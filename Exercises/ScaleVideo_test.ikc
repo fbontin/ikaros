@@ -1,27 +1,26 @@
 <?xml version="1.0"?>
 
 <group>
-	
-		<module class = "InputVideo" name = "VideoStream" />
-	
+
+		<module class = "InputVideoQT" name = "VideoStream" size_x="640" size_y="480" />
+
 		<module
 			class = "Scale"
 			name = "Scale"
-			factor = "0.8"
+			factor = "0.5"
 		/>
 
-    <connection sourcemodule = "VideoStream" source = "RED" targetmodule = "Scale" target = "INPUT" />
-    <connection sourcemodule = "VideoStream" source = "GREEN" targetmodule = "Scale" target = "INPUT" />
-    <connection sourcemodule = "VideoStream" source = "BLUE" targetmodule = "Scale" target = "INPUT" />
+
+			<connection sourcemodule = "VideoStream" source = "INTENSITY" targetmodule = "Scale" target = "INPUT" />
+
 
 	<view name="Movie View" object_size="500">
 
 
-        <object class="Image" name="Color1" module="VideoStream" type = "rgb" source="RED+GREEN+BLUE" x="0" y="0" />
-        <object class="Image" name="Color2" module="Scale" type = "rgb" source="OUTPUT+OUTPUT+OUTPUT" x="1" y="0" />
+        <object class="Image" name="Color1" module="VideoStream" type = "gray" source="INTENSITY" x="0" y="0" />
+        <object class="Image" name="Color2" module="Scale" type = "gray" source="OUTPUT" x="1" y="0" />
 
 
 	</view>
 
 </group>
- 
