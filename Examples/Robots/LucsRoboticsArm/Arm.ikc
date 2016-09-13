@@ -71,6 +71,7 @@
 
 
 
+
 	<view name = "Lucs Robotic Arm" object_size = "50" >
     	<!-- Dynamixel objects -->
         <object
