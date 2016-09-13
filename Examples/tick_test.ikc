@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+
+<group title="FUnction Example">
+
+<module
+    type =	"ticksquare"
+		basetime	=	"40"
+    tickduty = "10"
+/>
+
+
+    <view>
+        <object class="Plot"module="func" source="OUTPUT" title="Square Wave 10/40 ticks" x="4" y="3" w="4" />
+    </view>
+</group>

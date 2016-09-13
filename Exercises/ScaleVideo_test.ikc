@@ -2,7 +2,7 @@
 
 <group>
 
-		<module class = "InputVideoQT" name = "VideoStream" size_x="640" size_y="480" />
+		<module class = "InputVideo" name = "VideoStream" size_x="640" size_y="480" />
 
 		<module
 			class = "Scale"
