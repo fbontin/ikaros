@@ -30,9 +30,9 @@
 	</author>
 
    <files>
-   		<file>Sum.h</file>
-   		<file>Sum.cc</file>
-   		<file>Sum.ikc</file>
+   		<file>Thrower.h</file>
+   		<file>Thrower.cc</file>
+   		<file>Thrower.ikc</file>
    </files>
 
 </group>
