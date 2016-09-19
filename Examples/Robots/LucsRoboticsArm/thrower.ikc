@@ -18,68 +18,36 @@
 		index_mode 	 = "indirect"
 		servo_id	 = "1 2 3"
 		angle_unit 	 = "degrees"
-    feedback = "no"
+    feedback = "yes"
 	/>
 
 	<!-- Modules to generate a moving behaviour -->
 	<!-- These modueles are just do demonstate a moving behavioer of the arm. These modules and connections should be removed and replaced by user modules -->
 
-  <module class = "Constant" name = "GoalPosition1" outputsize = "1" data = "210" />
-  <module class = "Constant" name = "GoalPosition2" outputsize = "1" data = "230" />
-  <module class = "Constant" name = "GoalPosition3" outputsize = "1" data = "180" />
+  <module class = "Constant" name = "C1" outputsize = "3" data = "180 180 180" />
+  <module class = "Constant" name = "C2" outputsize = "3" data = "180 180 180" />
 
+  <module class = "Constant" name = "V1" outputsize = "1" data = "1" />
+  <module class = "Constant" name = "V2" outputsize = "1" data = "0" />
 
+	<connection sourcemodule = "C1" source = "OUTPUT" targetmodule = "Arbiter" target = "INPUT_1" delay="0" />
+	<connection sourcemodule = "C2" source = "OUTPUT" targetmodule = "Arbiter" target = "INPUT_2" delay="0" />
+	<connection sourcemodule = "V1" source = "OUTPUT" targetmodule = "Arbiter" target = "VALUE_1" delay="0" />
+	<connection sourcemodule = "V2" source = "OUTPUT" targetmodule = "Arbiter" target = "VALUE_2" delay="0" />
 
-  <connection sourcemodule  = "GoalPosition1" source  = "OUTPUT" targetmodule	 = "Dynamixel" target  = "GOAL_POSITION" />
-	<connection sourcemodule  = "GoalPosition1" source  = "OUTPUT" targetmodule	 = "Dynamixel" target  = "GOAL_POSITION" />
-	<connection sourcemodule  = "GoalPosition3" source  = "OUTPUT" targetmodule	 = "Dynamixel" target  = "GOAL_POSITION" />
+  <module
+    class = "Arbiter"
+    name = "Arbiter"
+  />
 
+  <connection sourcemodule  = "Arbiter" source  = "OUTPUT" targetmodule	 = "Dynamixel" target  = "GOAL_POSITION" />
 
   <module class = "Constant" name = "MovingSpeed" outputsize = "3" data = "1 1 1" />
   <connection sourcemodule  = "MovingSpeed" source  = "OUTPUT" targetmodule	 = "Dynamixel" target  = "MOVING_SPEED" />
 
 
-
 	<view name = "Lucs Robotic Arm" object_size = "50" >
     	<!-- Dynamixel objects -->
-
-        <object
-            class	 = "Plot"
-            title	 = "Actual Positions"
-            module	 = "Dynamixel"
-            source 	 = "FEEDBACK_PRESENT_POSITION"
-            x = "0" 	y = "2"
-            w = "2" 	h = "2"
-            color 	 = "red, green, blue"
-            select	 = "0,1,2"
-            max = "360"
-
-        />
-        <object
-            class	 = "Plot"
-            title	 = "Speed"
-            module 	 = "Dynamixel"
-            source 	 = "FEEDBACK_PRESENT_SPEED"
-            x = "2" 	y = "2"
-            w = "2" 	h = "2"
-            color 	 = "red, green, blue"
-            select	 = "0,1,2"
-        	min = "-1"
-        	max = "1"
-
-        />
-
-        <object
-            class = "Plot"
-            title = "Temperature (C)"
-            module  = "Dynamixel"
-            source  = "FEEDBACK_PRESENT_TEMPERATURE"
-            x = "4" y = "2"
-            w = "2" h = "2"
-            color 	 = "red, green, blue"
-            select	 = "0,1,2"
-            max = "80"
-        />
 
         <object
             class="Table"
@@ -93,56 +61,120 @@
 
         <object
           class="Switch"
-          title="GoalPos 1"
-          module="GoalPosition1"
+          title="throw"
+          module="V2"
           parameter="data"
-			    x="0"
-          y="4"
+			    x="8"
+          y="0"
           w="2"
           h="2"
-          min = "170"
-          max = "250"
+          min = "0"
+          max = "2"
         />
 
         <object
-          class="Switch"
-          title="GoalPos 2"
-          module="GoalPosition2"
+          class="Slider"
+          title="Before 1"
+          module="C1"
           parameter="data"
-			    x="2"
-          y="4"
+          select="0"
+          x="0"
+          y="2"
           w="2"
-          h="2"
-          min = "160"
-          max = "250"
+          h="8"
+          min = "30"
+          max = "330"
         />
 
         <object
-          class="Switch"
-          title="GoalPos 3"
-          module="GoalPosition3"
+          class="Slider"
+          title="Before 2"
+          module="C1"
           parameter="data"
-			    x="4"
-          y="4"
+          select="1"
+          x="2"
+          y="2"
           w="2"
-          h="2"
-          min = "130"
-          max = "230"
+          h="8"
+          min = "100"
+          max = "270"
+        />
+
+        <object
+          class="Slider"
+          title="Before 3"
+          module="C1"
+          parameter="data"
+          select="2"
+          x="4"
+          y="2"
+          w="2"
+          h="8"
+          min = "80"
+          max = "300"
         />
 
 
         <object
-          class="Switch"
-          title="GoalPos 2"
-          module="GoalPosition2"
+          class="Slider"
+          title="After 1"
+          module="C2"
           parameter="data"
-			    x="2"
-          y="6"
+          select="0"
+          x="6"
+          y="2"
           w="2"
-          h="2"
-          min = "130"
-          max = "230"
+          h="8"
+          min = "30"
+          max = "330"
         />
+
+        <object
+          class="Slider"
+          title="After 2"
+          module="C2"
+          parameter="data"
+          select="1"
+          x="8"
+          y="2"
+          w="2"
+          h="8"
+          min = "100"
+          max = "270"
+        />
+
+        <object
+          class="Slider"
+          title="After 3"
+          module="C2"
+          parameter="data"
+          select="2"
+          x="10"
+          y="2"
+          w="2"
+          h="8"
+          min = "80"
+          max = "300"
+        />
+
+        <object
+            class="Table"
+            module = "C1"
+            source = "data"
+            x="0" y="10"
+            w="6" h="2"
+            font_size = "30"
+        />
+
+        <object
+            class="Table"
+            module = "C2"
+            source = "data"
+            x="6" y="10"
+            w="6" h="2"
+            font_size = "30"
+        />
+
 
 		</view>
 </group>
