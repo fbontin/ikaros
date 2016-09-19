@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+
+<group name="Thrower" description="throws a ball using a robot arm">
+
+<description type="text">
+		Module that throws a ball using a robot arm.
+    Force of throw can be adjusted using the web view.
+	</description>
+
+	<example description="A simple example">
+		<module
+			class="Thrower"
+			name="Thrower"
+		/>
+	</example>
+
+	<input name="POSITION1" description="The position of the first robot" />
+  <input name="POSITION2" description="The position of the second robot" />
+  <input name="POSITION3" description="The position of the third robot" />
+
+
+	<output name="OUTPUT" description="The sum" size="1" />
+
+	<module class="Thrower" />
+
+
+	<author>
+		<name>Group 16</name>
+		<email>insert e-mail here</email>
+	</author>
+
+   <files>
+   		<file>Sum.h</file>
+   		<file>Sum.cc</file>
+   		<file>Sum.ikc</file>
+   </files>
+
+</group>

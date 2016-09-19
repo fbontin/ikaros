@@ -9,7 +9,7 @@
     <module
     class = "Dynamixel"
     name = "Dynamixel"
-    device  = "/dev/cu.usbserial-A8005hj3"
+    device  = "/dev/ttyUSB0"
     index_mode = "indirect"
     printf_info ="full"
     use_feedback ="true"
@@ -39,9 +39,9 @@
     shift		=	"0.0"
     />
 
-    <module class = "Constant" name = "GoalPosition1" outputsize = "1" data = "200" />
-    <module class = "Constant" name = "GoalPosition2" outputsize = "1" data = "240" />
-    <module class = "Constant" name = "GoalPosition3" outputsize = "1" data = "280" />
+    <module class = "Constant" name = "GoalPosition1" outputsize = "1" data = "180" />
+    <module class = "Constant" name = "GoalPosition2" outputsize = "1" data = "180" />
+    <module class = "Constant" name = "GoalPosition3" outputsize = "1" data = "180" />
 
     <connection sourcemodule = "GoalPosition1"  source = "OUTPUT" targetmodule = "Dynamixel"  target = "GOAL_POSITION" />
     <connection sourcemodule = "GoalPosition2"  source = "OUTPUT" targetmodule = "Dynamixel"  target = "GOAL_POSITION" />
