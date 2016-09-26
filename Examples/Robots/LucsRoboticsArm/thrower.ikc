@@ -21,17 +21,18 @@
     feedback = "yes"
 	/>
 
-	<!-- Modules to generate a moving behaviour -->
-	<!-- These modueles are just do demonstate a moving behavioer of the arm. These modules and connections should be removed and replaced by user modules -->
+  <!-- Create constants for the three servos-->
+  <module class = "Constant" name = "C1" outputsize = "3" data = "180 135 231" />
+  <module class = "Constant" name = "C2" outputsize = "3" data = "180 242 300" />
 
-  <module class = "Constant" name = "C1" outputsize = "3" data = "180 180 180" />
-  <module class = "Constant" name = "C2" outputsize = "3" data = "180 180 180" />
 
-  <module class = "Constant" name = "V1" outputsize = "1" data = "1" />
-  <module class = "Constant" name = "V2" outputsize = "1" data = "0" />
+  <!-- Create values which decide which constants will be used-->
+  <module class = "Constant" name = "V1" outputsize = "1" data = "0" />
+  <module class = "Constant" name = "V2" outputsize = "1" data = "1" />
 
-	<connection sourcemodule = "C1" source = "OUTPUT" targetmodule = "Arbiter" target = "INPUT_1" delay="0" />
-	<connection sourcemodule = "C2" source = "OUTPUT" targetmodule = "Arbiter" target = "INPUT_2" delay="0" />
+  <!-- Connect with arbiter-->
+	<connection sourcemodule = "C2" source = "OUTPUT" targetmodule = "Arbiter" target = "INPUT_1" delay="0" />
+	<connection sourcemodule = "C1" source = "OUTPUT" targetmodule = "Arbiter" target = "INPUT_2" delay="0" />
 	<connection sourcemodule = "V1" source = "OUTPUT" targetmodule = "Arbiter" target = "VALUE_1" delay="0" />
 	<connection sourcemodule = "V2" source = "OUTPUT" targetmodule = "Arbiter" target = "VALUE_2" delay="0" />
 
@@ -42,15 +43,17 @@
 
   <connection sourcemodule  = "Arbiter" source  = "OUTPUT" targetmodule	 = "Dynamixel" target  = "GOAL_POSITION" />
 
-  <module class = "Constant" name = "MovingSpeed" outputsize = "3" data = "1 1 1" />
-  <connection sourcemodule  = "MovingSpeed" source  = "OUTPUT" targetmodule	 = "Dynamixel" target  = "MOVING_SPEED" />
+  <module class = "Constant" name = "MovingSpeedAll" outputsize = "1" data = "1" />
+  <connection sourcemodule  = "MovingSpeedAll" source  = "OUTPUT" targetmodule	 = "Dynamixel" target  = "MOVING_SPEED" />
+  <connection sourcemodule  = "MovingSpeedAll" source  = "OUTPUT" targetmodule	 = "Dynamixel" target  = "MOVING_SPEED" />
+  <connection sourcemodule  = "MovingSpeedAll" source  = "OUTPUT" targetmodule	 = "Dynamixel" target  = "MOVING_SPEED" />
 
 
 	<view name = "Lucs Robotic Arm" object_size = "50" >
-    	<!-- Dynamixel objects -->
-
+    	  <!-- Show present position -->
         <object
             class="Table"
+            title="Actual position"
             module = "Dynamixel"
             source = "FEEDBACK_PRESENT_POSITION"
             x="0" y="0"
@@ -58,11 +61,11 @@
             font_size = "40"
         />
 
-
+        <!-- Switch which is used for throwing-->
         <object
           class="Switch"
           title="throw"
-          module="V2"
+          module="V1"
           parameter="data"
 			    x="8"
           y="0"
@@ -72,6 +75,7 @@
           max = "2"
         />
 
+        <!-- Sliders for controlling start and end positions-->
         <object
           class="Slider"
           title="Before 1"
@@ -158,7 +162,23 @@
         />
 
         <object
+          class="Slider"
+          title="Movement Speed"
+          module="MovingSpeedAll"
+          parameter="data"
+
+          x="12"
+          y="2"
+          w="2"
+          h="8"
+          min = "0.01"
+          max = "1"
+        />
+
+        <!-- Tables which show the start and end positions-->
+        <object
             class="Table"
+            title="Start positions"
             module = "C1"
             source = "data"
             x="0" y="10"
@@ -168,10 +188,21 @@
 
         <object
             class="Table"
+            title="End positions"
             module = "C2"
             source = "data"
             x="6" y="10"
             w="6" h="2"
+            font_size = "30"
+        />
+
+        <object
+            class="Table"
+            title="Movement speed"
+            module = "MovingSpeedAll"
+            source = "data"
+            x="12" y="10"
+            w="2" h="2"
             font_size = "30"
         />
 

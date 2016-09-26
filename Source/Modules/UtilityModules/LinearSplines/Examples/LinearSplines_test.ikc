@@ -8,6 +8,7 @@
         outputsize = "1" data="70"
     />
 
+
     <module
         class = "LinearSplines"
         name = "LinearSplines"
@@ -23,6 +24,7 @@
         target = "INPUT"
     />
 
+
     <view name="Plot">
 
         <object
@@ -32,9 +34,8 @@
             y = "0"
             w = "4"
             module = "F1"
-            source = "OUTPUT"
+            source="OUTPUT"
         />
-
         <object
             class = "Table"
             title = "f(x)"
