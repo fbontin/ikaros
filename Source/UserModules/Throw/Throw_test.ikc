@@ -2,20 +2,17 @@
 
 <group name="Test">
 
-	<module class = "Randomizer" name = "Constant1" outputsize = "5" max="4" />
-	<module class = "Randomizer" name = "Constant2" outputsize = "5" max="4" />
+	<module class = "Constant" name = "Constant1" outputsize = "3" data="50 100 20" />
 
 	<module
 		class = "Throw"
 		name = "Throw"
 	/>
 
-	<connection sourcemodule="Constant1" source="OUTPUT" targetmodule="Throw" target="INPUT1" />
-	<connection sourcemodule="Constant2" source="OUTPUT" targetmodule="Throw" target="INPUT2" />
+	<connection sourcemodule="Constant1" source="OUTPUT" targetmodule="Throw" target="INPUT" />
 
 	<view name="View">
-		<object class="BarGraph" name="Constant 1" module="Constant1" source="OUTPUT" x="0" y="0" max="10"/>
-		<object class="BarGraph" name="Constant 2" module="Constant2" source="OUTPUT" x="0" y="1" max="10" />
-		<object class="BarGraph" name="Sum" module="Throw" source="OUTPUT" x="1" y="0" max="10" />
+		<object class="Table" name="Constant 1" module="Constant1" source="OUTPUT" x="0" y="0" max="150"/>
+		<object class="Table" name="Sum" module="Throw" source="OUTPUT" x="1" y="0" max="170" />
 	</view>
 </group>

@@ -3,35 +3,19 @@
 <group title="Linear Splines - Example">
 
     <module
-        class = "FunctionGenerator"
+        class = "Constant"
         name = "F1"
-        type = "sin"
-        frequency = "0.1"
-        offset = "0.0"
-        amplitude = "1"
-        shift = "0.0"
+        outputsize = "1" data="70"
     />
-
-    <module
-        class = "FunctionGenerator"
-        name = "F2"
-        type = "sin"
-        frequency = "0.1"
-        offset = "0.0"
-        amplitude = "1"
-        shift = "0.0"
-    />
-
 
     <module
         class = "LinearSplines"
         name = "LinearSplines"
-        points = "
-             -1  5  -0.5  -7;
-              0  0   0    10;
-              1  10  0     0"
+        points = "10 0.1; 35.6 0.2; 53 0.21; 59 0.22; 64.5 0.23; 78 0.24; 82 0.25;
+          82.5 0.26; 100.5 0.27; 103 0.28; 104 0.29; 123.5 0.30; 127 0.31; 125 0.32; 136 0.33;
+          137.6 0.34; 147 0.35; 149 0.36; 150 0.48; 155 0.65; 156 0.95;"
     />
-        
+
     <connection
         sourcemodule = "F1"
         source = "OUTPUT"
@@ -39,50 +23,27 @@
         target = "INPUT"
     />
 
-    <connection
-        sourcemodule = "F2"
-        source = "OUTPUT"
-        targetmodule = "LinearSplines"
-        target = "INPUT"
-    />
-
     <view name="Plot">
-        
+
         <object
-            class = "Plot"
+            class = "Table"
             title = "x"
             x = "0"
             y = "0"
             w = "4"
-            min = "-1"
             module = "F1"
             source = "OUTPUT"
         />
-        
+
         <object
-            class = "Plot"
+            class = "Table"
             title = "f(x)"
             x = "0"
             y = "1"
             w = "4"
             module = "LinearSplines"
             source = "OUTPUT"
-            min = "-10"
-            max = "10"
         />
-        
-        <object
-        class = "Plot"
-        title = "f(x)"
-        x = "0"
-        y = "2"
-        w = "4"
-        select="1"
-        module = "LinearSplines"
-        source = "OUTPUT"
-        min = "-10"
-        max = "10"
-        />
-        
+
     </view>
 </group>

@@ -15,10 +15,9 @@
 		/>
 	</example>
 
-	<input name="INPUT1" description="The first input" />
-	<input name="INPUT2" description="The second input" />
+	<input name="INPUT" description="array of three inputs" />
 
-	<output name="OUTPUT" description="The output" size_set="INPUT1, INPUT2" />
+	<output name="OUTPUT" description="array of three outputs" size_set="INPUT" />
 
 	<module class="Throw" />
 
