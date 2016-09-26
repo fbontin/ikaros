@@ -2,87 +2,45 @@
 
 <group title="Linear Splines - Example">
 
-    <module
-        class = "FunctionGenerator"
-        name = "F1"
-        type = "sin"
-        frequency = "0.1"
-        offset = "0.0"
-        amplitude = "1"
-        shift = "0.0"
-    />
-
-    <module
-        class = "FunctionGenerator"
-        name = "F2"
-        type = "sin"
-        frequency = "0.1"
-        offset = "0.0"
-        amplitude = "1"
-        shift = "0.0"
-    />
-
+<module class = "Constant" name = "C1" outputsize = "1" data = "1" />
+<module class = "Constant" name = "C2" outputsize = "1" data = "2" />
+<module class = "Constant" name = "C3" outputsize = "1" data = "3" />
 
     <module
         class = "LinearSplines"
         name = "LinearSplines"
         points = "
-             -1  5  -0.5  -7;
-              0  0   0    10;
-              1  10  0     0"
-    />
-        
-    <connection
-        sourcemodule = "F1"
-        source = "OUTPUT"
-        targetmodule = "LinearSplines"
-        target = "INPUT"
+              0.1 0.1;
+              0.2 0.15;
+              0.3 0.2;
+              0.4 0.25;
+              0.5 0.35"
     />
 
-    <connection
-        sourcemodule = "F2"
-        source = "OUTPUT"
-        targetmodule = "LinearSplines"
-        target = "INPUT"
-    />
+    <connection sourcemodule = "C1" source = "OUTPUT" targetmodule = "LinearSplines" target = "INPUT"/>
+    <connection sourcemodule = "C2" source = "OUTPUT" targetmodule = "LinearSplines" target = "INPUT"/>
+    <connection sourcemodule = "C3" source = "OUTPUT" targetmodule = "LinearSplines" target = "INPUT"/>
 
     <view name="Plot">
-        
+
         <object
-            class = "Plot"
+            class = "Table"
             title = "x"
             x = "0"
             y = "0"
             w = "4"
-            min = "-1"
-            module = "F1"
+            module = "C1"
             source = "OUTPUT"
         />
-        
+
         <object
-            class = "Plot"
+            class = "Table"
             title = "f(x)"
             x = "0"
             y = "1"
             w = "4"
             module = "LinearSplines"
             source = "OUTPUT"
-            min = "-10"
-            max = "10"
         />
-        
-        <object
-        class = "Plot"
-        title = "f(x)"
-        x = "0"
-        y = "2"
-        w = "4"
-        select="1"
-        module = "LinearSplines"
-        source = "OUTPUT"
-        min = "-10"
-        max = "10"
-        />
-        
     </view>
 </group>
