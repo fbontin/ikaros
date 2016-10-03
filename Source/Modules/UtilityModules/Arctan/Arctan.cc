@@ -38,7 +38,7 @@ Arctan::Init()
 void
 Arctan::Tick()
 {
-    *output = atan(input[0]/input[1]);
+    *output = atan(input[0]/input[1])*180/3.141592;
 }
 
 static InitClass init("Arctan", &Arctan::Create, "Source/Modules/UtilityModules/Arctan/");
