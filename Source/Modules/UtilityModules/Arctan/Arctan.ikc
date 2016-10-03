@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+
+<group name="Arctan" description="calculates the angle from two input values">
+
+	<description type="text">
+		Calculates the angle using arctan from two input values.
+		Outputs an angle in degrees.
+
+		A = arctan(a/b)
+	</description>
+
+	<example description="A simple example">
+		<module
+			class="Arctan"
+			name="Arctan"
+		/>
+	</example>
+
+	<input name="INPUT" description="The length of the farthest leg (a)" size="2"/>
+	<!--input name="INPUT2" description="The length of the closest leg (b)" /-->
+
+	<output name="OUTPUT" description="The angle" size="1" />
+
+	<module class="Arctan" />
+
+    <view title="Arctan">
+        <object
+            x="0" y="0" w="2"
+            class="BarGraph"
+            module="*"
+            source="OUTPUT"
+            title="Default view for Arctan"
+        />
+    </view>
+
+	<author>
+		<name>Group 16 - 2016</name>
+		<email>christian.balkenius@lucs.lu.se</email>
+		<affiliation>Lund University Cognitive Science</affiliation>
+		<homepage>http://www.lucs.lu.se/Christian.Balkenius</homepage>
+	</author>
+
+   <files>
+   		<file>Sum.h</file>
+   		<file>Sum.cc</file>
+   		<file>Sum.ikc</file>
+   </files>
+
+</group>

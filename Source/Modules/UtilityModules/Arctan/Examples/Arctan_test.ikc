@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+
+<group name="Test">
+
+	<module class = "Constant" name = "a" outputsize = "2" data = "5 5"/>
+	<!--module class = "Constant" name = "b" outputsize = "1" data = "5"/-->
+
+	<module
+		class = "Arctan"
+		name = "Arctan"
+	/>
+
+	<connection sourcemodule="a" source="OUTPUT" targetmodule="Arctan" target="INPUT" />
+	<!--connection sourcemodule="b" source="OUTPUT" targetmodule="Arctan" target="INPUT2" /-->
+
+	<view name="View">
+		<object class="Table" name="Angle" module="Arctan" source="OUTPUT" x="0" y="0" />
+	</view>
+</group>
