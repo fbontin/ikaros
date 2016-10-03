@@ -13,7 +13,7 @@
     <module
     	class		 = "Dynamixel"
 		name		 = "Dynamixel"
-        device   	 = "/dev/cu.usbserial-A40129WB"
+        device   	 = "/dev/ttyUSB0"
 		_device		 = "/dev/cu.usbserial-A40129WB"
 		index_mode 	 = "indirect"
 		servo_id	 = "1 2 3"
