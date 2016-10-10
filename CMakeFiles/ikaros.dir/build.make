@@ -1929,9 +1929,33 @@ CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/Histogram/Histogram.cc.o.pro
 CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/Histogram/Histogram.cc.o.provides.build: CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/Histogram/Histogram.cc.o
 
 
+CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/HypotenuseLength/HypotenuseLength.cc.o: CMakeFiles/ikaros.dir/flags.make
+CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/HypotenuseLength/HypotenuseLength.cc.o: Source/Modules/UtilityModules/HypotenuseLength/HypotenuseLength.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/filip/ikaros/CMakeFiles --progress-num=$(CMAKE_PROGRESS_79) "Building CXX object CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/HypotenuseLength/HypotenuseLength.cc.o"
+	g++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/HypotenuseLength/HypotenuseLength.cc.o -c /home/filip/ikaros/Source/Modules/UtilityModules/HypotenuseLength/HypotenuseLength.cc
+
+CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/HypotenuseLength/HypotenuseLength.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/HypotenuseLength/HypotenuseLength.cc.i"
+	g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/filip/ikaros/Source/Modules/UtilityModules/HypotenuseLength/HypotenuseLength.cc > CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/HypotenuseLength/HypotenuseLength.cc.i
+
+CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/HypotenuseLength/HypotenuseLength.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/HypotenuseLength/HypotenuseLength.cc.s"
+	g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/filip/ikaros/Source/Modules/UtilityModules/HypotenuseLength/HypotenuseLength.cc -o CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/HypotenuseLength/HypotenuseLength.cc.s
+
+CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/HypotenuseLength/HypotenuseLength.cc.o.requires:
+
+.PHONY : CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/HypotenuseLength/HypotenuseLength.cc.o.requires
+
+CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/HypotenuseLength/HypotenuseLength.cc.o.provides: CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/HypotenuseLength/HypotenuseLength.cc.o.requires
+	$(MAKE) -f CMakeFiles/ikaros.dir/build.make CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/HypotenuseLength/HypotenuseLength.cc.o.provides.build
+.PHONY : CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/HypotenuseLength/HypotenuseLength.cc.o.provides
+
+CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/HypotenuseLength/HypotenuseLength.cc.o.provides.build: CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/HypotenuseLength/HypotenuseLength.cc.o
+
+
 CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/Integrator/Integrator.cc.o: CMakeFiles/ikaros.dir/flags.make
 CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/Integrator/Integrator.cc.o: Source/Modules/UtilityModules/Integrator/Integrator.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/filip/ikaros/CMakeFiles --progress-num=$(CMAKE_PROGRESS_79) "Building CXX object CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/Integrator/Integrator.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/filip/ikaros/CMakeFiles --progress-num=$(CMAKE_PROGRESS_80) "Building CXX object CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/Integrator/Integrator.cc.o"
 	g++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/Integrator/Integrator.cc.o -c /home/filip/ikaros/Source/Modules/UtilityModules/Integrator/Integrator.cc
 
 CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/Integrator/Integrator.cc.i: cmake_force
@@ -1955,7 +1979,7 @@ CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/Integrator/Integrator.cc.o.p
 
 CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/LinearSplines/LinearSplines.cc.o: CMakeFiles/ikaros.dir/flags.make
 CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/LinearSplines/LinearSplines.cc.o: Source/Modules/UtilityModules/LinearSplines/LinearSplines.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/filip/ikaros/CMakeFiles --progress-num=$(CMAKE_PROGRESS_80) "Building CXX object CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/LinearSplines/LinearSplines.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/filip/ikaros/CMakeFiles --progress-num=$(CMAKE_PROGRESS_81) "Building CXX object CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/LinearSplines/LinearSplines.cc.o"
 	g++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/LinearSplines/LinearSplines.cc.o -c /home/filip/ikaros/Source/Modules/UtilityModules/LinearSplines/LinearSplines.cc
 
 CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/LinearSplines/LinearSplines.cc.i: cmake_force
@@ -1979,7 +2003,7 @@ CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/LinearSplines/LinearSplines.
 
 CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/MatrixMultiply/MatrixMultiply.cc.o: CMakeFiles/ikaros.dir/flags.make
 CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/MatrixMultiply/MatrixMultiply.cc.o: Source/Modules/UtilityModules/MatrixMultiply/MatrixMultiply.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/filip/ikaros/CMakeFiles --progress-num=$(CMAKE_PROGRESS_81) "Building CXX object CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/MatrixMultiply/MatrixMultiply.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/filip/ikaros/CMakeFiles --progress-num=$(CMAKE_PROGRESS_82) "Building CXX object CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/MatrixMultiply/MatrixMultiply.cc.o"
 	g++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/MatrixMultiply/MatrixMultiply.cc.o -c /home/filip/ikaros/Source/Modules/UtilityModules/MatrixMultiply/MatrixMultiply.cc
 
 CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/MatrixMultiply/MatrixMultiply.cc.i: cmake_force
@@ -2003,7 +2027,7 @@ CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/MatrixMultiply/MatrixMultipl
 
 CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/Max/Max.cc.o: CMakeFiles/ikaros.dir/flags.make
 CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/Max/Max.cc.o: Source/Modules/UtilityModules/Max/Max.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/filip/ikaros/CMakeFiles --progress-num=$(CMAKE_PROGRESS_82) "Building CXX object CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/Max/Max.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/filip/ikaros/CMakeFiles --progress-num=$(CMAKE_PROGRESS_83) "Building CXX object CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/Max/Max.cc.o"
 	g++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/Max/Max.cc.o -c /home/filip/ikaros/Source/Modules/UtilityModules/Max/Max.cc
 
 CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/Max/Max.cc.i: cmake_force
@@ -2027,7 +2051,7 @@ CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/Max/Max.cc.o.provides.build:
 
 CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/Maxima/Maxima.cc.o: CMakeFiles/ikaros.dir/flags.make
 CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/Maxima/Maxima.cc.o: Source/Modules/UtilityModules/Maxima/Maxima.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/filip/ikaros/CMakeFiles --progress-num=$(CMAKE_PROGRESS_83) "Building CXX object CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/Maxima/Maxima.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/filip/ikaros/CMakeFiles --progress-num=$(CMAKE_PROGRESS_84) "Building CXX object CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/Maxima/Maxima.cc.o"
 	g++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/Maxima/Maxima.cc.o -c /home/filip/ikaros/Source/Modules/UtilityModules/Maxima/Maxima.cc
 
 CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/Maxima/Maxima.cc.i: cmake_force
@@ -2051,7 +2075,7 @@ CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/Maxima/Maxima.cc.o.provides.
 
 CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/Fuse/Fuse.cc.o: CMakeFiles/ikaros.dir/flags.make
 CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/Fuse/Fuse.cc.o: Source/Modules/UtilityModules/Fuse/Fuse.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/filip/ikaros/CMakeFiles --progress-num=$(CMAKE_PROGRESS_84) "Building CXX object CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/Fuse/Fuse.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/filip/ikaros/CMakeFiles --progress-num=$(CMAKE_PROGRESS_85) "Building CXX object CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/Fuse/Fuse.cc.o"
 	g++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/Fuse/Fuse.cc.o -c /home/filip/ikaros/Source/Modules/UtilityModules/Fuse/Fuse.cc
 
 CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/Fuse/Fuse.cc.i: cmake_force
@@ -2075,7 +2099,7 @@ CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/Fuse/Fuse.cc.o.provides.buil
 
 CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/Mean/Mean.cc.o: CMakeFiles/ikaros.dir/flags.make
 CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/Mean/Mean.cc.o: Source/Modules/UtilityModules/Mean/Mean.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/filip/ikaros/CMakeFiles --progress-num=$(CMAKE_PROGRESS_85) "Building CXX object CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/Mean/Mean.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/filip/ikaros/CMakeFiles --progress-num=$(CMAKE_PROGRESS_86) "Building CXX object CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/Mean/Mean.cc.o"
 	g++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/Mean/Mean.cc.o -c /home/filip/ikaros/Source/Modules/UtilityModules/Mean/Mean.cc
 
 CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/Mean/Mean.cc.i: cmake_force
@@ -2099,7 +2123,7 @@ CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/Mean/Mean.cc.o.provides.buil
 
 CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/Min/Min.cc.o: CMakeFiles/ikaros.dir/flags.make
 CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/Min/Min.cc.o: Source/Modules/UtilityModules/Min/Min.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/filip/ikaros/CMakeFiles --progress-num=$(CMAKE_PROGRESS_86) "Building CXX object CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/Min/Min.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/filip/ikaros/CMakeFiles --progress-num=$(CMAKE_PROGRESS_87) "Building CXX object CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/Min/Min.cc.o"
 	g++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/Min/Min.cc.o -c /home/filip/ikaros/Source/Modules/UtilityModules/Min/Min.cc
 
 CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/Min/Min.cc.i: cmake_force
@@ -2123,7 +2147,7 @@ CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/Min/Min.cc.o.provides.build:
 
 CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/Multiply/Multiply.cc.o: CMakeFiles/ikaros.dir/flags.make
 CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/Multiply/Multiply.cc.o: Source/Modules/UtilityModules/Multiply/Multiply.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/filip/ikaros/CMakeFiles --progress-num=$(CMAKE_PROGRESS_87) "Building CXX object CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/Multiply/Multiply.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/filip/ikaros/CMakeFiles --progress-num=$(CMAKE_PROGRESS_88) "Building CXX object CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/Multiply/Multiply.cc.o"
 	g++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/Multiply/Multiply.cc.o -c /home/filip/ikaros/Source/Modules/UtilityModules/Multiply/Multiply.cc
 
 CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/Multiply/Multiply.cc.i: cmake_force
@@ -2147,7 +2171,7 @@ CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/Multiply/Multiply.cc.o.provi
 
 CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/Noise/Noise.cc.o: CMakeFiles/ikaros.dir/flags.make
 CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/Noise/Noise.cc.o: Source/Modules/UtilityModules/Noise/Noise.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/filip/ikaros/CMakeFiles --progress-num=$(CMAKE_PROGRESS_88) "Building CXX object CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/Noise/Noise.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/filip/ikaros/CMakeFiles --progress-num=$(CMAKE_PROGRESS_89) "Building CXX object CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/Noise/Noise.cc.o"
 	g++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/Noise/Noise.cc.o -c /home/filip/ikaros/Source/Modules/UtilityModules/Noise/Noise.cc
 
 CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/Noise/Noise.cc.i: cmake_force
@@ -2171,7 +2195,7 @@ CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/Noise/Noise.cc.o.provides.bu
 
 CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/Normalize/Normalize.cc.o: CMakeFiles/ikaros.dir/flags.make
 CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/Normalize/Normalize.cc.o: Source/Modules/UtilityModules/Normalize/Normalize.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/filip/ikaros/CMakeFiles --progress-num=$(CMAKE_PROGRESS_89) "Building CXX object CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/Normalize/Normalize.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/filip/ikaros/CMakeFiles --progress-num=$(CMAKE_PROGRESS_90) "Building CXX object CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/Normalize/Normalize.cc.o"
 	g++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/Normalize/Normalize.cc.o -c /home/filip/ikaros/Source/Modules/UtilityModules/Normalize/Normalize.cc
 
 CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/Normalize/Normalize.cc.i: cmake_force
@@ -2195,7 +2219,7 @@ CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/Normalize/Normalize.cc.o.pro
 
 CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/OuterProduct/OuterProduct.cc.o: CMakeFiles/ikaros.dir/flags.make
 CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/OuterProduct/OuterProduct.cc.o: Source/Modules/UtilityModules/OuterProduct/OuterProduct.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/filip/ikaros/CMakeFiles --progress-num=$(CMAKE_PROGRESS_90) "Building CXX object CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/OuterProduct/OuterProduct.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/filip/ikaros/CMakeFiles --progress-num=$(CMAKE_PROGRESS_91) "Building CXX object CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/OuterProduct/OuterProduct.cc.o"
 	g++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/OuterProduct/OuterProduct.cc.o -c /home/filip/ikaros/Source/Modules/UtilityModules/OuterProduct/OuterProduct.cc
 
 CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/OuterProduct/OuterProduct.cc.i: cmake_force
@@ -2219,7 +2243,7 @@ CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/OuterProduct/OuterProduct.cc
 
 CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/Polynomial/Polynomial.cc.o: CMakeFiles/ikaros.dir/flags.make
 CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/Polynomial/Polynomial.cc.o: Source/Modules/UtilityModules/Polynomial/Polynomial.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/filip/ikaros/CMakeFiles --progress-num=$(CMAKE_PROGRESS_91) "Building CXX object CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/Polynomial/Polynomial.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/filip/ikaros/CMakeFiles --progress-num=$(CMAKE_PROGRESS_92) "Building CXX object CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/Polynomial/Polynomial.cc.o"
 	g++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/Polynomial/Polynomial.cc.o -c /home/filip/ikaros/Source/Modules/UtilityModules/Polynomial/Polynomial.cc
 
 CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/Polynomial/Polynomial.cc.i: cmake_force
@@ -2243,7 +2267,7 @@ CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/Polynomial/Polynomial.cc.o.p
 
 CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/Product/Product.cc.o: CMakeFiles/ikaros.dir/flags.make
 CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/Product/Product.cc.o: Source/Modules/UtilityModules/Product/Product.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/filip/ikaros/CMakeFiles --progress-num=$(CMAKE_PROGRESS_92) "Building CXX object CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/Product/Product.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/filip/ikaros/CMakeFiles --progress-num=$(CMAKE_PROGRESS_93) "Building CXX object CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/Product/Product.cc.o"
 	g++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/Product/Product.cc.o -c /home/filip/ikaros/Source/Modules/UtilityModules/Product/Product.cc
 
 CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/Product/Product.cc.i: cmake_force
@@ -2267,7 +2291,7 @@ CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/Product/Product.cc.o.provide
 
 CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/Randomizer/Randomizer.cc.o: CMakeFiles/ikaros.dir/flags.make
 CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/Randomizer/Randomizer.cc.o: Source/Modules/UtilityModules/Randomizer/Randomizer.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/filip/ikaros/CMakeFiles --progress-num=$(CMAKE_PROGRESS_93) "Building CXX object CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/Randomizer/Randomizer.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/filip/ikaros/CMakeFiles --progress-num=$(CMAKE_PROGRESS_94) "Building CXX object CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/Randomizer/Randomizer.cc.o"
 	g++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/Randomizer/Randomizer.cc.o -c /home/filip/ikaros/Source/Modules/UtilityModules/Randomizer/Randomizer.cc
 
 CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/Randomizer/Randomizer.cc.i: cmake_force
@@ -2291,7 +2315,7 @@ CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/Randomizer/Randomizer.cc.o.p
 
 CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/RotationConverter/RotationConverter.cc.o: CMakeFiles/ikaros.dir/flags.make
 CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/RotationConverter/RotationConverter.cc.o: Source/Modules/UtilityModules/RotationConverter/RotationConverter.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/filip/ikaros/CMakeFiles --progress-num=$(CMAKE_PROGRESS_94) "Building CXX object CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/RotationConverter/RotationConverter.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/filip/ikaros/CMakeFiles --progress-num=$(CMAKE_PROGRESS_95) "Building CXX object CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/RotationConverter/RotationConverter.cc.o"
 	g++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/RotationConverter/RotationConverter.cc.o -c /home/filip/ikaros/Source/Modules/UtilityModules/RotationConverter/RotationConverter.cc
 
 CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/RotationConverter/RotationConverter.cc.i: cmake_force
@@ -2315,7 +2339,7 @@ CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/RotationConverter/RotationCo
 
 CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/Scale/Scale.cc.o: CMakeFiles/ikaros.dir/flags.make
 CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/Scale/Scale.cc.o: Source/Modules/UtilityModules/Scale/Scale.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/filip/ikaros/CMakeFiles --progress-num=$(CMAKE_PROGRESS_95) "Building CXX object CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/Scale/Scale.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/filip/ikaros/CMakeFiles --progress-num=$(CMAKE_PROGRESS_96) "Building CXX object CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/Scale/Scale.cc.o"
 	g++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/Scale/Scale.cc.o -c /home/filip/ikaros/Source/Modules/UtilityModules/Scale/Scale.cc
 
 CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/Scale/Scale.cc.i: cmake_force
@@ -2339,7 +2363,7 @@ CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/Scale/Scale.cc.o.provides.bu
 
 CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/Select/Select.cc.o: CMakeFiles/ikaros.dir/flags.make
 CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/Select/Select.cc.o: Source/Modules/UtilityModules/Select/Select.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/filip/ikaros/CMakeFiles --progress-num=$(CMAKE_PROGRESS_96) "Building CXX object CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/Select/Select.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/filip/ikaros/CMakeFiles --progress-num=$(CMAKE_PROGRESS_97) "Building CXX object CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/Select/Select.cc.o"
 	g++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/Select/Select.cc.o -c /home/filip/ikaros/Source/Modules/UtilityModules/Select/Select.cc
 
 CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/Select/Select.cc.i: cmake_force
@@ -2363,7 +2387,7 @@ CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/Select/Select.cc.o.provides.
 
 CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/SelectMax/SelectMax.cc.o: CMakeFiles/ikaros.dir/flags.make
 CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/SelectMax/SelectMax.cc.o: Source/Modules/UtilityModules/SelectMax/SelectMax.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/filip/ikaros/CMakeFiles --progress-num=$(CMAKE_PROGRESS_97) "Building CXX object CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/SelectMax/SelectMax.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/filip/ikaros/CMakeFiles --progress-num=$(CMAKE_PROGRESS_98) "Building CXX object CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/SelectMax/SelectMax.cc.o"
 	g++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/SelectMax/SelectMax.cc.o -c /home/filip/ikaros/Source/Modules/UtilityModules/SelectMax/SelectMax.cc
 
 CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/SelectMax/SelectMax.cc.i: cmake_force
@@ -2387,7 +2411,7 @@ CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/SelectMax/SelectMax.cc.o.pro
 
 CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/Softmax/Softmax.cc.o: CMakeFiles/ikaros.dir/flags.make
 CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/Softmax/Softmax.cc.o: Source/Modules/UtilityModules/Softmax/Softmax.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/filip/ikaros/CMakeFiles --progress-num=$(CMAKE_PROGRESS_98) "Building CXX object CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/Softmax/Softmax.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/filip/ikaros/CMakeFiles --progress-num=$(CMAKE_PROGRESS_99) "Building CXX object CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/Softmax/Softmax.cc.o"
 	g++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/Softmax/Softmax.cc.o -c /home/filip/ikaros/Source/Modules/UtilityModules/Softmax/Softmax.cc
 
 CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/Softmax/Softmax.cc.i: cmake_force
@@ -2411,7 +2435,7 @@ CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/Softmax/Softmax.cc.o.provide
 
 CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/Submatrix/Submatrix.cc.o: CMakeFiles/ikaros.dir/flags.make
 CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/Submatrix/Submatrix.cc.o: Source/Modules/UtilityModules/Submatrix/Submatrix.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/filip/ikaros/CMakeFiles --progress-num=$(CMAKE_PROGRESS_99) "Building CXX object CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/Submatrix/Submatrix.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/filip/ikaros/CMakeFiles --progress-num=$(CMAKE_PROGRESS_100) "Building CXX object CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/Submatrix/Submatrix.cc.o"
 	g++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/Submatrix/Submatrix.cc.o -c /home/filip/ikaros/Source/Modules/UtilityModules/Submatrix/Submatrix.cc
 
 CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/Submatrix/Submatrix.cc.i: cmake_force
@@ -2435,7 +2459,7 @@ CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/Submatrix/Submatrix.cc.o.pro
 
 CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/Subtract/Subtract.cc.o: CMakeFiles/ikaros.dir/flags.make
 CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/Subtract/Subtract.cc.o: Source/Modules/UtilityModules/Subtract/Subtract.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/filip/ikaros/CMakeFiles --progress-num=$(CMAKE_PROGRESS_100) "Building CXX object CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/Subtract/Subtract.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/filip/ikaros/CMakeFiles --progress-num=$(CMAKE_PROGRESS_101) "Building CXX object CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/Subtract/Subtract.cc.o"
 	g++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/Subtract/Subtract.cc.o -c /home/filip/ikaros/Source/Modules/UtilityModules/Subtract/Subtract.cc
 
 CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/Subtract/Subtract.cc.i: cmake_force
@@ -2459,7 +2483,7 @@ CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/Subtract/Subtract.cc.o.provi
 
 CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/Sum/Sum.cc.o: CMakeFiles/ikaros.dir/flags.make
 CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/Sum/Sum.cc.o: Source/Modules/UtilityModules/Sum/Sum.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/filip/ikaros/CMakeFiles --progress-num=$(CMAKE_PROGRESS_101) "Building CXX object CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/Sum/Sum.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/filip/ikaros/CMakeFiles --progress-num=$(CMAKE_PROGRESS_102) "Building CXX object CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/Sum/Sum.cc.o"
 	g++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/Sum/Sum.cc.o -c /home/filip/ikaros/Source/Modules/UtilityModules/Sum/Sum.cc
 
 CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/Sum/Sum.cc.i: cmake_force
@@ -2483,7 +2507,7 @@ CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/Sum/Sum.cc.o.provides.build:
 
 CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/Sweep/Sweep.cc.o: CMakeFiles/ikaros.dir/flags.make
 CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/Sweep/Sweep.cc.o: Source/Modules/UtilityModules/Sweep/Sweep.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/filip/ikaros/CMakeFiles --progress-num=$(CMAKE_PROGRESS_102) "Building CXX object CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/Sweep/Sweep.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/filip/ikaros/CMakeFiles --progress-num=$(CMAKE_PROGRESS_103) "Building CXX object CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/Sweep/Sweep.cc.o"
 	g++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/Sweep/Sweep.cc.o -c /home/filip/ikaros/Source/Modules/UtilityModules/Sweep/Sweep.cc
 
 CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/Sweep/Sweep.cc.i: cmake_force
@@ -2507,7 +2531,7 @@ CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/Sweep/Sweep.cc.o.provides.bu
 
 CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/Transform/Transform.cc.o: CMakeFiles/ikaros.dir/flags.make
 CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/Transform/Transform.cc.o: Source/Modules/UtilityModules/Transform/Transform.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/filip/ikaros/CMakeFiles --progress-num=$(CMAKE_PROGRESS_103) "Building CXX object CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/Transform/Transform.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/filip/ikaros/CMakeFiles --progress-num=$(CMAKE_PROGRESS_104) "Building CXX object CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/Transform/Transform.cc.o"
 	g++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/Transform/Transform.cc.o -c /home/filip/ikaros/Source/Modules/UtilityModules/Transform/Transform.cc
 
 CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/Transform/Transform.cc.i: cmake_force
@@ -2531,7 +2555,7 @@ CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/Transform/Transform.cc.o.pro
 
 CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/Threshold/Threshold.cc.o: CMakeFiles/ikaros.dir/flags.make
 CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/Threshold/Threshold.cc.o: Source/Modules/UtilityModules/Threshold/Threshold.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/filip/ikaros/CMakeFiles --progress-num=$(CMAKE_PROGRESS_104) "Building CXX object CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/Threshold/Threshold.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/filip/ikaros/CMakeFiles --progress-num=$(CMAKE_PROGRESS_105) "Building CXX object CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/Threshold/Threshold.cc.o"
 	g++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/Threshold/Threshold.cc.o -c /home/filip/ikaros/Source/Modules/UtilityModules/Threshold/Threshold.cc
 
 CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/Threshold/Threshold.cc.i: cmake_force
@@ -2555,7 +2579,7 @@ CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/Threshold/Threshold.cc.o.pro
 
 CMakeFiles/ikaros.dir/Source/Modules/VisionModules/AttentionFocus/AttentionFocus.cc.o: CMakeFiles/ikaros.dir/flags.make
 CMakeFiles/ikaros.dir/Source/Modules/VisionModules/AttentionFocus/AttentionFocus.cc.o: Source/Modules/VisionModules/AttentionFocus/AttentionFocus.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/filip/ikaros/CMakeFiles --progress-num=$(CMAKE_PROGRESS_105) "Building CXX object CMakeFiles/ikaros.dir/Source/Modules/VisionModules/AttentionFocus/AttentionFocus.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/filip/ikaros/CMakeFiles --progress-num=$(CMAKE_PROGRESS_106) "Building CXX object CMakeFiles/ikaros.dir/Source/Modules/VisionModules/AttentionFocus/AttentionFocus.cc.o"
 	g++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ikaros.dir/Source/Modules/VisionModules/AttentionFocus/AttentionFocus.cc.o -c /home/filip/ikaros/Source/Modules/VisionModules/AttentionFocus/AttentionFocus.cc
 
 CMakeFiles/ikaros.dir/Source/Modules/VisionModules/AttentionFocus/AttentionFocus.cc.i: cmake_force
@@ -2579,7 +2603,7 @@ CMakeFiles/ikaros.dir/Source/Modules/VisionModules/AttentionFocus/AttentionFocus
 
 CMakeFiles/ikaros.dir/Source/Modules/VisionModules/AttentionWindow/AttentionWindow.cc.o: CMakeFiles/ikaros.dir/flags.make
 CMakeFiles/ikaros.dir/Source/Modules/VisionModules/AttentionWindow/AttentionWindow.cc.o: Source/Modules/VisionModules/AttentionWindow/AttentionWindow.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/filip/ikaros/CMakeFiles --progress-num=$(CMAKE_PROGRESS_106) "Building CXX object CMakeFiles/ikaros.dir/Source/Modules/VisionModules/AttentionWindow/AttentionWindow.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/filip/ikaros/CMakeFiles --progress-num=$(CMAKE_PROGRESS_107) "Building CXX object CMakeFiles/ikaros.dir/Source/Modules/VisionModules/AttentionWindow/AttentionWindow.cc.o"
 	g++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ikaros.dir/Source/Modules/VisionModules/AttentionWindow/AttentionWindow.cc.o -c /home/filip/ikaros/Source/Modules/VisionModules/AttentionWindow/AttentionWindow.cc
 
 CMakeFiles/ikaros.dir/Source/Modules/VisionModules/AttentionWindow/AttentionWindow.cc.i: cmake_force
@@ -2603,7 +2627,7 @@ CMakeFiles/ikaros.dir/Source/Modules/VisionModules/AttentionWindow/AttentionWind
 
 CMakeFiles/ikaros.dir/Source/Modules/VisionModules/CircleDetector/CircleDetector.cc.o: CMakeFiles/ikaros.dir/flags.make
 CMakeFiles/ikaros.dir/Source/Modules/VisionModules/CircleDetector/CircleDetector.cc.o: Source/Modules/VisionModules/CircleDetector/CircleDetector.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/filip/ikaros/CMakeFiles --progress-num=$(CMAKE_PROGRESS_107) "Building CXX object CMakeFiles/ikaros.dir/Source/Modules/VisionModules/CircleDetector/CircleDetector.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/filip/ikaros/CMakeFiles --progress-num=$(CMAKE_PROGRESS_108) "Building CXX object CMakeFiles/ikaros.dir/Source/Modules/VisionModules/CircleDetector/CircleDetector.cc.o"
 	g++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ikaros.dir/Source/Modules/VisionModules/CircleDetector/CircleDetector.cc.o -c /home/filip/ikaros/Source/Modules/VisionModules/CircleDetector/CircleDetector.cc
 
 CMakeFiles/ikaros.dir/Source/Modules/VisionModules/CircleDetector/CircleDetector.cc.i: cmake_force
@@ -2627,7 +2651,7 @@ CMakeFiles/ikaros.dir/Source/Modules/VisionModules/CircleDetector/CircleDetector
 
 CMakeFiles/ikaros.dir/Source/Modules/VisionModules/ColorClassifier/ColorClassifier.cc.o: CMakeFiles/ikaros.dir/flags.make
 CMakeFiles/ikaros.dir/Source/Modules/VisionModules/ColorClassifier/ColorClassifier.cc.o: Source/Modules/VisionModules/ColorClassifier/ColorClassifier.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/filip/ikaros/CMakeFiles --progress-num=$(CMAKE_PROGRESS_108) "Building CXX object CMakeFiles/ikaros.dir/Source/Modules/VisionModules/ColorClassifier/ColorClassifier.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/filip/ikaros/CMakeFiles --progress-num=$(CMAKE_PROGRESS_109) "Building CXX object CMakeFiles/ikaros.dir/Source/Modules/VisionModules/ColorClassifier/ColorClassifier.cc.o"
 	g++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ikaros.dir/Source/Modules/VisionModules/ColorClassifier/ColorClassifier.cc.o -c /home/filip/ikaros/Source/Modules/VisionModules/ColorClassifier/ColorClassifier.cc
 
 CMakeFiles/ikaros.dir/Source/Modules/VisionModules/ColorClassifier/ColorClassifier.cc.i: cmake_force
@@ -2651,7 +2675,7 @@ CMakeFiles/ikaros.dir/Source/Modules/VisionModules/ColorClassifier/ColorClassifi
 
 CMakeFiles/ikaros.dir/Source/Modules/VisionModules/ColorMatch/ColorMatch.cc.o: CMakeFiles/ikaros.dir/flags.make
 CMakeFiles/ikaros.dir/Source/Modules/VisionModules/ColorMatch/ColorMatch.cc.o: Source/Modules/VisionModules/ColorMatch/ColorMatch.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/filip/ikaros/CMakeFiles --progress-num=$(CMAKE_PROGRESS_109) "Building CXX object CMakeFiles/ikaros.dir/Source/Modules/VisionModules/ColorMatch/ColorMatch.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/filip/ikaros/CMakeFiles --progress-num=$(CMAKE_PROGRESS_110) "Building CXX object CMakeFiles/ikaros.dir/Source/Modules/VisionModules/ColorMatch/ColorMatch.cc.o"
 	g++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ikaros.dir/Source/Modules/VisionModules/ColorMatch/ColorMatch.cc.o -c /home/filip/ikaros/Source/Modules/VisionModules/ColorMatch/ColorMatch.cc
 
 CMakeFiles/ikaros.dir/Source/Modules/VisionModules/ColorMatch/ColorMatch.cc.i: cmake_force
@@ -2675,7 +2699,7 @@ CMakeFiles/ikaros.dir/Source/Modules/VisionModules/ColorMatch/ColorMatch.cc.o.pr
 
 CMakeFiles/ikaros.dir/Source/Modules/VisionModules/ColorTransform/ColorTransform.cc.o: CMakeFiles/ikaros.dir/flags.make
 CMakeFiles/ikaros.dir/Source/Modules/VisionModules/ColorTransform/ColorTransform.cc.o: Source/Modules/VisionModules/ColorTransform/ColorTransform.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/filip/ikaros/CMakeFiles --progress-num=$(CMAKE_PROGRESS_110) "Building CXX object CMakeFiles/ikaros.dir/Source/Modules/VisionModules/ColorTransform/ColorTransform.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/filip/ikaros/CMakeFiles --progress-num=$(CMAKE_PROGRESS_111) "Building CXX object CMakeFiles/ikaros.dir/Source/Modules/VisionModules/ColorTransform/ColorTransform.cc.o"
 	g++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ikaros.dir/Source/Modules/VisionModules/ColorTransform/ColorTransform.cc.o -c /home/filip/ikaros/Source/Modules/VisionModules/ColorTransform/ColorTransform.cc
 
 CMakeFiles/ikaros.dir/Source/Modules/VisionModules/ColorTransform/ColorTransform.cc.i: cmake_force
@@ -2699,7 +2723,7 @@ CMakeFiles/ikaros.dir/Source/Modules/VisionModules/ColorTransform/ColorTransform
 
 CMakeFiles/ikaros.dir/Source/Modules/VisionModules/DepthProcessing/DepthBlobList/DepthBlobList.cc.o: CMakeFiles/ikaros.dir/flags.make
 CMakeFiles/ikaros.dir/Source/Modules/VisionModules/DepthProcessing/DepthBlobList/DepthBlobList.cc.o: Source/Modules/VisionModules/DepthProcessing/DepthBlobList/DepthBlobList.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/filip/ikaros/CMakeFiles --progress-num=$(CMAKE_PROGRESS_111) "Building CXX object CMakeFiles/ikaros.dir/Source/Modules/VisionModules/DepthProcessing/DepthBlobList/DepthBlobList.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/filip/ikaros/CMakeFiles --progress-num=$(CMAKE_PROGRESS_112) "Building CXX object CMakeFiles/ikaros.dir/Source/Modules/VisionModules/DepthProcessing/DepthBlobList/DepthBlobList.cc.o"
 	g++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ikaros.dir/Source/Modules/VisionModules/DepthProcessing/DepthBlobList/DepthBlobList.cc.o -c /home/filip/ikaros/Source/Modules/VisionModules/DepthProcessing/DepthBlobList/DepthBlobList.cc
 
 CMakeFiles/ikaros.dir/Source/Modules/VisionModules/DepthProcessing/DepthBlobList/DepthBlobList.cc.i: cmake_force
@@ -2723,7 +2747,7 @@ CMakeFiles/ikaros.dir/Source/Modules/VisionModules/DepthProcessing/DepthBlobList
 
 CMakeFiles/ikaros.dir/Source/Modules/VisionModules/DepthProcessing/DepthContourTrace/DepthContourTrace.cc.o: CMakeFiles/ikaros.dir/flags.make
 CMakeFiles/ikaros.dir/Source/Modules/VisionModules/DepthProcessing/DepthContourTrace/DepthContourTrace.cc.o: Source/Modules/VisionModules/DepthProcessing/DepthContourTrace/DepthContourTrace.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/filip/ikaros/CMakeFiles --progress-num=$(CMAKE_PROGRESS_112) "Building CXX object CMakeFiles/ikaros.dir/Source/Modules/VisionModules/DepthProcessing/DepthContourTrace/DepthContourTrace.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/filip/ikaros/CMakeFiles --progress-num=$(CMAKE_PROGRESS_113) "Building CXX object CMakeFiles/ikaros.dir/Source/Modules/VisionModules/DepthProcessing/DepthContourTrace/DepthContourTrace.cc.o"
 	g++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ikaros.dir/Source/Modules/VisionModules/DepthProcessing/DepthContourTrace/DepthContourTrace.cc.o -c /home/filip/ikaros/Source/Modules/VisionModules/DepthProcessing/DepthContourTrace/DepthContourTrace.cc
 
 CMakeFiles/ikaros.dir/Source/Modules/VisionModules/DepthProcessing/DepthContourTrace/DepthContourTrace.cc.i: cmake_force
@@ -2747,7 +2771,7 @@ CMakeFiles/ikaros.dir/Source/Modules/VisionModules/DepthProcessing/DepthContourT
 
 CMakeFiles/ikaros.dir/Source/Modules/VisionModules/DepthProcessing/DepthHistogram/DepthHistogram.cc.o: CMakeFiles/ikaros.dir/flags.make
 CMakeFiles/ikaros.dir/Source/Modules/VisionModules/DepthProcessing/DepthHistogram/DepthHistogram.cc.o: Source/Modules/VisionModules/DepthProcessing/DepthHistogram/DepthHistogram.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/filip/ikaros/CMakeFiles --progress-num=$(CMAKE_PROGRESS_113) "Building CXX object CMakeFiles/ikaros.dir/Source/Modules/VisionModules/DepthProcessing/DepthHistogram/DepthHistogram.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/filip/ikaros/CMakeFiles --progress-num=$(CMAKE_PROGRESS_114) "Building CXX object CMakeFiles/ikaros.dir/Source/Modules/VisionModules/DepthProcessing/DepthHistogram/DepthHistogram.cc.o"
 	g++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ikaros.dir/Source/Modules/VisionModules/DepthProcessing/DepthHistogram/DepthHistogram.cc.o -c /home/filip/ikaros/Source/Modules/VisionModules/DepthProcessing/DepthHistogram/DepthHistogram.cc
 
 CMakeFiles/ikaros.dir/Source/Modules/VisionModules/DepthProcessing/DepthHistogram/DepthHistogram.cc.i: cmake_force
@@ -2771,7 +2795,7 @@ CMakeFiles/ikaros.dir/Source/Modules/VisionModules/DepthProcessing/DepthHistogra
 
 CMakeFiles/ikaros.dir/Source/Modules/VisionModules/DepthProcessing/DepthPointList/DepthPointList.cc.o: CMakeFiles/ikaros.dir/flags.make
 CMakeFiles/ikaros.dir/Source/Modules/VisionModules/DepthProcessing/DepthPointList/DepthPointList.cc.o: Source/Modules/VisionModules/DepthProcessing/DepthPointList/DepthPointList.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/filip/ikaros/CMakeFiles --progress-num=$(CMAKE_PROGRESS_114) "Building CXX object CMakeFiles/ikaros.dir/Source/Modules/VisionModules/DepthProcessing/DepthPointList/DepthPointList.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/filip/ikaros/CMakeFiles --progress-num=$(CMAKE_PROGRESS_115) "Building CXX object CMakeFiles/ikaros.dir/Source/Modules/VisionModules/DepthProcessing/DepthPointList/DepthPointList.cc.o"
 	g++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ikaros.dir/Source/Modules/VisionModules/DepthProcessing/DepthPointList/DepthPointList.cc.o -c /home/filip/ikaros/Source/Modules/VisionModules/DepthProcessing/DepthPointList/DepthPointList.cc
 
 CMakeFiles/ikaros.dir/Source/Modules/VisionModules/DepthProcessing/DepthPointList/DepthPointList.cc.i: cmake_force
@@ -2795,7 +2819,7 @@ CMakeFiles/ikaros.dir/Source/Modules/VisionModules/DepthProcessing/DepthPointLis
 
 CMakeFiles/ikaros.dir/Source/Modules/VisionModules/DepthProcessing/DepthSegmentation/DepthSegmentation.cc.o: CMakeFiles/ikaros.dir/flags.make
 CMakeFiles/ikaros.dir/Source/Modules/VisionModules/DepthProcessing/DepthSegmentation/DepthSegmentation.cc.o: Source/Modules/VisionModules/DepthProcessing/DepthSegmentation/DepthSegmentation.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/filip/ikaros/CMakeFiles --progress-num=$(CMAKE_PROGRESS_115) "Building CXX object CMakeFiles/ikaros.dir/Source/Modules/VisionModules/DepthProcessing/DepthSegmentation/DepthSegmentation.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/filip/ikaros/CMakeFiles --progress-num=$(CMAKE_PROGRESS_116) "Building CXX object CMakeFiles/ikaros.dir/Source/Modules/VisionModules/DepthProcessing/DepthSegmentation/DepthSegmentation.cc.o"
 	g++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ikaros.dir/Source/Modules/VisionModules/DepthProcessing/DepthSegmentation/DepthSegmentation.cc.o -c /home/filip/ikaros/Source/Modules/VisionModules/DepthProcessing/DepthSegmentation/DepthSegmentation.cc
 
 CMakeFiles/ikaros.dir/Source/Modules/VisionModules/DepthProcessing/DepthSegmentation/DepthSegmentation.cc.i: cmake_force
@@ -2819,7 +2843,7 @@ CMakeFiles/ikaros.dir/Source/Modules/VisionModules/DepthProcessing/DepthSegmenta
 
 CMakeFiles/ikaros.dir/Source/Modules/VisionModules/DepthProcessing/DepthTransform/DepthTransform.cc.o: CMakeFiles/ikaros.dir/flags.make
 CMakeFiles/ikaros.dir/Source/Modules/VisionModules/DepthProcessing/DepthTransform/DepthTransform.cc.o: Source/Modules/VisionModules/DepthProcessing/DepthTransform/DepthTransform.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/filip/ikaros/CMakeFiles --progress-num=$(CMAKE_PROGRESS_116) "Building CXX object CMakeFiles/ikaros.dir/Source/Modules/VisionModules/DepthProcessing/DepthTransform/DepthTransform.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/filip/ikaros/CMakeFiles --progress-num=$(CMAKE_PROGRESS_117) "Building CXX object CMakeFiles/ikaros.dir/Source/Modules/VisionModules/DepthProcessing/DepthTransform/DepthTransform.cc.o"
 	g++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ikaros.dir/Source/Modules/VisionModules/DepthProcessing/DepthTransform/DepthTransform.cc.o -c /home/filip/ikaros/Source/Modules/VisionModules/DepthProcessing/DepthTransform/DepthTransform.cc
 
 CMakeFiles/ikaros.dir/Source/Modules/VisionModules/DepthProcessing/DepthTransform/DepthTransform.cc.i: cmake_force
@@ -2843,7 +2867,7 @@ CMakeFiles/ikaros.dir/Source/Modules/VisionModules/DepthProcessing/DepthTransfor
 
 CMakeFiles/ikaros.dir/Source/Modules/VisionModules/ImageConvolution/ImageConvolution.cc.o: CMakeFiles/ikaros.dir/flags.make
 CMakeFiles/ikaros.dir/Source/Modules/VisionModules/ImageConvolution/ImageConvolution.cc.o: Source/Modules/VisionModules/ImageConvolution/ImageConvolution.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/filip/ikaros/CMakeFiles --progress-num=$(CMAKE_PROGRESS_117) "Building CXX object CMakeFiles/ikaros.dir/Source/Modules/VisionModules/ImageConvolution/ImageConvolution.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/filip/ikaros/CMakeFiles --progress-num=$(CMAKE_PROGRESS_118) "Building CXX object CMakeFiles/ikaros.dir/Source/Modules/VisionModules/ImageConvolution/ImageConvolution.cc.o"
 	g++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ikaros.dir/Source/Modules/VisionModules/ImageConvolution/ImageConvolution.cc.o -c /home/filip/ikaros/Source/Modules/VisionModules/ImageConvolution/ImageConvolution.cc
 
 CMakeFiles/ikaros.dir/Source/Modules/VisionModules/ImageConvolution/ImageConvolution.cc.i: cmake_force
@@ -2867,7 +2891,7 @@ CMakeFiles/ikaros.dir/Source/Modules/VisionModules/ImageConvolution/ImageConvolu
 
 CMakeFiles/ikaros.dir/Source/Modules/VisionModules/IntegralImage/IntegralImage.cc.o: CMakeFiles/ikaros.dir/flags.make
 CMakeFiles/ikaros.dir/Source/Modules/VisionModules/IntegralImage/IntegralImage.cc.o: Source/Modules/VisionModules/IntegralImage/IntegralImage.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/filip/ikaros/CMakeFiles --progress-num=$(CMAKE_PROGRESS_118) "Building CXX object CMakeFiles/ikaros.dir/Source/Modules/VisionModules/IntegralImage/IntegralImage.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/filip/ikaros/CMakeFiles --progress-num=$(CMAKE_PROGRESS_119) "Building CXX object CMakeFiles/ikaros.dir/Source/Modules/VisionModules/IntegralImage/IntegralImage.cc.o"
 	g++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ikaros.dir/Source/Modules/VisionModules/IntegralImage/IntegralImage.cc.o -c /home/filip/ikaros/Source/Modules/VisionModules/IntegralImage/IntegralImage.cc
 
 CMakeFiles/ikaros.dir/Source/Modules/VisionModules/IntegralImage/IntegralImage.cc.i: cmake_force
@@ -2891,7 +2915,7 @@ CMakeFiles/ikaros.dir/Source/Modules/VisionModules/IntegralImage/IntegralImage.c
 
 CMakeFiles/ikaros.dir/Source/Modules/VisionModules/ImageOperators/ChangeDetector/ChangeDetector.cc.o: CMakeFiles/ikaros.dir/flags.make
 CMakeFiles/ikaros.dir/Source/Modules/VisionModules/ImageOperators/ChangeDetector/ChangeDetector.cc.o: Source/Modules/VisionModules/ImageOperators/ChangeDetector/ChangeDetector.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/filip/ikaros/CMakeFiles --progress-num=$(CMAKE_PROGRESS_119) "Building CXX object CMakeFiles/ikaros.dir/Source/Modules/VisionModules/ImageOperators/ChangeDetector/ChangeDetector.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/filip/ikaros/CMakeFiles --progress-num=$(CMAKE_PROGRESS_120) "Building CXX object CMakeFiles/ikaros.dir/Source/Modules/VisionModules/ImageOperators/ChangeDetector/ChangeDetector.cc.o"
 	g++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ikaros.dir/Source/Modules/VisionModules/ImageOperators/ChangeDetector/ChangeDetector.cc.o -c /home/filip/ikaros/Source/Modules/VisionModules/ImageOperators/ChangeDetector/ChangeDetector.cc
 
 CMakeFiles/ikaros.dir/Source/Modules/VisionModules/ImageOperators/ChangeDetector/ChangeDetector.cc.i: cmake_force
@@ -2915,7 +2939,7 @@ CMakeFiles/ikaros.dir/Source/Modules/VisionModules/ImageOperators/ChangeDetector
 
 CMakeFiles/ikaros.dir/Source/Modules/VisionModules/ImageOperators/CurvatureDetectors/FASTDetector/FASTDetector.cc.o: CMakeFiles/ikaros.dir/flags.make
 CMakeFiles/ikaros.dir/Source/Modules/VisionModules/ImageOperators/CurvatureDetectors/FASTDetector/FASTDetector.cc.o: Source/Modules/VisionModules/ImageOperators/CurvatureDetectors/FASTDetector/FASTDetector.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/filip/ikaros/CMakeFiles --progress-num=$(CMAKE_PROGRESS_120) "Building CXX object CMakeFiles/ikaros.dir/Source/Modules/VisionModules/ImageOperators/CurvatureDetectors/FASTDetector/FASTDetector.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/filip/ikaros/CMakeFiles --progress-num=$(CMAKE_PROGRESS_121) "Building CXX object CMakeFiles/ikaros.dir/Source/Modules/VisionModules/ImageOperators/CurvatureDetectors/FASTDetector/FASTDetector.cc.o"
 	g++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ikaros.dir/Source/Modules/VisionModules/ImageOperators/CurvatureDetectors/FASTDetector/FASTDetector.cc.o -c /home/filip/ikaros/Source/Modules/VisionModules/ImageOperators/CurvatureDetectors/FASTDetector/FASTDetector.cc
 
 CMakeFiles/ikaros.dir/Source/Modules/VisionModules/ImageOperators/CurvatureDetectors/FASTDetector/FASTDetector.cc.i: cmake_force
@@ -2939,7 +2963,7 @@ CMakeFiles/ikaros.dir/Source/Modules/VisionModules/ImageOperators/CurvatureDetec
 
 CMakeFiles/ikaros.dir/Source/Modules/VisionModules/ImageOperators/CurvatureDetectors/FASTDetector/fast-C-src-2.1/fast.c.o: CMakeFiles/ikaros.dir/flags.make
 CMakeFiles/ikaros.dir/Source/Modules/VisionModules/ImageOperators/CurvatureDetectors/FASTDetector/fast-C-src-2.1/fast.c.o: Source/Modules/VisionModules/ImageOperators/CurvatureDetectors/FASTDetector/fast-C-src-2.1/fast.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/filip/ikaros/CMakeFiles --progress-num=$(CMAKE_PROGRESS_121) "Building C object CMakeFiles/ikaros.dir/Source/Modules/VisionModules/ImageOperators/CurvatureDetectors/FASTDetector/fast-C-src-2.1/fast.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/filip/ikaros/CMakeFiles --progress-num=$(CMAKE_PROGRESS_122) "Building C object CMakeFiles/ikaros.dir/Source/Modules/VisionModules/ImageOperators/CurvatureDetectors/FASTDetector/fast-C-src-2.1/fast.c.o"
 	gcc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ikaros.dir/Source/Modules/VisionModules/ImageOperators/CurvatureDetectors/FASTDetector/fast-C-src-2.1/fast.c.o   -c /home/filip/ikaros/Source/Modules/VisionModules/ImageOperators/CurvatureDetectors/FASTDetector/fast-C-src-2.1/fast.c
 
 CMakeFiles/ikaros.dir/Source/Modules/VisionModules/ImageOperators/CurvatureDetectors/FASTDetector/fast-C-src-2.1/fast.c.i: cmake_force
@@ -2963,7 +2987,7 @@ CMakeFiles/ikaros.dir/Source/Modules/VisionModules/ImageOperators/CurvatureDetec
 
 CMakeFiles/ikaros.dir/Source/Modules/VisionModules/ImageOperators/CurvatureDetectors/FASTDetector/fast-C-src-2.1/fast_9.c.o: CMakeFiles/ikaros.dir/flags.make
 CMakeFiles/ikaros.dir/Source/Modules/VisionModules/ImageOperators/CurvatureDetectors/FASTDetector/fast-C-src-2.1/fast_9.c.o: Source/Modules/VisionModules/ImageOperators/CurvatureDetectors/FASTDetector/fast-C-src-2.1/fast_9.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/filip/ikaros/CMakeFiles --progress-num=$(CMAKE_PROGRESS_122) "Building C object CMakeFiles/ikaros.dir/Source/Modules/VisionModules/ImageOperators/CurvatureDetectors/FASTDetector/fast-C-src-2.1/fast_9.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/filip/ikaros/CMakeFiles --progress-num=$(CMAKE_PROGRESS_123) "Building C object CMakeFiles/ikaros.dir/Source/Modules/VisionModules/ImageOperators/CurvatureDetectors/FASTDetector/fast-C-src-2.1/fast_9.c.o"
 	gcc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ikaros.dir/Source/Modules/VisionModules/ImageOperators/CurvatureDetectors/FASTDetector/fast-C-src-2.1/fast_9.c.o   -c /home/filip/ikaros/Source/Modules/VisionModules/ImageOperators/CurvatureDetectors/FASTDetector/fast-C-src-2.1/fast_9.c
 
 CMakeFiles/ikaros.dir/Source/Modules/VisionModules/ImageOperators/CurvatureDetectors/FASTDetector/fast-C-src-2.1/fast_9.c.i: cmake_force
@@ -2987,7 +3011,7 @@ CMakeFiles/ikaros.dir/Source/Modules/VisionModules/ImageOperators/CurvatureDetec
 
 CMakeFiles/ikaros.dir/Source/Modules/VisionModules/ImageOperators/CurvatureDetectors/FASTDetector/fast-C-src-2.1/fast_10.c.o: CMakeFiles/ikaros.dir/flags.make
 CMakeFiles/ikaros.dir/Source/Modules/VisionModules/ImageOperators/CurvatureDetectors/FASTDetector/fast-C-src-2.1/fast_10.c.o: Source/Modules/VisionModules/ImageOperators/CurvatureDetectors/FASTDetector/fast-C-src-2.1/fast_10.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/filip/ikaros/CMakeFiles --progress-num=$(CMAKE_PROGRESS_123) "Building C object CMakeFiles/ikaros.dir/Source/Modules/VisionModules/ImageOperators/CurvatureDetectors/FASTDetector/fast-C-src-2.1/fast_10.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/filip/ikaros/CMakeFiles --progress-num=$(CMAKE_PROGRESS_124) "Building C object CMakeFiles/ikaros.dir/Source/Modules/VisionModules/ImageOperators/CurvatureDetectors/FASTDetector/fast-C-src-2.1/fast_10.c.o"
 	gcc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ikaros.dir/Source/Modules/VisionModules/ImageOperators/CurvatureDetectors/FASTDetector/fast-C-src-2.1/fast_10.c.o   -c /home/filip/ikaros/Source/Modules/VisionModules/ImageOperators/CurvatureDetectors/FASTDetector/fast-C-src-2.1/fast_10.c
 
 CMakeFiles/ikaros.dir/Source/Modules/VisionModules/ImageOperators/CurvatureDetectors/FASTDetector/fast-C-src-2.1/fast_10.c.i: cmake_force
@@ -3011,7 +3035,7 @@ CMakeFiles/ikaros.dir/Source/Modules/VisionModules/ImageOperators/CurvatureDetec
 
 CMakeFiles/ikaros.dir/Source/Modules/VisionModules/ImageOperators/CurvatureDetectors/FASTDetector/fast-C-src-2.1/fast_11.c.o: CMakeFiles/ikaros.dir/flags.make
 CMakeFiles/ikaros.dir/Source/Modules/VisionModules/ImageOperators/CurvatureDetectors/FASTDetector/fast-C-src-2.1/fast_11.c.o: Source/Modules/VisionModules/ImageOperators/CurvatureDetectors/FASTDetector/fast-C-src-2.1/fast_11.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/filip/ikaros/CMakeFiles --progress-num=$(CMAKE_PROGRESS_124) "Building C object CMakeFiles/ikaros.dir/Source/Modules/VisionModules/ImageOperators/CurvatureDetectors/FASTDetector/fast-C-src-2.1/fast_11.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/filip/ikaros/CMakeFiles --progress-num=$(CMAKE_PROGRESS_125) "Building C object CMakeFiles/ikaros.dir/Source/Modules/VisionModules/ImageOperators/CurvatureDetectors/FASTDetector/fast-C-src-2.1/fast_11.c.o"
 	gcc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ikaros.dir/Source/Modules/VisionModules/ImageOperators/CurvatureDetectors/FASTDetector/fast-C-src-2.1/fast_11.c.o   -c /home/filip/ikaros/Source/Modules/VisionModules/ImageOperators/CurvatureDetectors/FASTDetector/fast-C-src-2.1/fast_11.c
 
 CMakeFiles/ikaros.dir/Source/Modules/VisionModules/ImageOperators/CurvatureDetectors/FASTDetector/fast-C-src-2.1/fast_11.c.i: cmake_force
@@ -3035,7 +3059,7 @@ CMakeFiles/ikaros.dir/Source/Modules/VisionModules/ImageOperators/CurvatureDetec
 
 CMakeFiles/ikaros.dir/Source/Modules/VisionModules/ImageOperators/CurvatureDetectors/FASTDetector/fast-C-src-2.1/fast_12.c.o: CMakeFiles/ikaros.dir/flags.make
 CMakeFiles/ikaros.dir/Source/Modules/VisionModules/ImageOperators/CurvatureDetectors/FASTDetector/fast-C-src-2.1/fast_12.c.o: Source/Modules/VisionModules/ImageOperators/CurvatureDetectors/FASTDetector/fast-C-src-2.1/fast_12.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/filip/ikaros/CMakeFiles --progress-num=$(CMAKE_PROGRESS_125) "Building C object CMakeFiles/ikaros.dir/Source/Modules/VisionModules/ImageOperators/CurvatureDetectors/FASTDetector/fast-C-src-2.1/fast_12.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/filip/ikaros/CMakeFiles --progress-num=$(CMAKE_PROGRESS_126) "Building C object CMakeFiles/ikaros.dir/Source/Modules/VisionModules/ImageOperators/CurvatureDetectors/FASTDetector/fast-C-src-2.1/fast_12.c.o"
 	gcc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ikaros.dir/Source/Modules/VisionModules/ImageOperators/CurvatureDetectors/FASTDetector/fast-C-src-2.1/fast_12.c.o   -c /home/filip/ikaros/Source/Modules/VisionModules/ImageOperators/CurvatureDetectors/FASTDetector/fast-C-src-2.1/fast_12.c
 
 CMakeFiles/ikaros.dir/Source/Modules/VisionModules/ImageOperators/CurvatureDetectors/FASTDetector/fast-C-src-2.1/fast_12.c.i: cmake_force
@@ -3059,7 +3083,7 @@ CMakeFiles/ikaros.dir/Source/Modules/VisionModules/ImageOperators/CurvatureDetec
 
 CMakeFiles/ikaros.dir/Source/Modules/VisionModules/ImageOperators/CurvatureDetectors/FASTDetector/fast-C-src-2.1/nonmax.c.o: CMakeFiles/ikaros.dir/flags.make
 CMakeFiles/ikaros.dir/Source/Modules/VisionModules/ImageOperators/CurvatureDetectors/FASTDetector/fast-C-src-2.1/nonmax.c.o: Source/Modules/VisionModules/ImageOperators/CurvatureDetectors/FASTDetector/fast-C-src-2.1/nonmax.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/filip/ikaros/CMakeFiles --progress-num=$(CMAKE_PROGRESS_126) "Building C object CMakeFiles/ikaros.dir/Source/Modules/VisionModules/ImageOperators/CurvatureDetectors/FASTDetector/fast-C-src-2.1/nonmax.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/filip/ikaros/CMakeFiles --progress-num=$(CMAKE_PROGRESS_127) "Building C object CMakeFiles/ikaros.dir/Source/Modules/VisionModules/ImageOperators/CurvatureDetectors/FASTDetector/fast-C-src-2.1/nonmax.c.o"
 	gcc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ikaros.dir/Source/Modules/VisionModules/ImageOperators/CurvatureDetectors/FASTDetector/fast-C-src-2.1/nonmax.c.o   -c /home/filip/ikaros/Source/Modules/VisionModules/ImageOperators/CurvatureDetectors/FASTDetector/fast-C-src-2.1/nonmax.c
 
 CMakeFiles/ikaros.dir/Source/Modules/VisionModules/ImageOperators/CurvatureDetectors/FASTDetector/fast-C-src-2.1/nonmax.c.i: cmake_force
@@ -3083,7 +3107,7 @@ CMakeFiles/ikaros.dir/Source/Modules/VisionModules/ImageOperators/CurvatureDetec
 
 CMakeFiles/ikaros.dir/Source/Modules/VisionModules/ImageOperators/CurvatureDetectors/HarrisDetector/HarrisDetector.cc.o: CMakeFiles/ikaros.dir/flags.make
 CMakeFiles/ikaros.dir/Source/Modules/VisionModules/ImageOperators/CurvatureDetectors/HarrisDetector/HarrisDetector.cc.o: Source/Modules/VisionModules/ImageOperators/CurvatureDetectors/HarrisDetector/HarrisDetector.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/filip/ikaros/CMakeFiles --progress-num=$(CMAKE_PROGRESS_127) "Building CXX object CMakeFiles/ikaros.dir/Source/Modules/VisionModules/ImageOperators/CurvatureDetectors/HarrisDetector/HarrisDetector.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/filip/ikaros/CMakeFiles --progress-num=$(CMAKE_PROGRESS_128) "Building CXX object CMakeFiles/ikaros.dir/Source/Modules/VisionModules/ImageOperators/CurvatureDetectors/HarrisDetector/HarrisDetector.cc.o"
 	g++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ikaros.dir/Source/Modules/VisionModules/ImageOperators/CurvatureDetectors/HarrisDetector/HarrisDetector.cc.o -c /home/filip/ikaros/Source/Modules/VisionModules/ImageOperators/CurvatureDetectors/HarrisDetector/HarrisDetector.cc
 
 CMakeFiles/ikaros.dir/Source/Modules/VisionModules/ImageOperators/CurvatureDetectors/HarrisDetector/HarrisDetector.cc.i: cmake_force
@@ -3107,7 +3131,7 @@ CMakeFiles/ikaros.dir/Source/Modules/VisionModules/ImageOperators/CurvatureDetec
 
 CMakeFiles/ikaros.dir/Source/Modules/VisionModules/ImageOperators/EdgeDetectors/CannyEdgeDetector/CannyEdgeDetector.cc.o: CMakeFiles/ikaros.dir/flags.make
 CMakeFiles/ikaros.dir/Source/Modules/VisionModules/ImageOperators/EdgeDetectors/CannyEdgeDetector/CannyEdgeDetector.cc.o: Source/Modules/VisionModules/ImageOperators/EdgeDetectors/CannyEdgeDetector/CannyEdgeDetector.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/filip/ikaros/CMakeFiles --progress-num=$(CMAKE_PROGRESS_128) "Building CXX object CMakeFiles/ikaros.dir/Source/Modules/VisionModules/ImageOperators/EdgeDetectors/CannyEdgeDetector/CannyEdgeDetector.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/filip/ikaros/CMakeFiles --progress-num=$(CMAKE_PROGRESS_129) "Building CXX object CMakeFiles/ikaros.dir/Source/Modules/VisionModules/ImageOperators/EdgeDetectors/CannyEdgeDetector/CannyEdgeDetector.cc.o"
 	g++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ikaros.dir/Source/Modules/VisionModules/ImageOperators/EdgeDetectors/CannyEdgeDetector/CannyEdgeDetector.cc.o -c /home/filip/ikaros/Source/Modules/VisionModules/ImageOperators/EdgeDetectors/CannyEdgeDetector/CannyEdgeDetector.cc
 
 CMakeFiles/ikaros.dir/Source/Modules/VisionModules/ImageOperators/EdgeDetectors/CannyEdgeDetector/CannyEdgeDetector.cc.i: cmake_force
@@ -3131,7 +3155,7 @@ CMakeFiles/ikaros.dir/Source/Modules/VisionModules/ImageOperators/EdgeDetectors/
 
 CMakeFiles/ikaros.dir/Source/Modules/VisionModules/ImageOperators/EdgeDetectors/GaussianEdgeDetector/GaussianEdgeDetector.cc.o: CMakeFiles/ikaros.dir/flags.make
 CMakeFiles/ikaros.dir/Source/Modules/VisionModules/ImageOperators/EdgeDetectors/GaussianEdgeDetector/GaussianEdgeDetector.cc.o: Source/Modules/VisionModules/ImageOperators/EdgeDetectors/GaussianEdgeDetector/GaussianEdgeDetector.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/filip/ikaros/CMakeFiles --progress-num=$(CMAKE_PROGRESS_129) "Building CXX object CMakeFiles/ikaros.dir/Source/Modules/VisionModules/ImageOperators/EdgeDetectors/GaussianEdgeDetector/GaussianEdgeDetector.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/filip/ikaros/CMakeFiles --progress-num=$(CMAKE_PROGRESS_130) "Building CXX object CMakeFiles/ikaros.dir/Source/Modules/VisionModules/ImageOperators/EdgeDetectors/GaussianEdgeDetector/GaussianEdgeDetector.cc.o"
 	g++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ikaros.dir/Source/Modules/VisionModules/ImageOperators/EdgeDetectors/GaussianEdgeDetector/GaussianEdgeDetector.cc.o -c /home/filip/ikaros/Source/Modules/VisionModules/ImageOperators/EdgeDetectors/GaussianEdgeDetector/GaussianEdgeDetector.cc
 
 CMakeFiles/ikaros.dir/Source/Modules/VisionModules/ImageOperators/EdgeDetectors/GaussianEdgeDetector/GaussianEdgeDetector.cc.i: cmake_force
@@ -3155,7 +3179,7 @@ CMakeFiles/ikaros.dir/Source/Modules/VisionModules/ImageOperators/EdgeDetectors/
 
 CMakeFiles/ikaros.dir/Source/Modules/VisionModules/ImageOperators/EdgeDetectors/HysteresisThresholding/HysteresisThresholding.cc.o: CMakeFiles/ikaros.dir/flags.make
 CMakeFiles/ikaros.dir/Source/Modules/VisionModules/ImageOperators/EdgeDetectors/HysteresisThresholding/HysteresisThresholding.cc.o: Source/Modules/VisionModules/ImageOperators/EdgeDetectors/HysteresisThresholding/HysteresisThresholding.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/filip/ikaros/CMakeFiles --progress-num=$(CMAKE_PROGRESS_130) "Building CXX object CMakeFiles/ikaros.dir/Source/Modules/VisionModules/ImageOperators/EdgeDetectors/HysteresisThresholding/HysteresisThresholding.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/filip/ikaros/CMakeFiles --progress-num=$(CMAKE_PROGRESS_131) "Building CXX object CMakeFiles/ikaros.dir/Source/Modules/VisionModules/ImageOperators/EdgeDetectors/HysteresisThresholding/HysteresisThresholding.cc.o"
 	g++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ikaros.dir/Source/Modules/VisionModules/ImageOperators/EdgeDetectors/HysteresisThresholding/HysteresisThresholding.cc.o -c /home/filip/ikaros/Source/Modules/VisionModules/ImageOperators/EdgeDetectors/HysteresisThresholding/HysteresisThresholding.cc
 
 CMakeFiles/ikaros.dir/Source/Modules/VisionModules/ImageOperators/EdgeDetectors/HysteresisThresholding/HysteresisThresholding.cc.i: cmake_force
@@ -3179,7 +3203,7 @@ CMakeFiles/ikaros.dir/Source/Modules/VisionModules/ImageOperators/EdgeDetectors/
 
 CMakeFiles/ikaros.dir/Source/Modules/VisionModules/ImageOperators/EdgeDetectors/PrewittEdgeDetector/PrewittEdgeDetector.cc.o: CMakeFiles/ikaros.dir/flags.make
 CMakeFiles/ikaros.dir/Source/Modules/VisionModules/ImageOperators/EdgeDetectors/PrewittEdgeDetector/PrewittEdgeDetector.cc.o: Source/Modules/VisionModules/ImageOperators/EdgeDetectors/PrewittEdgeDetector/PrewittEdgeDetector.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/filip/ikaros/CMakeFiles --progress-num=$(CMAKE_PROGRESS_131) "Building CXX object CMakeFiles/ikaros.dir/Source/Modules/VisionModules/ImageOperators/EdgeDetectors/PrewittEdgeDetector/PrewittEdgeDetector.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/filip/ikaros/CMakeFiles --progress-num=$(CMAKE_PROGRESS_132) "Building CXX object CMakeFiles/ikaros.dir/Source/Modules/VisionModules/ImageOperators/EdgeDetectors/PrewittEdgeDetector/PrewittEdgeDetector.cc.o"
 	g++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ikaros.dir/Source/Modules/VisionModules/ImageOperators/EdgeDetectors/PrewittEdgeDetector/PrewittEdgeDetector.cc.o -c /home/filip/ikaros/Source/Modules/VisionModules/ImageOperators/EdgeDetectors/PrewittEdgeDetector/PrewittEdgeDetector.cc
 
 CMakeFiles/ikaros.dir/Source/Modules/VisionModules/ImageOperators/EdgeDetectors/PrewittEdgeDetector/PrewittEdgeDetector.cc.i: cmake_force
@@ -3203,7 +3227,7 @@ CMakeFiles/ikaros.dir/Source/Modules/VisionModules/ImageOperators/EdgeDetectors/
 
 CMakeFiles/ikaros.dir/Source/Modules/VisionModules/ImageOperators/EdgeDetectors/RobertsEdgeDetector/RobertsEdgeDetector.cc.o: CMakeFiles/ikaros.dir/flags.make
 CMakeFiles/ikaros.dir/Source/Modules/VisionModules/ImageOperators/EdgeDetectors/RobertsEdgeDetector/RobertsEdgeDetector.cc.o: Source/Modules/VisionModules/ImageOperators/EdgeDetectors/RobertsEdgeDetector/RobertsEdgeDetector.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/filip/ikaros/CMakeFiles --progress-num=$(CMAKE_PROGRESS_132) "Building CXX object CMakeFiles/ikaros.dir/Source/Modules/VisionModules/ImageOperators/EdgeDetectors/RobertsEdgeDetector/RobertsEdgeDetector.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/filip/ikaros/CMakeFiles --progress-num=$(CMAKE_PROGRESS_133) "Building CXX object CMakeFiles/ikaros.dir/Source/Modules/VisionModules/ImageOperators/EdgeDetectors/RobertsEdgeDetector/RobertsEdgeDetector.cc.o"
 	g++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ikaros.dir/Source/Modules/VisionModules/ImageOperators/EdgeDetectors/RobertsEdgeDetector/RobertsEdgeDetector.cc.o -c /home/filip/ikaros/Source/Modules/VisionModules/ImageOperators/EdgeDetectors/RobertsEdgeDetector/RobertsEdgeDetector.cc
 
 CMakeFiles/ikaros.dir/Source/Modules/VisionModules/ImageOperators/EdgeDetectors/RobertsEdgeDetector/RobertsEdgeDetector.cc.i: cmake_force
@@ -3227,7 +3251,7 @@ CMakeFiles/ikaros.dir/Source/Modules/VisionModules/ImageOperators/EdgeDetectors/
 
 CMakeFiles/ikaros.dir/Source/Modules/VisionModules/ImageOperators/EdgeDetectors/SobelEdgeDetector/SobelEdgeDetector.cc.o: CMakeFiles/ikaros.dir/flags.make
 CMakeFiles/ikaros.dir/Source/Modules/VisionModules/ImageOperators/EdgeDetectors/SobelEdgeDetector/SobelEdgeDetector.cc.o: Source/Modules/VisionModules/ImageOperators/EdgeDetectors/SobelEdgeDetector/SobelEdgeDetector.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/filip/ikaros/CMakeFiles --progress-num=$(CMAKE_PROGRESS_133) "Building CXX object CMakeFiles/ikaros.dir/Source/Modules/VisionModules/ImageOperators/EdgeDetectors/SobelEdgeDetector/SobelEdgeDetector.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/filip/ikaros/CMakeFiles --progress-num=$(CMAKE_PROGRESS_134) "Building CXX object CMakeFiles/ikaros.dir/Source/Modules/VisionModules/ImageOperators/EdgeDetectors/SobelEdgeDetector/SobelEdgeDetector.cc.o"
 	g++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ikaros.dir/Source/Modules/VisionModules/ImageOperators/EdgeDetectors/SobelEdgeDetector/SobelEdgeDetector.cc.o -c /home/filip/ikaros/Source/Modules/VisionModules/ImageOperators/EdgeDetectors/SobelEdgeDetector/SobelEdgeDetector.cc
 
 CMakeFiles/ikaros.dir/Source/Modules/VisionModules/ImageOperators/EdgeDetectors/SobelEdgeDetector/SobelEdgeDetector.cc.i: cmake_force
@@ -3251,7 +3275,7 @@ CMakeFiles/ikaros.dir/Source/Modules/VisionModules/ImageOperators/EdgeDetectors/
 
 CMakeFiles/ikaros.dir/Source/Modules/VisionModules/ImageOperators/EdgeDetectors/EdgeSegmentation/EdgeSegmentation.cc.o: CMakeFiles/ikaros.dir/flags.make
 CMakeFiles/ikaros.dir/Source/Modules/VisionModules/ImageOperators/EdgeDetectors/EdgeSegmentation/EdgeSegmentation.cc.o: Source/Modules/VisionModules/ImageOperators/EdgeDetectors/EdgeSegmentation/EdgeSegmentation.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/filip/ikaros/CMakeFiles --progress-num=$(CMAKE_PROGRESS_134) "Building CXX object CMakeFiles/ikaros.dir/Source/Modules/VisionModules/ImageOperators/EdgeDetectors/EdgeSegmentation/EdgeSegmentation.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/filip/ikaros/CMakeFiles --progress-num=$(CMAKE_PROGRESS_135) "Building CXX object CMakeFiles/ikaros.dir/Source/Modules/VisionModules/ImageOperators/EdgeDetectors/EdgeSegmentation/EdgeSegmentation.cc.o"
 	g++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ikaros.dir/Source/Modules/VisionModules/ImageOperators/EdgeDetectors/EdgeSegmentation/EdgeSegmentation.cc.o -c /home/filip/ikaros/Source/Modules/VisionModules/ImageOperators/EdgeDetectors/EdgeSegmentation/EdgeSegmentation.cc
 
 CMakeFiles/ikaros.dir/Source/Modules/VisionModules/ImageOperators/EdgeDetectors/EdgeSegmentation/EdgeSegmentation.cc.i: cmake_force
@@ -3275,7 +3299,7 @@ CMakeFiles/ikaros.dir/Source/Modules/VisionModules/ImageOperators/EdgeDetectors/
 
 CMakeFiles/ikaros.dir/Source/Modules/VisionModules/ImageOperators/GaborFilter/GaborFilter.cc.o: CMakeFiles/ikaros.dir/flags.make
 CMakeFiles/ikaros.dir/Source/Modules/VisionModules/ImageOperators/GaborFilter/GaborFilter.cc.o: Source/Modules/VisionModules/ImageOperators/GaborFilter/GaborFilter.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/filip/ikaros/CMakeFiles --progress-num=$(CMAKE_PROGRESS_135) "Building CXX object CMakeFiles/ikaros.dir/Source/Modules/VisionModules/ImageOperators/GaborFilter/GaborFilter.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/filip/ikaros/CMakeFiles --progress-num=$(CMAKE_PROGRESS_136) "Building CXX object CMakeFiles/ikaros.dir/Source/Modules/VisionModules/ImageOperators/GaborFilter/GaborFilter.cc.o"
 	g++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ikaros.dir/Source/Modules/VisionModules/ImageOperators/GaborFilter/GaborFilter.cc.o -c /home/filip/ikaros/Source/Modules/VisionModules/ImageOperators/GaborFilter/GaborFilter.cc
 
 CMakeFiles/ikaros.dir/Source/Modules/VisionModules/ImageOperators/GaborFilter/GaborFilter.cc.i: cmake_force
@@ -3299,7 +3323,7 @@ CMakeFiles/ikaros.dir/Source/Modules/VisionModules/ImageOperators/GaborFilter/Ga
 
 CMakeFiles/ikaros.dir/Source/Modules/VisionModules/ImageOperators/GaussianFilter/GaussianFilter.cc.o: CMakeFiles/ikaros.dir/flags.make
 CMakeFiles/ikaros.dir/Source/Modules/VisionModules/ImageOperators/GaussianFilter/GaussianFilter.cc.o: Source/Modules/VisionModules/ImageOperators/GaussianFilter/GaussianFilter.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/filip/ikaros/CMakeFiles --progress-num=$(CMAKE_PROGRESS_136) "Building CXX object CMakeFiles/ikaros.dir/Source/Modules/VisionModules/ImageOperators/GaussianFilter/GaussianFilter.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/filip/ikaros/CMakeFiles --progress-num=$(CMAKE_PROGRESS_137) "Building CXX object CMakeFiles/ikaros.dir/Source/Modules/VisionModules/ImageOperators/GaussianFilter/GaussianFilter.cc.o"
 	g++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ikaros.dir/Source/Modules/VisionModules/ImageOperators/GaussianFilter/GaussianFilter.cc.o -c /home/filip/ikaros/Source/Modules/VisionModules/ImageOperators/GaussianFilter/GaussianFilter.cc
 
 CMakeFiles/ikaros.dir/Source/Modules/VisionModules/ImageOperators/GaussianFilter/GaussianFilter.cc.i: cmake_force
@@ -3323,7 +3347,7 @@ CMakeFiles/ikaros.dir/Source/Modules/VisionModules/ImageOperators/GaussianFilter
 
 CMakeFiles/ikaros.dir/Source/Modules/VisionModules/ImageOperators/DoGFilter/DoGFilter.cc.o: CMakeFiles/ikaros.dir/flags.make
 CMakeFiles/ikaros.dir/Source/Modules/VisionModules/ImageOperators/DoGFilter/DoGFilter.cc.o: Source/Modules/VisionModules/ImageOperators/DoGFilter/DoGFilter.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/filip/ikaros/CMakeFiles --progress-num=$(CMAKE_PROGRESS_137) "Building CXX object CMakeFiles/ikaros.dir/Source/Modules/VisionModules/ImageOperators/DoGFilter/DoGFilter.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/filip/ikaros/CMakeFiles --progress-num=$(CMAKE_PROGRESS_138) "Building CXX object CMakeFiles/ikaros.dir/Source/Modules/VisionModules/ImageOperators/DoGFilter/DoGFilter.cc.o"
 	g++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ikaros.dir/Source/Modules/VisionModules/ImageOperators/DoGFilter/DoGFilter.cc.o -c /home/filip/ikaros/Source/Modules/VisionModules/ImageOperators/DoGFilter/DoGFilter.cc
 
 CMakeFiles/ikaros.dir/Source/Modules/VisionModules/ImageOperators/DoGFilter/DoGFilter.cc.i: cmake_force
@@ -3347,7 +3371,7 @@ CMakeFiles/ikaros.dir/Source/Modules/VisionModules/ImageOperators/DoGFilter/DoGF
 
 CMakeFiles/ikaros.dir/Source/Modules/VisionModules/ImageOperators/LoGFilter/LoGFilter.cc.o: CMakeFiles/ikaros.dir/flags.make
 CMakeFiles/ikaros.dir/Source/Modules/VisionModules/ImageOperators/LoGFilter/LoGFilter.cc.o: Source/Modules/VisionModules/ImageOperators/LoGFilter/LoGFilter.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/filip/ikaros/CMakeFiles --progress-num=$(CMAKE_PROGRESS_138) "Building CXX object CMakeFiles/ikaros.dir/Source/Modules/VisionModules/ImageOperators/LoGFilter/LoGFilter.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/filip/ikaros/CMakeFiles --progress-num=$(CMAKE_PROGRESS_139) "Building CXX object CMakeFiles/ikaros.dir/Source/Modules/VisionModules/ImageOperators/LoGFilter/LoGFilter.cc.o"
 	g++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ikaros.dir/Source/Modules/VisionModules/ImageOperators/LoGFilter/LoGFilter.cc.o -c /home/filip/ikaros/Source/Modules/VisionModules/ImageOperators/LoGFilter/LoGFilter.cc
 
 CMakeFiles/ikaros.dir/Source/Modules/VisionModules/ImageOperators/LoGFilter/LoGFilter.cc.i: cmake_force
@@ -3371,7 +3395,7 @@ CMakeFiles/ikaros.dir/Source/Modules/VisionModules/ImageOperators/LoGFilter/LoGF
 
 CMakeFiles/ikaros.dir/Source/Modules/VisionModules/ImageOperators/MedianFilter/MedianFilter.cc.o: CMakeFiles/ikaros.dir/flags.make
 CMakeFiles/ikaros.dir/Source/Modules/VisionModules/ImageOperators/MedianFilter/MedianFilter.cc.o: Source/Modules/VisionModules/ImageOperators/MedianFilter/MedianFilter.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/filip/ikaros/CMakeFiles --progress-num=$(CMAKE_PROGRESS_139) "Building CXX object CMakeFiles/ikaros.dir/Source/Modules/VisionModules/ImageOperators/MedianFilter/MedianFilter.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/filip/ikaros/CMakeFiles --progress-num=$(CMAKE_PROGRESS_140) "Building CXX object CMakeFiles/ikaros.dir/Source/Modules/VisionModules/ImageOperators/MedianFilter/MedianFilter.cc.o"
 	g++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ikaros.dir/Source/Modules/VisionModules/ImageOperators/MedianFilter/MedianFilter.cc.o -c /home/filip/ikaros/Source/Modules/VisionModules/ImageOperators/MedianFilter/MedianFilter.cc
 
 CMakeFiles/ikaros.dir/Source/Modules/VisionModules/ImageOperators/MedianFilter/MedianFilter.cc.i: cmake_force
@@ -3395,7 +3419,7 @@ CMakeFiles/ikaros.dir/Source/Modules/VisionModules/ImageOperators/MedianFilter/M
 
 CMakeFiles/ikaros.dir/Source/Modules/VisionModules/ImageOperators/ZeroCrossings/ZeroCrossings.cc.o: CMakeFiles/ikaros.dir/flags.make
 CMakeFiles/ikaros.dir/Source/Modules/VisionModules/ImageOperators/ZeroCrossings/ZeroCrossings.cc.o: Source/Modules/VisionModules/ImageOperators/ZeroCrossings/ZeroCrossings.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/filip/ikaros/CMakeFiles --progress-num=$(CMAKE_PROGRESS_140) "Building CXX object CMakeFiles/ikaros.dir/Source/Modules/VisionModules/ImageOperators/ZeroCrossings/ZeroCrossings.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/filip/ikaros/CMakeFiles --progress-num=$(CMAKE_PROGRESS_141) "Building CXX object CMakeFiles/ikaros.dir/Source/Modules/VisionModules/ImageOperators/ZeroCrossings/ZeroCrossings.cc.o"
 	g++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ikaros.dir/Source/Modules/VisionModules/ImageOperators/ZeroCrossings/ZeroCrossings.cc.o -c /home/filip/ikaros/Source/Modules/VisionModules/ImageOperators/ZeroCrossings/ZeroCrossings.cc
 
 CMakeFiles/ikaros.dir/Source/Modules/VisionModules/ImageOperators/ZeroCrossings/ZeroCrossings.cc.i: cmake_force
@@ -3419,7 +3443,7 @@ CMakeFiles/ikaros.dir/Source/Modules/VisionModules/ImageOperators/ZeroCrossings/
 
 CMakeFiles/ikaros.dir/Source/Modules/VisionModules/ImageOperators/MorphologicalOperators/Dilate/Dilate.cc.o: CMakeFiles/ikaros.dir/flags.make
 CMakeFiles/ikaros.dir/Source/Modules/VisionModules/ImageOperators/MorphologicalOperators/Dilate/Dilate.cc.o: Source/Modules/VisionModules/ImageOperators/MorphologicalOperators/Dilate/Dilate.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/filip/ikaros/CMakeFiles --progress-num=$(CMAKE_PROGRESS_141) "Building CXX object CMakeFiles/ikaros.dir/Source/Modules/VisionModules/ImageOperators/MorphologicalOperators/Dilate/Dilate.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/filip/ikaros/CMakeFiles --progress-num=$(CMAKE_PROGRESS_142) "Building CXX object CMakeFiles/ikaros.dir/Source/Modules/VisionModules/ImageOperators/MorphologicalOperators/Dilate/Dilate.cc.o"
 	g++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ikaros.dir/Source/Modules/VisionModules/ImageOperators/MorphologicalOperators/Dilate/Dilate.cc.o -c /home/filip/ikaros/Source/Modules/VisionModules/ImageOperators/MorphologicalOperators/Dilate/Dilate.cc
 
 CMakeFiles/ikaros.dir/Source/Modules/VisionModules/ImageOperators/MorphologicalOperators/Dilate/Dilate.cc.i: cmake_force
@@ -3443,7 +3467,7 @@ CMakeFiles/ikaros.dir/Source/Modules/VisionModules/ImageOperators/MorphologicalO
 
 CMakeFiles/ikaros.dir/Source/Modules/VisionModules/ImageOperators/MorphologicalOperators/Erode/Erode.cc.o: CMakeFiles/ikaros.dir/flags.make
 CMakeFiles/ikaros.dir/Source/Modules/VisionModules/ImageOperators/MorphologicalOperators/Erode/Erode.cc.o: Source/Modules/VisionModules/ImageOperators/MorphologicalOperators/Erode/Erode.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/filip/ikaros/CMakeFiles --progress-num=$(CMAKE_PROGRESS_142) "Building CXX object CMakeFiles/ikaros.dir/Source/Modules/VisionModules/ImageOperators/MorphologicalOperators/Erode/Erode.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/filip/ikaros/CMakeFiles --progress-num=$(CMAKE_PROGRESS_143) "Building CXX object CMakeFiles/ikaros.dir/Source/Modules/VisionModules/ImageOperators/MorphologicalOperators/Erode/Erode.cc.o"
 	g++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ikaros.dir/Source/Modules/VisionModules/ImageOperators/MorphologicalOperators/Erode/Erode.cc.o -c /home/filip/ikaros/Source/Modules/VisionModules/ImageOperators/MorphologicalOperators/Erode/Erode.cc
 
 CMakeFiles/ikaros.dir/Source/Modules/VisionModules/ImageOperators/MorphologicalOperators/Erode/Erode.cc.i: cmake_force
@@ -3467,7 +3491,7 @@ CMakeFiles/ikaros.dir/Source/Modules/VisionModules/ImageOperators/MorphologicalO
 
 CMakeFiles/ikaros.dir/Source/Modules/VisionModules/MarkerTracker/Utilities/CalibrateCameraPosition/CalibrateCameraPosition.cc.o: CMakeFiles/ikaros.dir/flags.make
 CMakeFiles/ikaros.dir/Source/Modules/VisionModules/MarkerTracker/Utilities/CalibrateCameraPosition/CalibrateCameraPosition.cc.o: Source/Modules/VisionModules/MarkerTracker/Utilities/CalibrateCameraPosition/CalibrateCameraPosition.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/filip/ikaros/CMakeFiles --progress-num=$(CMAKE_PROGRESS_143) "Building CXX object CMakeFiles/ikaros.dir/Source/Modules/VisionModules/MarkerTracker/Utilities/CalibrateCameraPosition/CalibrateCameraPosition.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/filip/ikaros/CMakeFiles --progress-num=$(CMAKE_PROGRESS_144) "Building CXX object CMakeFiles/ikaros.dir/Source/Modules/VisionModules/MarkerTracker/Utilities/CalibrateCameraPosition/CalibrateCameraPosition.cc.o"
 	g++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ikaros.dir/Source/Modules/VisionModules/MarkerTracker/Utilities/CalibrateCameraPosition/CalibrateCameraPosition.cc.o -c /home/filip/ikaros/Source/Modules/VisionModules/MarkerTracker/Utilities/CalibrateCameraPosition/CalibrateCameraPosition.cc
 
 CMakeFiles/ikaros.dir/Source/Modules/VisionModules/MarkerTracker/Utilities/CalibrateCameraPosition/CalibrateCameraPosition.cc.i: cmake_force
@@ -3491,7 +3515,7 @@ CMakeFiles/ikaros.dir/Source/Modules/VisionModules/MarkerTracker/Utilities/Calib
 
 CMakeFiles/ikaros.dir/Source/Modules/VisionModules/MarkerTracker/MarkerTracker.cc.o: CMakeFiles/ikaros.dir/flags.make
 CMakeFiles/ikaros.dir/Source/Modules/VisionModules/MarkerTracker/MarkerTracker.cc.o: Source/Modules/VisionModules/MarkerTracker/MarkerTracker.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/filip/ikaros/CMakeFiles --progress-num=$(CMAKE_PROGRESS_144) "Building CXX object CMakeFiles/ikaros.dir/Source/Modules/VisionModules/MarkerTracker/MarkerTracker.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/filip/ikaros/CMakeFiles --progress-num=$(CMAKE_PROGRESS_145) "Building CXX object CMakeFiles/ikaros.dir/Source/Modules/VisionModules/MarkerTracker/MarkerTracker.cc.o"
 	g++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ikaros.dir/Source/Modules/VisionModules/MarkerTracker/MarkerTracker.cc.o -c /home/filip/ikaros/Source/Modules/VisionModules/MarkerTracker/MarkerTracker.cc
 
 CMakeFiles/ikaros.dir/Source/Modules/VisionModules/MarkerTracker/MarkerTracker.cc.i: cmake_force
@@ -3515,7 +3539,7 @@ CMakeFiles/ikaros.dir/Source/Modules/VisionModules/MarkerTracker/MarkerTracker.c
 
 CMakeFiles/ikaros.dir/Source/Modules/VisionModules/MPIFaceDetector/MPIFaceDetector.cc.o: CMakeFiles/ikaros.dir/flags.make
 CMakeFiles/ikaros.dir/Source/Modules/VisionModules/MPIFaceDetector/MPIFaceDetector.cc.o: Source/Modules/VisionModules/MPIFaceDetector/MPIFaceDetector.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/filip/ikaros/CMakeFiles --progress-num=$(CMAKE_PROGRESS_145) "Building CXX object CMakeFiles/ikaros.dir/Source/Modules/VisionModules/MPIFaceDetector/MPIFaceDetector.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/filip/ikaros/CMakeFiles --progress-num=$(CMAKE_PROGRESS_146) "Building CXX object CMakeFiles/ikaros.dir/Source/Modules/VisionModules/MPIFaceDetector/MPIFaceDetector.cc.o"
 	g++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ikaros.dir/Source/Modules/VisionModules/MPIFaceDetector/MPIFaceDetector.cc.o -c /home/filip/ikaros/Source/Modules/VisionModules/MPIFaceDetector/MPIFaceDetector.cc
 
 CMakeFiles/ikaros.dir/Source/Modules/VisionModules/MPIFaceDetector/MPIFaceDetector.cc.i: cmake_force
@@ -3539,7 +3563,7 @@ CMakeFiles/ikaros.dir/Source/Modules/VisionModules/MPIFaceDetector/MPIFaceDetect
 
 CMakeFiles/ikaros.dir/Source/Modules/VisionModules/SaliencePoints/SaliencePoints.cc.o: CMakeFiles/ikaros.dir/flags.make
 CMakeFiles/ikaros.dir/Source/Modules/VisionModules/SaliencePoints/SaliencePoints.cc.o: Source/Modules/VisionModules/SaliencePoints/SaliencePoints.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/filip/ikaros/CMakeFiles --progress-num=$(CMAKE_PROGRESS_146) "Building CXX object CMakeFiles/ikaros.dir/Source/Modules/VisionModules/SaliencePoints/SaliencePoints.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/filip/ikaros/CMakeFiles --progress-num=$(CMAKE_PROGRESS_147) "Building CXX object CMakeFiles/ikaros.dir/Source/Modules/VisionModules/SaliencePoints/SaliencePoints.cc.o"
 	g++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ikaros.dir/Source/Modules/VisionModules/SaliencePoints/SaliencePoints.cc.o -c /home/filip/ikaros/Source/Modules/VisionModules/SaliencePoints/SaliencePoints.cc
 
 CMakeFiles/ikaros.dir/Source/Modules/VisionModules/SaliencePoints/SaliencePoints.cc.i: cmake_force
@@ -3563,7 +3587,7 @@ CMakeFiles/ikaros.dir/Source/Modules/VisionModules/SaliencePoints/SaliencePoints
 
 CMakeFiles/ikaros.dir/Source/Modules/VisionModules/SaliencyMap/SaliencyMap.cc.o: CMakeFiles/ikaros.dir/flags.make
 CMakeFiles/ikaros.dir/Source/Modules/VisionModules/SaliencyMap/SaliencyMap.cc.o: Source/Modules/VisionModules/SaliencyMap/SaliencyMap.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/filip/ikaros/CMakeFiles --progress-num=$(CMAKE_PROGRESS_147) "Building CXX object CMakeFiles/ikaros.dir/Source/Modules/VisionModules/SaliencyMap/SaliencyMap.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/filip/ikaros/CMakeFiles --progress-num=$(CMAKE_PROGRESS_148) "Building CXX object CMakeFiles/ikaros.dir/Source/Modules/VisionModules/SaliencyMap/SaliencyMap.cc.o"
 	g++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ikaros.dir/Source/Modules/VisionModules/SaliencyMap/SaliencyMap.cc.o -c /home/filip/ikaros/Source/Modules/VisionModules/SaliencyMap/SaliencyMap.cc
 
 CMakeFiles/ikaros.dir/Source/Modules/VisionModules/SaliencyMap/SaliencyMap.cc.i: cmake_force
@@ -3587,7 +3611,7 @@ CMakeFiles/ikaros.dir/Source/Modules/VisionModules/SaliencyMap/SaliencyMap.cc.o.
 
 CMakeFiles/ikaros.dir/Source/Modules/VisionModules/Scaling/Downsample/Downsample.cc.o: CMakeFiles/ikaros.dir/flags.make
 CMakeFiles/ikaros.dir/Source/Modules/VisionModules/Scaling/Downsample/Downsample.cc.o: Source/Modules/VisionModules/Scaling/Downsample/Downsample.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/filip/ikaros/CMakeFiles --progress-num=$(CMAKE_PROGRESS_148) "Building CXX object CMakeFiles/ikaros.dir/Source/Modules/VisionModules/Scaling/Downsample/Downsample.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/filip/ikaros/CMakeFiles --progress-num=$(CMAKE_PROGRESS_149) "Building CXX object CMakeFiles/ikaros.dir/Source/Modules/VisionModules/Scaling/Downsample/Downsample.cc.o"
 	g++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ikaros.dir/Source/Modules/VisionModules/Scaling/Downsample/Downsample.cc.o -c /home/filip/ikaros/Source/Modules/VisionModules/Scaling/Downsample/Downsample.cc
 
 CMakeFiles/ikaros.dir/Source/Modules/VisionModules/Scaling/Downsample/Downsample.cc.i: cmake_force
@@ -3611,7 +3635,7 @@ CMakeFiles/ikaros.dir/Source/Modules/VisionModules/Scaling/Downsample/Downsample
 
 CMakeFiles/ikaros.dir/Source/Modules/VisionModules/Scaling/Upsample/Upsample.cc.o: CMakeFiles/ikaros.dir/flags.make
 CMakeFiles/ikaros.dir/Source/Modules/VisionModules/Scaling/Upsample/Upsample.cc.o: Source/Modules/VisionModules/Scaling/Upsample/Upsample.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/filip/ikaros/CMakeFiles --progress-num=$(CMAKE_PROGRESS_149) "Building CXX object CMakeFiles/ikaros.dir/Source/Modules/VisionModules/Scaling/Upsample/Upsample.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/filip/ikaros/CMakeFiles --progress-num=$(CMAKE_PROGRESS_150) "Building CXX object CMakeFiles/ikaros.dir/Source/Modules/VisionModules/Scaling/Upsample/Upsample.cc.o"
 	g++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ikaros.dir/Source/Modules/VisionModules/Scaling/Upsample/Upsample.cc.o -c /home/filip/ikaros/Source/Modules/VisionModules/Scaling/Upsample/Upsample.cc
 
 CMakeFiles/ikaros.dir/Source/Modules/VisionModules/Scaling/Upsample/Upsample.cc.i: cmake_force
@@ -3635,7 +3659,7 @@ CMakeFiles/ikaros.dir/Source/Modules/VisionModules/Scaling/Upsample/Upsample.cc.
 
 CMakeFiles/ikaros.dir/Source/Modules/VisionModules/SpatialClustering/SpatialClustering.cc.o: CMakeFiles/ikaros.dir/flags.make
 CMakeFiles/ikaros.dir/Source/Modules/VisionModules/SpatialClustering/SpatialClustering.cc.o: Source/Modules/VisionModules/SpatialClustering/SpatialClustering.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/filip/ikaros/CMakeFiles --progress-num=$(CMAKE_PROGRESS_150) "Building CXX object CMakeFiles/ikaros.dir/Source/Modules/VisionModules/SpatialClustering/SpatialClustering.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/filip/ikaros/CMakeFiles --progress-num=$(CMAKE_PROGRESS_151) "Building CXX object CMakeFiles/ikaros.dir/Source/Modules/VisionModules/SpatialClustering/SpatialClustering.cc.o"
 	g++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ikaros.dir/Source/Modules/VisionModules/SpatialClustering/SpatialClustering.cc.o -c /home/filip/ikaros/Source/Modules/VisionModules/SpatialClustering/SpatialClustering.cc
 
 CMakeFiles/ikaros.dir/Source/Modules/VisionModules/SpatialClustering/SpatialClustering.cc.i: cmake_force
@@ -3659,7 +3683,7 @@ CMakeFiles/ikaros.dir/Source/Modules/VisionModules/SpatialClustering/SpatialClus
 
 CMakeFiles/ikaros.dir/Source/Modules/VisionModules/WhiteBalance/WhiteBalance.cc.o: CMakeFiles/ikaros.dir/flags.make
 CMakeFiles/ikaros.dir/Source/Modules/VisionModules/WhiteBalance/WhiteBalance.cc.o: Source/Modules/VisionModules/WhiteBalance/WhiteBalance.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/filip/ikaros/CMakeFiles --progress-num=$(CMAKE_PROGRESS_151) "Building CXX object CMakeFiles/ikaros.dir/Source/Modules/VisionModules/WhiteBalance/WhiteBalance.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/filip/ikaros/CMakeFiles --progress-num=$(CMAKE_PROGRESS_152) "Building CXX object CMakeFiles/ikaros.dir/Source/Modules/VisionModules/WhiteBalance/WhiteBalance.cc.o"
 	g++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ikaros.dir/Source/Modules/VisionModules/WhiteBalance/WhiteBalance.cc.o -c /home/filip/ikaros/Source/Modules/VisionModules/WhiteBalance/WhiteBalance.cc
 
 CMakeFiles/ikaros.dir/Source/Modules/VisionModules/WhiteBalance/WhiteBalance.cc.i: cmake_force
@@ -3683,7 +3707,7 @@ CMakeFiles/ikaros.dir/Source/Modules/VisionModules/WhiteBalance/WhiteBalance.cc.
 
 CMakeFiles/ikaros.dir/Source/UserModules/MinimalModule/MinimalModule.cc.o: CMakeFiles/ikaros.dir/flags.make
 CMakeFiles/ikaros.dir/Source/UserModules/MinimalModule/MinimalModule.cc.o: Source/UserModules/MinimalModule/MinimalModule.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/filip/ikaros/CMakeFiles --progress-num=$(CMAKE_PROGRESS_152) "Building CXX object CMakeFiles/ikaros.dir/Source/UserModules/MinimalModule/MinimalModule.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/filip/ikaros/CMakeFiles --progress-num=$(CMAKE_PROGRESS_153) "Building CXX object CMakeFiles/ikaros.dir/Source/UserModules/MinimalModule/MinimalModule.cc.o"
 	g++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ikaros.dir/Source/UserModules/MinimalModule/MinimalModule.cc.o -c /home/filip/ikaros/Source/UserModules/MinimalModule/MinimalModule.cc
 
 CMakeFiles/ikaros.dir/Source/UserModules/MinimalModule/MinimalModule.cc.i: cmake_force
@@ -3707,7 +3731,7 @@ CMakeFiles/ikaros.dir/Source/UserModules/MinimalModule/MinimalModule.cc.o.provid
 
 CMakeFiles/ikaros.dir/Source/UserModules/MyModule/MyModule.cc.o: CMakeFiles/ikaros.dir/flags.make
 CMakeFiles/ikaros.dir/Source/UserModules/MyModule/MyModule.cc.o: Source/UserModules/MyModule/MyModule.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/filip/ikaros/CMakeFiles --progress-num=$(CMAKE_PROGRESS_153) "Building CXX object CMakeFiles/ikaros.dir/Source/UserModules/MyModule/MyModule.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/filip/ikaros/CMakeFiles --progress-num=$(CMAKE_PROGRESS_154) "Building CXX object CMakeFiles/ikaros.dir/Source/UserModules/MyModule/MyModule.cc.o"
 	g++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ikaros.dir/Source/UserModules/MyModule/MyModule.cc.o -c /home/filip/ikaros/Source/UserModules/MyModule/MyModule.cc
 
 CMakeFiles/ikaros.dir/Source/UserModules/MyModule/MyModule.cc.i: cmake_force
@@ -3731,7 +3755,7 @@ CMakeFiles/ikaros.dir/Source/UserModules/MyModule/MyModule.cc.o.provides.build: 
 
 CMakeFiles/ikaros.dir/Source/UserModules/Throw/Throw.cc.o: CMakeFiles/ikaros.dir/flags.make
 CMakeFiles/ikaros.dir/Source/UserModules/Throw/Throw.cc.o: Source/UserModules/Throw/Throw.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/filip/ikaros/CMakeFiles --progress-num=$(CMAKE_PROGRESS_154) "Building CXX object CMakeFiles/ikaros.dir/Source/UserModules/Throw/Throw.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/filip/ikaros/CMakeFiles --progress-num=$(CMAKE_PROGRESS_155) "Building CXX object CMakeFiles/ikaros.dir/Source/UserModules/Throw/Throw.cc.o"
 	g++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ikaros.dir/Source/UserModules/Throw/Throw.cc.o -c /home/filip/ikaros/Source/UserModules/Throw/Throw.cc
 
 CMakeFiles/ikaros.dir/Source/UserModules/Throw/Throw.cc.i: cmake_force
@@ -3755,7 +3779,7 @@ CMakeFiles/ikaros.dir/Source/UserModules/Throw/Throw.cc.o.provides.build: CMakeF
 
 CMakeFiles/ikaros.dir/Source/WebUI/WebUI.cc.o: CMakeFiles/ikaros.dir/flags.make
 CMakeFiles/ikaros.dir/Source/WebUI/WebUI.cc.o: Source/WebUI/WebUI.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/filip/ikaros/CMakeFiles --progress-num=$(CMAKE_PROGRESS_155) "Building CXX object CMakeFiles/ikaros.dir/Source/WebUI/WebUI.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/filip/ikaros/CMakeFiles --progress-num=$(CMAKE_PROGRESS_156) "Building CXX object CMakeFiles/ikaros.dir/Source/WebUI/WebUI.cc.o"
 	g++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ikaros.dir/Source/WebUI/WebUI.cc.o -c /home/filip/ikaros/Source/WebUI/WebUI.cc
 
 CMakeFiles/ikaros.dir/Source/WebUI/WebUI.cc.i: cmake_force
@@ -3857,6 +3881,7 @@ ikaros_OBJECTS = \
 "CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/FunctionGenerator/FunctionGenerator.cc.o" \
 "CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/Gate/Gate.cc.o" \
 "CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/Histogram/Histogram.cc.o" \
+"CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/HypotenuseLength/HypotenuseLength.cc.o" \
 "CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/Integrator/Integrator.cc.o" \
 "CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/LinearSplines/LinearSplines.cc.o" \
 "CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/MatrixMultiply/MatrixMultiply.cc.o" \
@@ -4016,6 +4041,7 @@ Bin/ikaros: CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/Divide/Divide.cc
 Bin/ikaros: CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/FunctionGenerator/FunctionGenerator.cc.o
 Bin/ikaros: CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/Gate/Gate.cc.o
 Bin/ikaros: CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/Histogram/Histogram.cc.o
+Bin/ikaros: CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/HypotenuseLength/HypotenuseLength.cc.o
 Bin/ikaros: CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/Integrator/Integrator.cc.o
 Bin/ikaros: CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/LinearSplines/LinearSplines.cc.o
 Bin/ikaros: CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/MatrixMultiply/MatrixMultiply.cc.o
@@ -4129,7 +4155,7 @@ Bin/ikaros: /usr/local/lib/libswresample.so
 Bin/ikaros: /usr/local/lib/libavdevice.so
 Bin/ikaros: /usr/lib/libARToolKitPlus.so
 Bin/ikaros: CMakeFiles/ikaros.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/filip/ikaros/CMakeFiles --progress-num=$(CMAKE_PROGRESS_156) "Linking CXX executable Bin/ikaros"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/filip/ikaros/CMakeFiles --progress-num=$(CMAKE_PROGRESS_157) "Linking CXX executable Bin/ikaros"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ikaros.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -4215,6 +4241,7 @@ CMakeFiles/ikaros.dir/requires: CMakeFiles/ikaros.dir/Source/Modules/UtilityModu
 CMakeFiles/ikaros.dir/requires: CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/FunctionGenerator/FunctionGenerator.cc.o.requires
 CMakeFiles/ikaros.dir/requires: CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/Gate/Gate.cc.o.requires
 CMakeFiles/ikaros.dir/requires: CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/Histogram/Histogram.cc.o.requires
+CMakeFiles/ikaros.dir/requires: CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/HypotenuseLength/HypotenuseLength.cc.o.requires
 CMakeFiles/ikaros.dir/requires: CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/Integrator/Integrator.cc.o.requires
 CMakeFiles/ikaros.dir/requires: CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/LinearSplines/LinearSplines.cc.o.requires
 CMakeFiles/ikaros.dir/requires: CMakeFiles/ikaros.dir/Source/Modules/UtilityModules/MatrixMultiply/MatrixMultiply.cc.o.requires

@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+
+<group name="HypotenuseLength" description="Calculates the length of the hypotenuse">
+
+	<description type="text">
+		calculates the length of the hypotenuse when given the length of two legs/catheti. Uses the Pythagorean theorem, a²+b²=c².
+	</description>
+
+	<example description="A simple example">
+		<module
+			class="HypotenuseLength"
+			name="HypotenuseLength"
+		/>
+	</example>
+
+	<input name="INPUT" description="The length of the first leg (a) and the second leg (b)" size="2"/>
+
+	<output name="OUTPUT" description="The hypotenuse length" size="1" />
+
+	<module class="HypotenuseLength" />
+
+    <view title="HypotenuseLength">
+        <object
+            x="0" y="0" w="2"
+            class="BarGraph"
+            module="*"
+            source="OUTPUT"
+            title="Default view for HypotenuseLength"
+        />
+    </view>
+
+	<author>
+		<name>Group 16 - 2016</name>
+		<email>christian.balkenius@lucs.lu.se</email>
+		<affiliation>Lund University Cognitive Science</affiliation>
+		<homepage>http://www.lucs.lu.se/Christian.Balkenius</homepage>
+	</author>
+
+   <files>
+   		<file>Sum.h</file>
+   		<file>Sum.cc</file>
+   		<file>Sum.ikc</file>
+   </files>
+
+</group>

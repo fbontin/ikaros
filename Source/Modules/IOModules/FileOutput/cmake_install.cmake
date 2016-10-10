@@ -37,7 +37,6 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   include("/home/filip/ikaros/Source/Modules/IOModules/FileOutput/OutputFile/cmake_install.cmake")
   include("/home/filip/ikaros/Source/Modules/IOModules/FileOutput/OutputJPEG/cmake_install.cmake")
   include("/home/filip/ikaros/Source/Modules/IOModules/FileOutput/OutputPNG/cmake_install.cmake")
-  include("/home/filip/ikaros/Source/Modules/IOModules/FileOutput/OutputQTAudioVisual/cmake_install.cmake")
   include("/home/filip/ikaros/Source/Modules/IOModules/FileOutput/OutputRawImage/cmake_install.cmake")
   include("/home/filip/ikaros/Source/Modules/IOModules/FileOutput/OutputVideoFile/cmake_install.cmake")
 

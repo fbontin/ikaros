@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+
+<group name="Test">
+
+	<module class = "Constant" name = "legs" outputsize = "2" data = "3 4"/>
+
+	<module
+		class = "HypotenuseLength"
+		name = "HypotenuseLength"
+	/>
+
+	<connection sourcemodule="legs" source="OUTPUT" targetmodule="HypotenuseLength" target="INPUT" />
+
+	<view name="View">
+		<object class="Table" title="INPUT (a then b)" module="legs" source="data" x="0" y="0" />
+		<object class="Table" module="HypotenuseLength" source="OUTPUT" x="1" y="0" />
+	</view>
+</group>
