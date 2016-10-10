@@ -14,6 +14,7 @@
 	<!--connection sourcemodule="b" source="OUTPUT" targetmodule="Arctan" target="INPUT2" /-->
 
 	<view name="View">
-		<object class="Table" name="Angle" module="Arctan" source="OUTPUT" x="0" y="0" />
+		<object class="Table" title="INPUT (a then b)" module="a" source="data" x="0" y="0" />
+		<object class="Table" module="Arctan" source="OUTPUT" x="1" y="0" />
 	</view>
 </group>
