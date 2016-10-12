@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+
+<group name="ClosestObject" description="Gets the closest pixel of the Kinect">
+
+	<description type="text">
+		Gets the closest pixel of the Kinect
+	</description>
+
+	<example description="A simple example">
+		<module
+			class="ClosestObject"
+			name="ClosestObject"
+		/>
+	</example>
+
+	<input name="INPUT" description="Depth matrix of the kinect" size_x="640" size_y="480"/>
+
+	<output name="DISTANCE" description="the closest distance" size="1" />
+	<output name="XPIXEL" description="The X pixel of the closest point" size="1" />
+	<output name="YPIXEL" description="the Y pixel of the closest point" size="1" />
+	<output name="ANGLE" description="the angle to the closest point" size="1" />
+
+	<module class="ClosestObject" />
+
+    <view title="ClosestObject">
+        <object
+            x="0" y="0" w="2"
+            class="BarGraph"
+            module="*"
+            source="OUTPUT"
+            title="Default view for HypotenuseLength"
+        />
+    </view>
+
+	<author>
+		<name>Group 16 - 2016</name>
+		<email>christian.balkenius@lucs.lu.se</email>
+		<affiliation>Lund University Cognitive Science</affiliation>
+		<homepage>http://www.lucs.lu.se/Christian.Balkenius</homepage>
+	</author>
+
+   <files>
+   		<file>Sum.h</file>
+   		<file>Sum.cc</file>
+   		<file>Sum.ikc</file>
+   </files>
+
+</group>
