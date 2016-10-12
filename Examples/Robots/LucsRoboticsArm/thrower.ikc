@@ -10,7 +10,7 @@
     <!-- This module controls the servos of the arm. All the servos are connected on the same serial bus and each of the servo has a unique ID. ID 1: is the servo is the first servo of the arm. ID 2: is the middle servo and ID 3 is the last servo (end of the arm).
     This module uses the computer's serial port and the parameter "device" needs to be adjusted to fit the current setup. In linux the port is usally "/dev/ttyUSB0", in OSX somthing similar to "/dev/cu.usbserial-A8006Esq" and in windows COM1. This module set the position of each servo in the angle specifyed by the parameter angle_unit. -->
 
-    <module
+  <module
     	class		 = "Dynamixel"
 		name		 = "Dynamixel"
         device   	 = "/dev/ttyUSB0"

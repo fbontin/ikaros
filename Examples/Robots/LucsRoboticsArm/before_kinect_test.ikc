@@ -1,0 +1,140 @@
+<?xml version = "1.0"?>
+
+<group title = "Before Kinect Test">
+
+    <description>
+		Used for testing if the modules for calculating angle and length are correct.
+    </description>
+
+
+  <!-- Create x and y, in millimeters-->
+  <module class = "Constant" name = "xy" outputsize = "2" data = "0 500" />
+
+  <module class = "HypotenuseLength" name = "HypotenuseLength" />
+  <connection sourcemodule = "xy" source = "OUTPUT" targetmodule = "HypotenuseLength" target = "INPUT" />
+
+  <module class = "Arctan" name = "Arctan" />
+  <connection sourcemodule = "xy" source = "OUTPUT" targetmodule = "Arctan" target = "INPUT" />
+
+  <!--lol-->
+
+  <module class = "Constant" name = "defAngle" outputsize = "1" data = "180" />
+
+  <module class = "Add" name = "Add" />
+
+  <connection sourcemodule = "Arctan" source = "OUTPUT" targetmodule = "Add" target = "INPUT1" />
+  <connection sourcemodule = "defAngle" source = "OUTPUT" targetmodule = "Add" target = "INPUT2" />
+  <connection sourcemodule = "Add" source = "OUTPUT" targetmodule = "Dynamixel" target = "GOAL_POSITION"/>
+
+  <module
+      class		 = "Dynamixel"
+    name		 = "Dynamixel"
+        device   	 = "/dev/ttyUSB0"
+    _device		 = "/dev/cu.usbserial-A40129WB"
+    index_mode 	 = "indirect"
+    servo_id	 = "1 2 3"
+    angle_unit 	 = "degrees"
+    feedback = "yes"
+  />
+
+  <!-- Create constants for the three servos-->
+  <module class = "Constant" name = "C1" outputsize = "2" data = "135 231" />
+  <module class = "Constant" name = "C2" outputsize = "2" data = "242 300" />
+
+  <!-- Mapping between meters and Movement Speed -->
+  <module
+      class = "LinearSplines"
+      name = "LinearSplines"
+      points = "10 0.1; 35.6 0.2; 53 0.21; 59 0.22; 64.5 0.23; 78 0.24; 82 0.25;
+        82.5 0.26; 100.5 0.27; 103 0.28; 104 0.29; 123.5 0.30; 127 0.31; 125 0.32; 136 0.33;
+        137.6 0.34; 147 0.35; 149 0.36; 150 0.48; 155 0.65; 156 0.95;"
+  />
+
+  <!-- Create values which decide which constants will be used-->
+  <module class = "Constant" name = "V1" outputsize = "1" data = "0" />
+  <module class = "Constant" name = "V2" outputsize = "1" data = "1" />
+
+  <!-- Connect with arbiter-->
+  <connection sourcemodule = "C2" source = "OUTPUT" targetmodule = "Arbiter" target = "INPUT_1" delay="0" />
+  <connection sourcemodule = "C1" source = "OUTPUT" targetmodule = "Arbiter" target = "INPUT_2" delay="0" />
+  <connection sourcemodule = "V1" source = "OUTPUT" targetmodule = "Arbiter" target = "VALUE_1" delay="0" />
+  <connection sourcemodule = "V2" source = "OUTPUT" targetmodule = "Arbiter" target = "VALUE_2" delay="0" />
+
+
+  <module class = "Arbiter" name = "Arbiter" />
+
+  <connection sourcemodule  = "Arbiter" source  = "OUTPUT" targetmodule	 = "Dynamixel" target  = "GOAL_POSITION" />
+
+  <module class = "Constant" name = "MovingSpeedAll" outputsize = "1" data = "100" />
+  <connection sourcemodule = "MovingSpeedAll" source = "OUTPUT" targetmodule = "LinearSplines" target = "INPUT" />
+
+  <connection sourcemodule  = "LinearSplines" source  = "OUTPUT" targetmodule	 = "Dynamixel" target  = "MOVING_SPEED" />
+  <connection sourcemodule  = "LinearSplines" source  = "OUTPUT" targetmodule	 = "Dynamixel" target  = "MOVING_SPEED" />
+  <connection sourcemodule  = "LinearSplines" source  = "OUTPUT" targetmodule	 = "Dynamixel" target  = "MOVING_SPEED" />
+
+
+	<view name = "Test" object_size = "50" >
+        <!-- Sliders for controlling x and y-->
+        <object
+          class="Slider"
+          title="x"
+          module="xy"
+          parameter="data"
+          select="0"
+          x="0"
+          y="0"
+          w="2"
+          h="8"
+          min = "-1000"
+          max = "1000"
+        />
+
+        <object
+          class="Slider"
+          title="y"
+          module="xy"
+          parameter="data"
+          select="1"
+          x="2"
+          y="0"
+          w="2"
+          h="8"
+          min = "0"
+          max = "2000"
+        />
+
+        <!--X and Y tables-->
+
+        <object
+            class="Table"
+            title="X, Y"
+            module = "xy"
+            source = "data"
+            x="0" y="8"
+            w="4" h="2"
+            font_size = "30"
+        />
+
+
+        <!-- Tables angle and length-->
+        <object
+            class="Table"
+            title="Angle"
+            module = "Arctan"
+            source = "OUTPUT"
+            x="4" y="4"
+            w="4" h="2"
+            font_size = "30"
+        />
+
+        <object
+            class="Table"
+            title="Length"
+            module = "HypotenuseLength"
+            source = "OUTPUT"
+            x="4" y="2"
+            w="4" h="2"
+            font_size = "30"
+        />
+		</view>
+</group>
