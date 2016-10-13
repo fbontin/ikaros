@@ -24,8 +24,8 @@ ClosestObject::Tick()
     int closestX = 0;
     int closestY = 0;
     int closestDistance = 10000000;
-    for(int j=0; j<size_y; j++) {
-        for(int i=0; i<size_x; i++) {
+    for(int j=0; j<size_y; j+=10) {
+        for(int i=0; i<size_x; i+=10) {
             if (input[j][i] < closestDistance && input[j][i] > 500) { //The closest distance seems to be 450 mm
                 closestX = i;
                 closestY = j;
