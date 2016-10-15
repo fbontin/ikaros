@@ -54,42 +54,39 @@
 
 	<connection sourcemodule="Kinect" source="DEPTH" targetmodule="ClosestObject" target="INPUT" />
 
-	<module class = "Constant" name = "C1" outputsize = "2" data = "135 231" />
-	<module class = "Constant" name = "C2" outputsize = "2" data = "200 240" />
+	<!-- Declare before and after angles for two upper servos-->
+	<module class = "Constant" name = "Angle1" outputsize = "2" data = "135 231" />
+	<module class = "Constant" name = "Angle2" outputsize = "2" data = "200 240" />
 
 	<!-- Create values which decide which constants will be used-->
 	<module class = "Constant" name = "V1" outputsize = "1" data = "0" />
 	<module class = "Constant" name = "V2" outputsize = "1" data = "1" />
 
 	<!-- Connect with arbiter-->
-	<connection sourcemodule = "C2" source = "OUTPUT" targetmodule = "Arbiter" target = "INPUT_1" delay="0" />
-	<connection sourcemodule = "C1" source = "OUTPUT" targetmodule = "Arbiter" target = "INPUT_2" delay="0" />
+	<connection sourcemodule = "Angle2" source = "OUTPUT" targetmodule = "Arbiter" target = "INPUT_1" delay="0" />
+	<connection sourcemodule = "Angle1" source = "OUTPUT" targetmodule = "Arbiter" target = "INPUT_2" delay="0" />
 	<connection sourcemodule = "V1" source = "OUTPUT" targetmodule = "Arbiter" target = "VALUE_1" delay="0" />
 	<connection sourcemodule = "V2" source = "OUTPUT" targetmodule = "Arbiter" target = "VALUE_2" delay="0" />
-
 	<module class = "Arbiter"	name = "Arbiter" />
 
-
+	<!-- Connect angles to dynamixel module -->
 	<connection sourcemodule  = "Arbiter" source  = "OUTPUT" targetmodule	 = "Dynamixel" target  = "GOAL_POSITION" />
 	<connection sourcemodule  = "ClosestObject" source  = "ANGLE" targetmodule	 = "Dynamixel" target  = "GOAL_POSITION" />
 
-
-
+	<!--Connect linear splines to dynamixel module to get correct throwing distance-->
   <connection sourcemodule = "ClosestObject" source = "DISTANCE" targetmodule = "LinearSplines" target = "INPUT" />
-
   <connection sourcemodule  = "LinearSplines" source  = "OUTPUT" targetmodule	 = "Dynamixel" target  = "MOVING_SPEED" />
   <connection sourcemodule  = "LinearSplines" source  = "OUTPUT" targetmodule	 = "Dynamixel" target  = "MOVING_SPEED" />
 
-
-
+	<!-- Set movement speed for lower servo (rotation) -->
 	<module class = "Constant" name = "speed" outputsize = "1" data = "0.2" />
 	<connection sourcemodule  = "speed" source  = "OUTPUT" targetmodule	 = "Dynamixel" target  = "MOVING_SPEED" />
 
-
+	<!--Set torque for all servos, lower servo first-->
 	<module class = "Constant" name = "torque" outputsize = "3" data = "0.1 1 1" />
 	<connection sourcemodule  = "torque" source  = "OUTPUT" targetmodule	 = "Dynamixel" target  = "TORQUE_LIMIT" />
 
-
+  <!-- Web view -->
 	<view name="Depth">
 			<object class="Image" type="rgb" name="Camera" module = "Kinect" source = "RED+GREEN+BLUE" x="0" y="0" w="3" h="2" />
 			<object class="Table" name="Coordinates" module="ClosestObject" source = "DISTANCE" x="0" y="2" w="1" h="1" />
@@ -98,7 +95,7 @@
 			<object class="Table" name="Y" module="ClosestObject" source = "YPIXEL" x="2" y="2" w="1" h="1" />
 			<object class="Table" name="Angle" module="ClosestObject" source = "ANGLE" x="3" y="2" w="1" h="1" />
 
-			<object class="Switch" title="throw" module="V1" parameter="data" x="8" y="0" w="2" h="2" min= "0" max= "2"	/>
+			<object class="Switch" title="throw" module="V1" parameter="data" x="4" y="0" w="2" h="2" min= "0" max= "2"	/>
 
 	</view>
 </group>
