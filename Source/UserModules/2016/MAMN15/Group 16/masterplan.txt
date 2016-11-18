@@ -1,0 +1,10 @@
+
+MASTERPLAN
+
+1. Sätta torque till noll, testa vinklar
+2. Göra ett kast utan hand
+	a. Vilka servos?
+3. Lägga till hand (släppa boll)
+4. Mäta kast - Linear Splines
+5. Ändra riktning
+6. Lägga till Kinect
