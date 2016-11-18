@@ -1,7 +1,8 @@
 //
-//	MotionGuard.h		This file is a part of the IKAROS project
+//	PopulationCoder.h	This file is a part of the IKAROS project
 //
-//    Copyright (C) 2015-2016 Christian Balkenius
+//
+//    Copyright (C) 2007  Christian Balkenius
 //
 //    This program is free software; you can redistribute it and/or modify
 //    it under the terms of the GNU General Public License as published by
@@ -17,35 +18,36 @@
 //    along with this program; if not, write to the Free Software
 //    Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 //
-//    See http://www.ikaros-project.org/ for more information.
-//
 
-#ifndef MotionGuard_
-#define MotionGuard_
+#ifndef PopulationCoder_
+#define PopulationCoder_
 
 #include "IKAROS.h"
 
-class MotionGuard: public Module
+
+class PopulationCoder: public Module
 {
 public:
-    static Module * Create(Parameter * p) { return new MotionGuard(p); }
 
-    MotionGuard(Parameter * p) : Module(p) {}
-    virtual ~MotionGuard(){};
+    PopulationCoder(Parameter * p) : Module(p) {}
+    virtual ~PopulationCoder() {}
 
-    void 		Init();
-    void 		Tick();
+    static Module * Create(Parameter * p) { return new PopulationCoder(p); }
 
-    float       max_speed;    
-    int         size;
+    void        SetSizes();
+    void		Init();
+    void		Tick();
 
-    float *     input;
-    float *     reference;
-    float *     output;
-	
-	float *		inputLimitMin;
-	float *		inputLimitMax;
+    int         size_x;
+    int         size_y;
+
+    int         sigma;
+    float		min;
+    float		max;
+
+    float *		input;
+    float **	output;
 };
 
-#endif
 
+#endif
