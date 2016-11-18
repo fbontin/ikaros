@@ -33,6 +33,13 @@ ClosestObject::Tick()
             }
         }
     }
+    //vertical: 43 degrees, 480 pixels
+    /*int vertAngle = closestY
+
+    for(int i=0; j < ???; i+=1){
+
+    }*/
+
     *distance = closestDistance;
     *x = closestX;
     *y = closestY;
