@@ -1,8 +1,6 @@
-//
-//	PopulationCoder.h	This file is a part of the IKAROS project
-//
-//
-//    Copyright (C) 2016  Christian Balkenius
+//	Sink.cc			This file is a part of the IKAROS project
+///
+//    Copyright (C) 2016 Christian Balkenius
 //
 //    This program is free software; you can redistribute it and/or modify
 //    it under the terms of the GNU General Public License as published by
@@ -19,36 +17,7 @@
 //    Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 //
 
-#ifndef PopulationCoder_
-#define PopulationCoder_
+#include "Sink.h"
 
-#include "IKAROS.h"
+static InitClass init("Sink", &Sink::Create, "Source/Modules/UtilityModules/Sink/");
 
-
-class PopulationCoder: public Module
-{
-public:
-
-    PopulationCoder(Parameter * p) : Module(p) {}
-    virtual ~PopulationCoder() {}
-
-    static Module * Create(Parameter * p) { return new PopulationCoder(p); }
-
-    void        SetSizes();
-    void		Init();
-    void		Tick();
-
-    int         size_x;
-    int         size_y;
-
-    int         sigma;
-    float		min;
-    float		max;
-
-    float *		input;
-    float *		amplitude;
-    float **	output;
-};
-
-
-#endif
