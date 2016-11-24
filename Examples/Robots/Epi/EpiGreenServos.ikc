@@ -123,6 +123,8 @@
         post_inverted   = "0 0 0 0 0 0" 
         offset          = "180 180 180 180 180 180" 
         output_size     = "6"
+        max_speed       = "100"
+
 	/>
         <connection sourcemodule = "LA_Guard"  source = "OUTPUT" targetmodule = "LA_SC_GoalPosition"  target = "INPUT" delay = "0"/>
 
