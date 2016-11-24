@@ -33,48 +33,49 @@
 <module class = "Constant" name = "B_SPEED" data = "0.02 0.02" />
 <module class = "Constant" name = "H_SPEED" data = "0.02 0.02 0.02 0.02" />
 <module class = "Constant" name = "LA_SPEED" data = "0.02 0.02 0.02 0.02 0.02 0.02" />
-<module class = "Constant" name = "RA_SPEED" data = "0.7 0.7 0.7 0.7 0.7 0.7" _data = "0.02 0.02 0.02 0.02 0.02 0.02" />
+<module class = "Constant" name = "RA_SPEED" data = "0.02 0.02 0.02 0.02 0.02 0.02" />
 <module class = "Constant" name = "P_SPEED" data = "0.02 0.02" />
 	
 <!-- Torque limit -->
 <module class = "Constant" name = "B_TORQUE_LIMIT" data = "0.02 0.02" />
-<module class = "Constant" name = "H_TORQUE_LIMIT" data = "0.5 0.5 0.5 0.5" />
-<module class = "Constant" name = "LA_TORQUE_LIMIT" data = "0.5 0.5 0.5 0.5 0.5 0.5" />
-<module class = "Constant" name = "RA_TORQUE_LIMIT" data = "0.5 0.5 0.5 0.5 0.5 0.5" />
+<module class = "Constant" name = "H_TORQUE_LIMIT" data = "0.02 0.02 0.02 0.02" />
+<module class = "Constant" name = "LA_TORQUE_LIMIT" data = "0.02 0.02 0.02 0.02 0.02 0.02" />
+<module class = "Constant" name = "RA_TORQUE_LIMIT" data = "0.02 0.02 0.02 0.02 0.02 0.02" />
 <module class = "Constant" name = "P_TORQUE_LIMIT" data = "0.02 0.02" />
 
 <!-- Torque enable -->
 <module class = "Constant" name = "B_TORQUE_ENABLE" data = "0 0" />
-<module class = "Constant" name = "H_TORQUE_ENABLE" _data = "0 0 0 0" data = "1 1 1 1" />
-<module class = "Constant" name = "LA_TORQUE_ENABLE" _data = "0 0 0 0 0 0" data = "1 1 1 1 1 0" />
-<module class = "Constant" name = "RA_TORQUE_ENABLE" data = "0 0 0 0 0 0" _data = "1 1 1 1 1 0"/>
+<module class = "Constant" name = "H_TORQUE_ENABLE" data = "0 0 0 0" />
+<module class = "Constant" name = "LA_TORQUE_ENABLE" data = "0 0 0 0 0 0" />
+<module class = "Constant" name = "RA_TORQUE_ENABLE" data = "0 0 0 0 0 0" />
 <module class = "Constant" name = "P_TORQUE_ENABLE" data = "0 0" />
 
 
+<!-- Set a manual focus point -->
+<module class = "Constant" name = "Manual" data = "
+1 0 0 1
+0 1 0 0 
+0 0 1 0.5 
+0 0 0 1"/>
+	
+<!-- Set a manual positions -->
+<module class = "Constant" name = "B_POS" data = "0 0" />
+<module class = "Constant" name = "H_POS" data = "0 0 0 0" />
+<module class = "Constant" name = "LA_POS_BEFORE" data = "90 -90 0 -2 62 43" />
+<module class = "Constant" name = "RA_POS" data = "0 0 0 0 0 0" />
+<module class = "Constant" name = "P_POS" data = "0 0" />
 
-
-<!-- GRUPP 16 -->
-
-<!-- Kast utan axel -->
-<_module class = "Constant" name = "RA_POS_BEFORE" data = "90 -90 0 -2 -90 -80" />
-<_module class = "Constant" name = "RA_POS_AFTER" data = "90 -90 0 -62 -90 -80" />
-
-<!-- Kast med axel -->
-<module class = "Constant" name = "RA_POS_BEFORE" data = "-110 -88 0 0 89 0" />
-<module class = "Constant" name = "RA_POS_AFTER" data = "-22 -88 0 36 89 0" />
-
-<_module class = "Constant" name = "LA_POS_BEFORE" data = "0 0 0 0 0 0" />
-<_module class = "Constant" name = "LA_POS_AFTER" data = "0 0 0 0 0 0" />
+<module class = "Constant" name = "LA_POS_AFTER" data = "90 -90 0 -62 62 43" />
 
   <!-- Create values which decide which constants will be used-->
   <module class = "Constant" name = "V_AFTER" outputsize = "1" data = "0" />
   <module class = "Constant" name = "V_BEFORE" outputsize = "1" data = "1" />
 
   <!-- Connect with arbiter-->
-	<connection sourcemodule = "RA_POS_BEFORE" source = "OUTPUT" targetmodule = "Arbiter" target = "INPUT_1" delay="0" />
-	<connection sourcemodule = "RA_POS_AFTER" source = "OUTPUT" targetmodule = "Arbiter" target = "INPUT_2" delay="0" />
-	<connection sourcemodule = "V_BEFORE" source = "OUTPUT" targetmodule = "Arbiter" target = "VALUE_1" delay="0" />
-	<connection sourcemodule = "V_AFTER" source = "OUTPUT" targetmodule = "Arbiter" target = "VALUE_2" delay="0" />
+	<connection sourcemodule = "LA_POS_BEFORE" source = "OUTPUT" targetmodule = "Arbiter" target = "INPUT_1" delay="0" />
+	<connection sourcemodule = "LA_POS_AFTER" source = "OUTPUT" targetmodule = "Arbiter" target = "INPUT_2" delay="0" />
+	<connection sourcemodule = "V_AFTER" source = "OUTPUT" targetmodule = "Arbiter" target = "VALUE_1" delay="0" />
+	<connection sourcemodule = "V_BEFORE" source = "OUTPUT" targetmodule = "Arbiter" target = "VALUE_2" delay="0" />
 
   <module
     class = "Arbiter"
@@ -99,8 +100,8 @@
 		<object
             class="Table"
             title="Start positions"
-            module = "Servos"
-            source = "RIGHT_ARM_FEEDBACK_POSITION"
+            module = "LEFT_ARM_FEEDBACK_POSITION"
+            source = "Servos"
             x="0" y="2"
             w="12" h="4"
             font_size = "20"
@@ -110,34 +111,15 @@
 
 
 
-    
-
-<!-- SLUT GRUPP 16-->
-
-
-<!-- Set a manual focus point -->
-<module class = "Constant" name = "Manual" data = "
-1 0 0 1
-0 1 0 0 
-0 0 1 0.5 
-0 0 0 1"/>
-	
-<!-- Set a manual positions -->
-<module class = "Constant" name = "B_POS" data = "0 0" />
-<module class = "Constant" name = "H_POS" data = "0 0 0 0" />
-<module class = "Constant" name = "LA_POS" data = "0 0 0 0 0 0" />
-<module class = "Constant" name = "RA_POS" data = "0 0 0 0 0 0" />
-<module class = "Constant" name = "P_POS" data = "0 0" />
-
 <!-- Chaning this value to 1 will always trigger manual mode --> 	
-<module class = "Constant" name = "ManualValue" 		data = "0.9"/>
+<module class = "Constant" name = "ManualValue" 		data = "1"/>
 
 
 <!-- Population coding -->
 <module class = "PopulationCoder" name = "ManPosPop" min  = "-400" max  = "400" size = "20"/>
     <connection sourcemodule="P_POS" 	source="OUTPUT" 	targetmodule="ManPosPop" target="INPUT" />
+    <connection sourcemodule="RA_POS" 	source="OUTPUT" 	targetmodule="ManPosPop" target="INPUT" />
     <connection sourcemodule="Arbiter" 	source="OUTPUT" 	targetmodule="ManPosPop" target="INPUT" />
-    <connection sourcemodule="LA_POS" 	source="OUTPUT" 	targetmodule="ManPosPop" target="INPUT" />
     <connection sourcemodule="H_POS" 	source="OUTPUT" 	targetmodule="ManPosPop" target="INPUT" />
     <connection sourcemodule="B_POS" 	source="OUTPUT" 	targetmodule="ManPosPop" target="INPUT" />
 
@@ -234,7 +216,10 @@
 
 <!-- Actuators/Proprioception -->
 <module class = "EpiGreenServos" 	name = "Servos" 		/>
-	<connection sourcemodule = "Pos"   source = "OUTPUT"  targetmodule = "Servos"  target = "GOAL_POSITION" />
+	<connection sourcemodule = "B_POS"   source = "OUTPUT"  targetmodule = "Servos"  target = "BODY_GOAL_POSITION" />
+	<connection sourcemodule = "H_POS"   source = "OUTPUT"  targetmodule = "Servos"  target = "HEAD_GOAL_POSITION" />
+	<connection sourcemodule = "LA_POS"  source = "OUTPUT"  targetmodule = "Servos"  target = "LEFT_ARM_GOAL_POSITION" />
+	<connection sourcemodule = "RA_POS"  source = "OUTPUT"  targetmodule = "Servos"  target = "RIGHT_ARM_GOAL_POSITION" />
 
 	<connection sourcemodule = "B_SPEED"   source = "OUTPUT"  targetmodule = "Servos"  target = "BODY_MOVING_SPEED" />
 	<connection sourcemodule = "H_SPEED"   source = "OUTPUT"  targetmodule = "Servos"  target = "HEAD_MOVING_SPEED" />
