@@ -31,59 +31,115 @@
 <!-- Set a manual speed -->
 <!-- Mental note: Speed is set for all motions -->
 <module class = "Constant" name = "B_SPEED" data = "0.02 0.02" />
-<module class = "Constant" name = "H_SPEED" data = "0.02 0.02 0.02 0.02" />
+<module class = "Constant" name = "H_SPEED" _data = "0.02 0.02 0.02 0.02" data = "0.2 0.2 0.2 0.2" />
 <module class = "Constant" name = "LA_SPEED" data = "0.02 0.02 0.02 0.02 0.02 0.02" />
-<module class = "Constant" name = "RA_SPEED" data = "0.7 0.7 0.7 0.7 0.7 0.7" _data = "0.02 0.02 0.02 0.02 0.02 0.02" />
+<module class = "Constant" name = "RA_SPEED" __data = "0.99 0.2 0.3 0.7 0.1 0.35" _data = "0.02 0.02 0.02 0.02 0.02 0.02" data = "0.1 0.1 0.1 0.1 0.1 0.1"/>
 <module class = "Constant" name = "P_SPEED" data = "0.02 0.02" />
 	
 <!-- Torque limit -->
 <module class = "Constant" name = "B_TORQUE_LIMIT" data = "0.02 0.02" />
 <module class = "Constant" name = "H_TORQUE_LIMIT" data = "0.5 0.5 0.5 0.5" />
-<module class = "Constant" name = "LA_TORQUE_LIMIT" data = "0.5 0.5 0.5 0.5 0.5 0.5" />
-<module class = "Constant" name = "RA_TORQUE_LIMIT" data = "0.5 0.5 0.5 0.5 0.5 0.5" />
+<module class = "Constant" name = "LA_TORQUE_LIMIT" data = "0.5 0.5 0.5 0.5 0.5 0.5"/>
+<module class = "Constant" name = "RA_TORQUE_LIMIT" data = "0.9 0.5 0.5 0.9 0.5 0.5"/>
 <module class = "Constant" name = "P_TORQUE_LIMIT" data = "0.02 0.02" />
 
 <!-- Torque enable -->
 <module class = "Constant" name = "B_TORQUE_ENABLE" data = "0 0" />
 <module class = "Constant" name = "H_TORQUE_ENABLE" _data = "0 0 0 0" data = "1 1 1 1" />
-<module class = "Constant" name = "LA_TORQUE_ENABLE" _data = "0 0 0 0 0 0" data = "1 1 1 1 1 0" />
-<module class = "Constant" name = "RA_TORQUE_ENABLE" data = "0 0 0 0 0 0" _data = "1 1 1 1 1 0"/>
+<module class = "Constant" name = "LA_TORQUE_ENABLE" data = "0 0 0 0 0 0" _data = "1 1 1 1 1 0" />
+<module class = "Constant" name = "RA_TORQUE_ENABLE" _data = "0 0 0 0 0 0" data = "1 1 1 1 1 1"/>
 <module class = "Constant" name = "P_TORQUE_ENABLE" data = "0 0" />
-
-
 
 
 <!-- GRUPP 16 -->
 
-<!-- Kast utan axel -->
-<_module class = "Constant" name = "RA_POS_BEFORE" data = "90 -90 0 -2 -90 -80" />
-<_module class = "Constant" name = "RA_POS_AFTER" data = "90 -90 0 -62 -90 -80" />
+ <!-- Mapping between angle and servo angle -->
+<module
+      class = "LinearSplines"
+      name = "Servo1Spline"
+      _points = "-38 -60; -29 -60; -21 -59; -14 -58; -7 -58; 0 -58; 7 -58; 14 -59; 21 -60; 29 -60; 38 -63;"
+      points = "-38 -24; -29 -24; -21 -23; -14 -22; -7 -22; 0 -22; 7 -22; 14 -23; 21 -24; 29 -24; 38 -24;"
+/>
+  
+<module
+      class = "LinearSplines"
+      name = "Servo2Spline"
+      points = "-38 -108;  -29 -102; -21 -100; -14 -96; -7 -93; 0 -88; 7 -84; 14 -80; 21 -77; 29 -70; 38 -70;"
+/>
+  
+<module
+      class = "LinearSplines"
+      name = "Servo3Spline"
+      points = "-38 -31; -29 -27; -21 -21; -14 -16; -7 -11; 0 -6; 7 -1; 14 4; 21 10; 29 13; 38 17; "
+/>
+
+<module class = "Constant" name = "GoalAngle" outputsize = "1" data = "0" />
+
+
+<connection sourcemodule = "GoalAngle" source = "OUTPUT" targetmodule = "Servo1Spline" target = "INPUT" />
+<connection sourcemodule = "GoalAngle" source = "OUTPUT" targetmodule = "Servo2Spline" target = "INPUT" />
+<connection sourcemodule = "GoalAngle" source = "OUTPUT" targetmodule = "Servo3Spline" target = "INPUT" />
+
+
+<module class = "Constant" name = "RA_AFTER_4" data = "36" />
+<module class = "Constant" name = "RA_AFTER_5" data = "89" />
+<module class = "Constant" name = "RA_AFTER_6" data = "-1" />
+
+
 
 <!-- Kast med axel -->
-<module class = "Constant" name = "RA_POS_BEFORE" data = "-110 -88 0 0 89 0" />
-<module class = "Constant" name = "RA_POS_AFTER" data = "-22 -88 0 36 89 0" />
+<module class = "Constant" name = "RA_POS_BEFORE" data = "-110 -88 0 0 89 -1" />
+<_module class = "Constant" name = "RA_POS_AFTER" data = "-22 -88 0 36 89 0" />
 
-<_module class = "Constant" name = "LA_POS_BEFORE" data = "0 0 0 0 0 0" />
-<_module class = "Constant" name = "LA_POS_AFTER" data = "0 0 0 0 0 0" />
+
 
   <!-- Create values which decide which constants will be used-->
   <module class = "Constant" name = "V_AFTER" outputsize = "1" data = "0" />
-  <module class = "Constant" name = "V_BEFORE" outputsize = "1" data = "1" />
+  <module class = "Constant" name = "V_BEFORE" outputsize = "1" data = "0.5" />
 
   <!-- Connect with arbiter-->
 	<connection sourcemodule = "RA_POS_BEFORE" source = "OUTPUT" targetmodule = "Arbiter" target = "INPUT_1" delay="0" />
-	<connection sourcemodule = "RA_POS_AFTER" source = "OUTPUT" targetmodule = "Arbiter" target = "INPUT_2" delay="0" />
+	<_connection sourcemodule = "RA_POS_AFTER" source = "OUTPUT" targetmodule = "Arbiter" target = "INPUT_2" delay="0" />
+	
+	<connection sourcemodule = "RA_AFTER_6" source = "OUTPUT" targetmodule = "Arbiter" target = "INPUT_2" delay="1" />
+	<connection sourcemodule = "RA_AFTER_5" source = "OUTPUT" targetmodule = "Arbiter" target = "INPUT_2" delay="1" />
+	<connection sourcemodule = "RA_AFTER_4" source = "OUTPUT" targetmodule = "Arbiter" target = "INPUT_2" delay="1" />
+	<connection sourcemodule = "Servo3Spline" source = "OUTPUT" targetmodule = "Arbiter" target = "INPUT_2" delay="1" />
+	<connection sourcemodule = "Servo2Spline" source = "OUTPUT" targetmodule = "Arbiter" target = "INPUT_2" delay="1" />
+	<connection sourcemodule = "Servo1Spline" source = "OUTPUT" targetmodule = "Arbiter" target = "INPUT_2" delay="1" />
+	
+	
+	
+
+	
 	<connection sourcemodule = "V_BEFORE" source = "OUTPUT" targetmodule = "Arbiter" target = "VALUE_1" delay="0" />
-	<connection sourcemodule = "V_AFTER" source = "OUTPUT" targetmodule = "Arbiter" target = "VALUE_2" delay="0" />
+	<connection sourcemodule = "SpeedRegulator" source = "IS_THROWING" targetmodule = "Arbiter" target = "VALUE_2" delay="0" />
 
   <module
     class = "Arbiter"
     name = "Arbiter"
   />
+  
+  <module
+    class = "SpeedRegulator"
+    name = "SpeedRegulator"
+  />
+  
+  
+  
+	<connection sourcemodule = "Servos" source = "RIGHT_ARM_FEEDBACK_POSITION" targetmodule = "SpeedRegulator" target = "FEEDBACK_POSITION" delay="0" />
+    <connection sourcemodule="Arbiter" source="OUTPUT" targetmodule="SpeedRegulator" target="GOAL_POSITION" delay="1"/>
+    
+    <module class = "Constant" name = "State" data = "1" />
+    <connection sourcemodule="State" source="OUTPUT" targetmodule="SpeedRegulator" target="STATE" delay="0"/>
+    
+    <module class = "Constant" name = "State2" data = "0" />
+    <connection sourcemodule="State2" source="OUTPUT" targetmodule="SpeedRegulator" target="TRIGGER" delay="0"/>
 
+  
 	<view name = "Throw left arm" object_size = "50" >
 		<!-- Switch which is used for throwing-->
-        <object
+        <_object
           class="Switch"
           title="throw"
           module="V_AFTER"
@@ -95,15 +151,112 @@
           min = "0"
           max = "2"
         />
-		
+        
+        <object
+    		class="Button" 
+    		module="State2"
+    		parameter="data"
+    		x="0"
+    		y="0" 
+    		min="0"
+    		max="1"
+  		/>
+        
+        <object
+    		class="Text"
+    		name = "Parts"
+    		text="Shoulder forward | Shoulder out | Over arm spin | Elbow | Under arm spin | Hand "
+    		x="0" y="2"
+    		w="8" h="1"
+  		/>
+        
 		<object
             class="Table"
-            title="Start positions"
+            title="Goal position"
+            module = "Arbiter"
+            source = "OUTPUT"
+            x="0" y="3"
+            w="8" h="1"
+            font_size = "15"
+        />
+        
+		<object
+            class="Table"
+            title="Feedback position"
             module = "Servos"
             source = "RIGHT_ARM_FEEDBACK_POSITION"
-            x="0" y="2"
-            w="12" h="4"
-            font_size = "20"
+            x="0" y="4"
+            w="8" h="1"
+            font_size = "15"
+        />
+        
+		<object
+            class="Table"
+            title="Output speed"
+            module = "SpeedRegulator"
+            source = "OUTPUT_SPEED"
+            x="0" y="5"
+            w="8" h="1"
+            font_size = "15"
+        />
+         <object
+            class="Plot"
+            title="Output speed"
+            module = "SpeedRegulator"
+            source = "OUTPUT_SPEED"
+            x="0" y="6"
+            w="8" h="3"
+            font_size = "15"
+            select="0, 3 ,5"
+            color = "red, green, blue"
+        />       
+        
+        <object
+          class="Slider"
+          title="Hand angle"
+          module="RA_POS_BEFORE"
+          parameter="data"
+          select="5"
+          x="4"
+          y="0"
+          w="2"
+          h="2"
+          min = "-50"
+          max = "-1"
+        />
+        
+        <object
+            class="Table"
+            title="Output is throwing"
+            module = "SpeedRegulator"
+            source = "IS_THROWING"
+            x="9" y="2"
+            w="1" h="1"
+            font_size = "15"
+        />
+        
+        <object
+          class="Slider"
+          title="Goal Angle Throw"
+          module="GoalAngle"
+          parameter="data"
+          select="0"
+          x="8"
+          y="0"
+          w="2"
+          h="8"
+          min = "-38"
+          max = "38"
+        />
+        
+        <object
+            class="Table"
+            title="Goal angle"
+            module = "GoalAngle"
+            source = "data"
+            x="6" y="0"
+            w="2" h="2"
+            font_size = "15"
         />
 		
 	</view>
@@ -132,13 +285,21 @@
 <!-- Chaning this value to 1 will always trigger manual mode --> 	
 <module class = "Constant" name = "ManualValue" 		data = "0.9"/>
 
+<module class = "Constant" name = "ZERO" 		data = "0"/>
+
 
 <!-- Population coding -->
 <module class = "PopulationCoder" name = "ManPosPop" min  = "-400" max  = "400" size = "20"/>
     <connection sourcemodule="P_POS" 	source="OUTPUT" 	targetmodule="ManPosPop" target="INPUT" />
     <connection sourcemodule="Arbiter" 	source="OUTPUT" 	targetmodule="ManPosPop" target="INPUT" />
     <connection sourcemodule="LA_POS" 	source="OUTPUT" 	targetmodule="ManPosPop" target="INPUT" />
-    <connection sourcemodule="H_POS" 	source="OUTPUT" 	targetmodule="ManPosPop" target="INPUT" />
+    
+    <connection sourcemodule="ZERO" 	source="OUTPUT" 	targetmodule="ManPosPop" target="INPUT" />
+    <connection sourcemodule="ZERO" 	source="OUTPUT" 	targetmodule="ManPosPop" target="INPUT" />
+    <connection sourcemodule="GoalAngle" 	source="OUTPUT" 	targetmodule="ManPosPop" target="INPUT" />
+    <connection sourcemodule="ZERO" 	source="OUTPUT" 	targetmodule="ManPosPop" target="INPUT" />
+    
+    <_connection sourcemodule="H_POS" 	source="OUTPUT" 	targetmodule="ManPosPop" target="INPUT" />
     <connection sourcemodule="B_POS" 	source="OUTPUT" 	targetmodule="ManPosPop" target="INPUT" />
 
 
@@ -239,7 +400,7 @@
 	<connection sourcemodule = "B_SPEED"   source = "OUTPUT"  targetmodule = "Servos"  target = "BODY_MOVING_SPEED" />
 	<connection sourcemodule = "H_SPEED"   source = "OUTPUT"  targetmodule = "Servos"  target = "HEAD_MOVING_SPEED" />
 	<connection sourcemodule = "LA_SPEED"  source = "OUTPUT"  targetmodule = "Servos"  target = "LEFT_ARM_MOVING_SPEED" />
-	<connection sourcemodule = "RA_SPEED"  source = "OUTPUT"  targetmodule = "Servos"  target = "RIGHT_ARM_MOVING_SPEED" />
+	<connection _sourcemodule = "RA_SPEED" sourcemodule = "SpeedRegulator" _source = "OUTPUT" source = "OUTPUT_SPEED" targetmodule = "Servos"  target = "RIGHT_ARM_MOVING_SPEED" />
 
 	<connection sourcemodule = "B_TORQUE_LIMIT"   source = "OUTPUT"  targetmodule = "Servos"  target = "BODY_TORQUE_LIMIT" />
 	<connection sourcemodule = "H_TORQUE_LIMIT"   source = "OUTPUT"  targetmodule = "Servos"  target = "HEAD_TORQUE_LIMIT" />

@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+
+<group name="SpeedRegulator" description="Regulates servo speed based on input.">
+
+<description type="text">
+Regulates servo speed based on input goal position and current position.
+</description>
+
+<example description="A simple example">
+<module
+class="SpeedRegulator"
+name="SpeedRegulator"
+/>
+</example>
+
+<input name="GOAL_POSITION" description="Goal position of the servos, in degrees." size="6"/>
+<input name="FEEDBACK_POSITION" description="Feedback position of the servos, in degrees." size="6"/>
+<input name="STATE" description="The state of Epi, 0: Do nothing, 1: Make a throw, 2: Pick up an object." size="1"/>
+<input name="TRIGGER" description="1 triggers a throw sequence." size="1"/>
+
+<output name="OUTPUT_SPEED" description="The output speed." size="6" />
+<output name="IS_THROWING" description="1 if throwing, 0 if going back." size="1" />
+
+<module class="SpeedRegulator" />
+
+<view title="SpeedRegulator">
+<object
+x="0" y="0" w="2"
+class="BarGraph"
+module="*"
+source="OUTPUT_SPEED"
+title="Default view for SpeedRegulator"
+/>
+</view>
+
+<author>
+<name>Group 16 - 2016</name>
+<email>christian.balkenius@lucs.lu.se</email>
+<affiliation>Lund University Cognitive Science</affiliation>
+<homepage>http://www.lucs.lu.se/Christian.Balkenius</homepage>
+</author>
+
+<files>
+<file>SpeedRegulator.h</file>
+<file>SpeedRegulator.cc</file>
+<file>SpeedRegulator.ikc</file>
+</files>
+
+</group>

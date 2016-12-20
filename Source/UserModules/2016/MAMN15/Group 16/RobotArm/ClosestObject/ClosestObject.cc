@@ -1,4 +1,3 @@
-
 #include "ClosestObject.h"
 
 using namespace ikaros;
