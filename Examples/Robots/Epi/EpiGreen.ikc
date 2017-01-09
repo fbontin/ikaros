@@ -76,6 +76,8 @@
 <module class = "Constant" name = "GoalAngle" outputsize = "1" data = "0" />
 
 
+
+
 <connection sourcemodule = "GoalAngle" source = "OUTPUT" targetmodule = "Servo1Spline" target = "INPUT" />
 <connection sourcemodule = "GoalAngle" source = "OUTPUT" targetmodule = "Servo2Spline" target = "INPUT" />
 <connection sourcemodule = "GoalAngle" source = "OUTPUT" targetmodule = "Servo3Spline" target = "INPUT" />
@@ -99,7 +101,6 @@
 
   <!-- Connect with arbiter-->
 	<connection sourcemodule = "RA_POS_BEFORE" source = "OUTPUT" targetmodule = "Arbiter" target = "INPUT_1" delay="0" />
-	<_connection sourcemodule = "RA_POS_AFTER" source = "OUTPUT" targetmodule = "Arbiter" target = "INPUT_2" delay="0" />
 	
 	<connection sourcemodule = "RA_AFTER_6" source = "OUTPUT" targetmodule = "Arbiter" target = "INPUT_2" delay="1" />
 	<connection sourcemodule = "RA_AFTER_5" source = "OUTPUT" targetmodule = "Arbiter" target = "INPUT_2" delay="1" />
@@ -133,33 +134,100 @@
     <module class = "Constant" name = "State" data = "1" />
     <connection sourcemodule="State" source="OUTPUT" targetmodule="SpeedRegulator" target="STATE" delay="0"/>
     
-    <module class = "Constant" name = "State2" data = "0" />
-    <connection sourcemodule="State2" source="OUTPUT" targetmodule="SpeedRegulator" target="TRIGGER" delay="0"/>
+    <module class = "Constant" name = "Trigger" data = "0" />
+    <connection sourcemodule="Trigger" source="OUTPUT" targetmodule="SpeedRegulator" target="TRIGGER" delay="0"/>
+    
+    <!--k      .................................................    k
+    
+    
+        <module
+        class = "Constant"
+        name = "Modes"
+        data = "0 0 0 0 0 0   0 0 0 0   0 0 0 0 0 0;
+                1 1 1 1 1 1   1 1 1 1   0 0 0 0 0 0;
+                0 0 0 0 0 0   1 1 1 1   1 1 1 1 1 1;
+                1 1 1 1 1 1   0 0 0 0   1 1 1 1 1 1"
+    />
 
+    <module
+        class = "SelectRow"
+        name = "ModeSelector"
+    />
+
+    <connection sourcemodule = "Modes" source = "OUTPUT" targetmodule = "ModeSelector" target = "INPUT" />
+    <connection sourcemodule = "ModeSelector" source = "OUTPUT" targetmodule = "MotionRecorder" target = "MODE" />
+    
+    <module
+        class = "MotionRecorder"
+        name = "MotionRecorder"
+        mask = "1 1 1 1 1 1   1 1 1 1 1 1   1 1 1 1 "
+        torque = "0.5 0.5 0.5 0.5 0.5 0.5  0.5 0.5 0.5 0.5 0.5 0.5   0.5 0.5 0.5 0.5"
+        filename = "motion.%d.mot"
+    />
+    
+ 	<connection sourcemodule = "MotionRecorder" source = "OUTPUT" targetmodule = "Split1_O" target = "INPUT" />
+    <connection sourcemodule = "MotionRecorder" source = "TORQUE" targetmodule = "Split1_T" target = "INPUT" />
+    <connection sourcemodule = "MotionRecorder" source = "ENABLE" targetmodule = "Split1_E" target = "INPUT" />
+
+    <connection sourcemodule = "MotionRecorder" source = "OUTPUT" targetmodule = "Split2_O" target = "INPUT" />
+    <connection sourcemodule = "MotionRecorder" source = "TORQUE" targetmodule = "Split2_T" target = "INPUT" />
+    <connection sourcemodule = "MotionRecorder" source = "ENABLE" targetmodule = "Split2_E" target = "INPUT" />
+    
+    <connection sourcemodule = "MotionRecorder" source = "OUTPUT" targetmodule = "Split3_O" target = "INPUT" />
+    <connection sourcemodule = "MotionRecorder" source = "TORQUE" targetmodule = "Split3_T" target = "INPUT" />
+    <connection sourcemodule = "MotionRecorder" source = "ENABLE" targetmodule = "Split3_E" target = "INPUT" />
+    
+    <module class = "TruncateArray" name = "Split1_O" array_length = "4" selection = "1 2 3 4" loop = "false"/>
+    <module class = "TruncateArray" name = "Split1_T" array_length = "4" selection = "1 2 3 4" loop = "false"/>
+    <module class = "TruncateArray" name = "Split1_E" array_length = "4" selection = "1 2 3 4" loop = "false"/>
+
+    <module class = "TruncateArray" name = "Split2_O" array_length = "6" selection = "5 6 7 8 9 10" loop = "false"/>
+    <module class = "TruncateArray" name = "Split2_T" array_length = "6" selection = "5 6 7 8 9 10" loop = "false"/>
+    <module class = "TruncateArray" name = "Split2_E" array_length = "6" selection = "5 6 7 8 9 10" loop = "false"/>
+
+    <module class = "TruncateArray" name = "Split3_O" array_length = "6" selection = "11 12 13 14 15 16" loop = "false"/>
+    <module class = "TruncateArray" name = "Split3_T" array_length = "6" selection = "11 12 13 14 15 16" loop = "false"/>
+    <module class = "TruncateArray" name = "Split3_E" array_length = "6" selection = "11 12 13 14 15 16" loop = "false"/>
+    
+    <connection sourcemodule = "Split1_O" source = "OUTPUT" targetmodule = "Head" target = "GOAL_POSITION" />
+    <connection sourcemodule = "Split1_T" source = "OUTPUT" targetmodule = "Head" target = "TORQUE_LIMIT" />
+    <connection sourcemodule = "Split1_E" source = "OUTPUT" targetmodule = "Head" target = "TORQUE_ENABLE" />
+
+    <connection sourcemodule = "Split2_O" source = "OUTPUT" targetmodule = "LeftArm" target = "GOAL_POSITION" />
+    <connection sourcemodule = "Split2_T" source = "OUTPUT" targetmodule = "LeftArm" target = "TORQUE_LIMIT" />
+    <connection sourcemodule = "Split2_E" source = "OUTPUT" targetmodule = "LeftArm" target = "TORQUE_ENABLE" />
+    
+    <connection sourcemodule = "Split3_O" source = "OUTPUT" targetmodule = "RightArm" target = "GOAL_POSITION" />
+    <connection sourcemodule = "Split3_T" source = "OUTPUT" targetmodule = "RightArm" target = "TORQUE_LIMIT" />
+    <connection sourcemodule = "Split3_E" source = "OUTPUT" targetmodule = "RightArm" target = "TORQUE_ENABLE" />
+  
+	-->
   
 	<view name = "Throw left arm" object_size = "50" >
 		<!-- Switch which is used for throwing-->
-        <_object
-          class="Switch"
-          title="throw"
-          module="V_AFTER"
-          parameter="data"
-          x="0"
-          y="0"
-          w="2"
-          h="2"
-          min = "0"
-          max = "2"
-        />
         
+        <!--Triggers throw-->
         <object
     		class="Button" 
-    		module="State2"
+    		module="Trigger"
     		parameter="data"
     		x="0"
     		y="0" 
     		min="0"
     		max="1"
+    		title="Throw"
+  		/>
+
+		<!--Pick up ball-->
+        <object
+    		class="Button" 
+    		module="MotionRecorder" 
+    		parameter="play"
+    		x="1"
+    		y="0" 
+    		min="0"
+    		max="1"
+    		title="Grab"
   		/>
         
         <object
@@ -260,10 +328,6 @@
         />
 		
 	</view>
-
-
-
-    
 
 <!-- SLUT GRUPP 16-->
 

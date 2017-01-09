@@ -110,11 +110,7 @@
         input_limit_min = "-125 -110 -125 -125 -125 -88"
         input_limit_max = "126 110 126 50 126 1"
         start_up_time   = "10"
-<<<<<<< HEAD
-        max_speed		= "100"
-=======
         max_speed       = "100"
->>>>>>> ikaros-project/master
     />
         <connection sourcemodule = "LA_SC_FeedBackPosition"  	source = "OUTPUT" targetmodule = "LA_Guard"  target = "REFERENCE" delay = "1"/>
         <connection sourcemodule = "SplitLeftArm"  				source = "OUTPUT" 	targetmodule = "LA_Guard"  	target = "INPUT"  delay = "1"/>

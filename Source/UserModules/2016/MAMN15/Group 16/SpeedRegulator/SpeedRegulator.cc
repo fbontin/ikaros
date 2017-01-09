@@ -32,7 +32,7 @@ SpeedRegulator::Init()
 
 
 
-// NÅN JÄTTESTOR KOMENTAR TYP-----------------------------
+// NÅN JÄTTESTOR KOMMENTAR TYP-----------------------------
 
 // TODO - Klickar man på tillbakavägen kastar Epi igen, hetsigt. får ej ske.
 
@@ -54,9 +54,7 @@ SpeedRegulator::Tick()
         goal_position[0] = 42.0f; //random high value, first tick
     }
     
-    
     if (throwing_sequence){
-        
         
         if (goal_position[0] > -30.0f && feedback_position[0] < -25.0f) {
             internal_is_throwing = true;
@@ -71,7 +69,6 @@ SpeedRegulator::Tick()
             if (internal_is_throwing){
                 
                 // 0. Shoulder forward/backward
-                
                 speed[0] = 1 - std::pow(0.005f * error, 1.8f);
                 
                 // 1. Shoulder outwards
@@ -107,7 +104,7 @@ SpeedRegulator::Tick()
                 }
             }
             
-            //All servos except hand, limits
+            //All servos limits
             for (int i = 0; i < 6; i++) {
                 if (speed[i] < 0.1f) {
                     speed[i] = 0.1f;
