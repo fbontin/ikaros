@@ -34,12 +34,15 @@ public:
     
     float *		goal_position;
     float *     feedback_position;
-    float *     state;
-    float *     trigger;
+    float *     throw_trigger;
+    float *     grab_trigger;
+    float *     grab_done;
     
     float *     output_speed;
     float *     is_throwing;
+    float *     state;
     
+    float       internal_state;
     bool        throwing_sequence;
     
     

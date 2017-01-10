@@ -60,13 +60,11 @@
       _points = "-38 -60; -29 -60; -21 -59; -14 -58; -7 -58; 0 -58; 7 -58; 14 -59; 21 -60; 29 -60; 38 -63;"
       points = "-38 -24; -29 -24; -21 -23; -14 -22; -7 -22; 0 -22; 7 -22; 14 -23; 21 -24; 29 -24; 38 -24;"
 />
-  
 <module
       class = "LinearSplines"
       name = "Servo2Spline"
       points = "-38 -108;  -29 -102; -21 -100; -14 -96; -7 -93; 0 -88; 7 -84; 14 -80; 21 -77; 29 -70; 38 -70;"
 />
-  
 <module
       class = "LinearSplines"
       name = "Servo3Spline"
@@ -74,9 +72,6 @@
 />
 
 <module class = "Constant" name = "GoalAngle" outputsize = "1" data = "0" />
-
-
-
 
 <connection sourcemodule = "GoalAngle" source = "OUTPUT" targetmodule = "Servo1Spline" target = "INPUT" />
 <connection sourcemodule = "GoalAngle" source = "OUTPUT" targetmodule = "Servo2Spline" target = "INPUT" />
@@ -91,34 +86,29 @@
 
 <!-- Kast med axel -->
 <module class = "Constant" name = "RA_POS_BEFORE" data = "-110 -88 0 0 89 -1" />
-<_module class = "Constant" name = "RA_POS_AFTER" data = "-22 -88 0 36 89 0" />
 
 
-
-  <!-- Create values which decide which constants will be used-->
-  <module class = "Constant" name = "V_AFTER" outputsize = "1" data = "0" />
-  <module class = "Constant" name = "V_BEFORE" outputsize = "1" data = "0.5" />
+  <!-- Create values which decide which constants will be used--> 
+  <module class = "Constant" name = "V_BEFORE" outputsize = "1" data = "2.5" />
 
   <!-- Connect with arbiter-->
-	<connection sourcemodule = "RA_POS_BEFORE" source = "OUTPUT" targetmodule = "Arbiter" target = "INPUT_1" delay="0" />
+	<connection sourcemodule = "RA_POS_BEFORE" source = "OUTPUT" targetmodule = "RightArmPosArbiter" target = "INPUT_1" delay="0" />
 	
-	<connection sourcemodule = "RA_AFTER_6" source = "OUTPUT" targetmodule = "Arbiter" target = "INPUT_2" delay="1" />
-	<connection sourcemodule = "RA_AFTER_5" source = "OUTPUT" targetmodule = "Arbiter" target = "INPUT_2" delay="1" />
-	<connection sourcemodule = "RA_AFTER_4" source = "OUTPUT" targetmodule = "Arbiter" target = "INPUT_2" delay="1" />
-	<connection sourcemodule = "Servo3Spline" source = "OUTPUT" targetmodule = "Arbiter" target = "INPUT_2" delay="1" />
-	<connection sourcemodule = "Servo2Spline" source = "OUTPUT" targetmodule = "Arbiter" target = "INPUT_2" delay="1" />
-	<connection sourcemodule = "Servo1Spline" source = "OUTPUT" targetmodule = "Arbiter" target = "INPUT_2" delay="1" />
-	
-	
+	<connection sourcemodule = "RA_AFTER_6" source = "OUTPUT" targetmodule = "RightArmPosArbiter" target = "INPUT_2" delay="1" />
+	<connection sourcemodule = "RA_AFTER_5" source = "OUTPUT" targetmodule = "RightArmPosArbiter" target = "INPUT_2" delay="1" />
+	<connection sourcemodule = "RA_AFTER_4" source = "OUTPUT" targetmodule = "RightArmPosArbiter" target = "INPUT_2" delay="1" />
+	<connection sourcemodule = "Servo3Spline" source = "OUTPUT" targetmodule = "RightArmPosArbiter" target = "INPUT_2" delay="1" />
+	<connection sourcemodule = "Servo2Spline" source = "OUTPUT" targetmodule = "RightArmPosArbiter" target = "INPUT_2" delay="1" />
+	<connection sourcemodule = "Servo1Spline" source = "OUTPUT" targetmodule = "RightArmPosArbiter" target = "INPUT_2" delay="1" />
 	
 
-	
-	<connection sourcemodule = "V_BEFORE" source = "OUTPUT" targetmodule = "Arbiter" target = "VALUE_1" delay="0" />
-	<connection sourcemodule = "SpeedRegulator" source = "IS_THROWING" targetmodule = "Arbiter" target = "VALUE_2" delay="0" />
+	<connection sourcemodule = "V_BEFORE" source = "OUTPUT" targetmodule = "RightArmPosArbiter" target = "VALUE_1" delay="0" />
+	<connection sourcemodule = "SpeedRegulator" source = "IS_THROWING" targetmodule = "RightArmPosArbiter" target = "VALUE_2" delay="0" />
 
   <module
     class = "Arbiter"
-    name = "Arbiter"
+    name = "RightArmPosArbiter"
+    no_of_inputs = "3"
   />
   
   <module
@@ -129,17 +119,20 @@
   
   
 	<connection sourcemodule = "Servos" source = "RIGHT_ARM_FEEDBACK_POSITION" targetmodule = "SpeedRegulator" target = "FEEDBACK_POSITION" delay="0" />
-    <connection sourcemodule="Arbiter" source="OUTPUT" targetmodule="SpeedRegulator" target="GOAL_POSITION" delay="1"/>
-    
-    <module class = "Constant" name = "State" data = "1" />
-    <connection sourcemodule="State" source="OUTPUT" targetmodule="SpeedRegulator" target="STATE" delay="0"/>
-    
-    <module class = "Constant" name = "Trigger" data = "0" />
-    <connection sourcemodule="Trigger" source="OUTPUT" targetmodule="SpeedRegulator" target="TRIGGER" delay="0"/>
-    
-    <!--k      .................................................    k
+    <connection sourcemodule="RightArmPosArbiter" source="OUTPUT" targetmodule="SpeedRegulator" target="GOAL_POSITION" delay="1"/>
     
     
+    <module class = "Constant" name = "throw_trigger" data = "0" />
+    <connection sourcemodule="throw_trigger" source="OUTPUT" targetmodule="SpeedRegulator" target="THROW_TRIGGER" delay="0"/>
+    
+    <module class = "Constant" name = "grab_trigger" data = "0" />
+    <connection sourcemodule="grab_trigger" source="OUTPUT" targetmodule="SpeedRegulator" target="GRAB_TRIGGER" delay="1"/>
+    
+    <_module class = "Constant" name = "grab_done" data = "0" />
+    <_connection sourcemodule="grab_done" source="OUTPUT" targetmodule="SpeedRegulator" target="GRAB_DONE" delay="1"/>
+    
+    
+    <!--k      .................................................   -->
         <module
         class = "Constant"
         name = "Modes"
@@ -165,52 +158,73 @@
         filename = "motion.%d.mot"
     />
     
- 	<connection sourcemodule = "MotionRecorder" source = "OUTPUT" targetmodule = "Split1_O" target = "INPUT" />
-    <connection sourcemodule = "MotionRecorder" source = "TORQUE" targetmodule = "Split1_T" target = "INPUT" />
-    <connection sourcemodule = "MotionRecorder" source = "ENABLE" targetmodule = "Split1_E" target = "INPUT" />
-
-    <connection sourcemodule = "MotionRecorder" source = "OUTPUT" targetmodule = "Split2_O" target = "INPUT" />
-    <connection sourcemodule = "MotionRecorder" source = "TORQUE" targetmodule = "Split2_T" target = "INPUT" />
-    <connection sourcemodule = "MotionRecorder" source = "ENABLE" targetmodule = "Split2_E" target = "INPUT" />
+    <connection sourcemodule = "MotionRecorder" source = "COMPLETED" targetmodule = "SpeedRegulator" target = "GRAB_DONE" delay="1"/>
     
+    
+ 	<connection sourcemodule = "MotionRecorder" source = "OUTPUT" targetmodule = "Split1_O" target = "INPUT" />
+    <connection sourcemodule = "MotionRecorder" source = "OUTPUT" targetmodule = "Split2_O" target = "INPUT" />
     <connection sourcemodule = "MotionRecorder" source = "OUTPUT" targetmodule = "Split3_O" target = "INPUT" />
+    
+    <module class = "TruncateArray" name = "Split1_O" array_length = "4" selection = "1 2 3 4" loop = "false"/>
+    <module class = "TruncateArray" name = "Split2_O" array_length = "6" selection = "5 6 7 8 9 10" loop = "false"/>
+    <module class = "TruncateArray" name = "Split3_O" array_length = "6" selection = "11 12 13 14 15 16" loop = "false"/>
+    
+        
     <connection sourcemodule = "MotionRecorder" source = "TORQUE" targetmodule = "Split3_T" target = "INPUT" />
     <connection sourcemodule = "MotionRecorder" source = "ENABLE" targetmodule = "Split3_E" target = "INPUT" />
     
-    <module class = "TruncateArray" name = "Split1_O" array_length = "4" selection = "1 2 3 4" loop = "false"/>
-    <module class = "TruncateArray" name = "Split1_T" array_length = "4" selection = "1 2 3 4" loop = "false"/>
-    <module class = "TruncateArray" name = "Split1_E" array_length = "4" selection = "1 2 3 4" loop = "false"/>
-
-    <module class = "TruncateArray" name = "Split2_O" array_length = "6" selection = "5 6 7 8 9 10" loop = "false"/>
-    <module class = "TruncateArray" name = "Split2_T" array_length = "6" selection = "5 6 7 8 9 10" loop = "false"/>
-    <module class = "TruncateArray" name = "Split2_E" array_length = "6" selection = "5 6 7 8 9 10" loop = "false"/>
-
-    <module class = "TruncateArray" name = "Split3_O" array_length = "6" selection = "11 12 13 14 15 16" loop = "false"/>
     <module class = "TruncateArray" name = "Split3_T" array_length = "6" selection = "11 12 13 14 15 16" loop = "false"/>
     <module class = "TruncateArray" name = "Split3_E" array_length = "6" selection = "11 12 13 14 15 16" loop = "false"/>
-    
-    <connection sourcemodule = "Split1_O" source = "OUTPUT" targetmodule = "Head" target = "GOAL_POSITION" />
-    <connection sourcemodule = "Split1_T" source = "OUTPUT" targetmodule = "Head" target = "TORQUE_LIMIT" />
-    <connection sourcemodule = "Split1_E" source = "OUTPUT" targetmodule = "Head" target = "TORQUE_ENABLE" />
 
-    <connection sourcemodule = "Split2_O" source = "OUTPUT" targetmodule = "LeftArm" target = "GOAL_POSITION" />
-    <connection sourcemodule = "Split2_T" source = "OUTPUT" targetmodule = "LeftArm" target = "TORQUE_LIMIT" />
-    <connection sourcemodule = "Split2_E" source = "OUTPUT" targetmodule = "LeftArm" target = "TORQUE_ENABLE" />
+    <_connection sourcemodule = "Split3_T" source = "OUTPUT" targetmodule = "RightArm" target = "TORQUE_LIMIT" />
+    <_connection sourcemodule = "Split3_E" source = "OUTPUT" targetmodule = "RightArm" target = "TORQUE_ENABLE" />
     
-    <connection sourcemodule = "Split3_O" source = "OUTPUT" targetmodule = "RightArm" target = "GOAL_POSITION" />
-    <connection sourcemodule = "Split3_T" source = "OUTPUT" targetmodule = "RightArm" target = "TORQUE_LIMIT" />
-    <connection sourcemodule = "Split3_E" source = "OUTPUT" targetmodule = "RightArm" target = "TORQUE_ENABLE" />
-  
-	-->
+    <module class = "Arbiter" name = "RightArmTorqueEnableArbiter" />
+    <connection sourcemodule = "SpeedRegulator" source = "STATE" targetmodule = "RightArmTorqueEnableArbiter" target = "VALUE_1" />
+	<connection sourcemodule = "Split3_E" source = "OUTPUT" targetmodule = "RightArmTorqueEnableArbiter" target = "INPUT_1" />
+	<connection sourcemodule = "TwoPointFive" source = "OUTPUT" targetmodule = "RightArmTorqueEnableArbiter" target = "VALUE_2" />
+	<connection sourcemodule = "RA_TORQUE_ENABLE" source = "OUTPUT" targetmodule = "RightArmTorqueEnableArbiter" target = "INPUT_2" />
+    
+    
+    <module class = "Arbiter" name = "RightArmTorqueArbiter" />
+    <connection sourcemodule = "SpeedRegulator" source = "STATE" targetmodule = "RightArmTorqueArbiter" target = "VALUE_1" />
+	<connection sourcemodule = "Split3_T" source = "OUTPUT" targetmodule = "RightArmTorqueArbiter" target = "INPUT_1" />
+	<connection sourcemodule = "TwoPointFive" source = "OUTPUT" targetmodule = "RightArmTorqueArbiter" target = "VALUE_2" />
+	<connection sourcemodule = "RA_TORQUE_LIMIT" source = "OUTPUT" targetmodule = "RightArmTorqueArbiter" target = "INPUT_2" />
+    
+	<connection sourcemodule = "Split3_O" source = "OUTPUT" targetmodule = "RightArmPosArbiter" target = "INPUT_3" />
+	<connection sourcemodule = "SpeedRegulator" source = "STATE" targetmodule = "RightArmPosArbiter" target = "VALUE_3" /> 
+
+	<module class = "Arbiter" name = "HeadPosArbiter"/>
+  	
+  	<connection sourcemodule = "SpeedRegulator" source = "STATE" targetmodule = "HeadPosArbiter" target = "VALUE_1" /> 
+  	
+    <connection sourcemodule="ZERO" 	source="OUTPUT" 	targetmodule="HeadPosArbiter" target="INPUT_1" />
+    <connection sourcemodule="ZERO" 	source="OUTPUT" 	targetmodule="HeadPosArbiter" target="INPUT_1" />
+    <connection sourcemodule="GoalAngle" 	source="OUTPUT" 	targetmodule="HeadPosArbiter" target="INPUT_1" />
+    <connection sourcemodule="ZERO" 	source="OUTPUT" 	targetmodule="HeadPosArbiter" target="INPUT_1" />
+
+  	
+
+  	<connection sourcemodule = "TwoPointFive" source = "OUTPUT" targetmodule = "HeadPosArbiter" target = "VALUE_2" /> 
+  	<connection sourcemodule = "Split1_O" source = "OUTPUT" targetmodule = "HeadPosArbiter" target = "INPUT_2" />
+    
+  	<module class = "Constant" name = "TwoPointFive" data = "2.5" />
+  	
+  	
+	<connection sourcemodule = "Servos" source = "RIGHT_ARM_FEEDBACK_POSITION" targetmodule = "MotionRecorder" target = "INPUT" />
+	<connection sourcemodule = "Servos" source = "LEFT_ARM_FEEDBACK_POSITION" targetmodule = "MotionRecorder" target = "INPUT" />
+	<connection sourcemodule = "Servos" source = "HEAD_FEEDBACK_POSITION" targetmodule = "MotionRecorder" target = "INPUT" />
+	
   
 	<view name = "Throw left arm" object_size = "50" >
 		<!-- Switch which is used for throwing-->
         
-        <!--Triggers throw-->
+        <!--throw trigger-->
         <object
     		class="Button" 
-    		module="Trigger"
-    		parameter="data"
+    		_module="SpeedRegulator" module="throw_trigger"
+    		_parameter="THROW_TRIGGER" parameter="data"
     		x="0"
     		y="0" 
     		min="0"
@@ -218,11 +232,11 @@
     		title="Throw"
   		/>
 
-		<!--Pick up ball-->
+		<!--Grab ball-->
         <object
     		class="Button" 
-    		module="MotionRecorder" 
-    		parameter="play"
+    		_module="SpeedRegulator" module="grab_trigger"
+    		_parameter="GRAB_TRIGGER" parameter="data"
     		x="1"
     		y="0" 
     		min="0"
@@ -241,7 +255,7 @@
 		<object
             class="Table"
             title="Goal position"
-            module = "Arbiter"
+            module = "RightArmPosArbiter"
             source = "OUTPUT"
             x="0" y="3"
             w="8" h="1"
@@ -299,9 +313,19 @@
             module = "SpeedRegulator"
             source = "IS_THROWING"
             x="9" y="2"
-            w="1" h="1"
+            w="2" h="2"
             font_size = "15"
         />
+        
+		<object
+            class="Table"
+            title="State"
+            module = "SpeedRegulator"
+            source = "STATE"
+            x="11" y="2"
+            w="2" h="2"
+            font_size = "15"
+        />        
         
         <object
           class="Slider"
@@ -355,15 +379,19 @@
 <!-- Population coding -->
 <module class = "PopulationCoder" name = "ManPosPop" min  = "-400" max  = "400" size = "20"/>
     <connection sourcemodule="P_POS" 	source="OUTPUT" 	targetmodule="ManPosPop" target="INPUT" />
-    <connection sourcemodule="Arbiter" 	source="OUTPUT" 	targetmodule="ManPosPop" target="INPUT" />
-    <connection sourcemodule="LA_POS" 	source="OUTPUT" 	targetmodule="ManPosPop" target="INPUT" />
+    <connection sourcemodule="RightArmPosArbiter" 	source="OUTPUT" 	targetmodule="ManPosPop" target="INPUT" />
+    <_connection sourcemodule = "RA_POS" source = "OUTPUT"	targetmodule="ManPosPop" target="INPUT" />
     
-    <connection sourcemodule="ZERO" 	source="OUTPUT" 	targetmodule="ManPosPop" target="INPUT" />
-    <connection sourcemodule="ZERO" 	source="OUTPUT" 	targetmodule="ManPosPop" target="INPUT" />
-    <connection sourcemodule="GoalAngle" 	source="OUTPUT" 	targetmodule="ManPosPop" target="INPUT" />
-    <connection sourcemodule="ZERO" 	source="OUTPUT" 	targetmodule="ManPosPop" target="INPUT" />
+    <connection sourcemodule = "Split2_O" source = "OUTPUT"	targetmodule="ManPosPop" target="INPUT" />
+    <_connection sourcemodule = "LA_POS" source = "OUTPUT"	targetmodule="ManPosPop" target="INPUT" />
     
-    <_connection sourcemodule="H_POS" 	source="OUTPUT" 	targetmodule="ManPosPop" target="INPUT" />
+    <connection sourcemodule="HeadPosArbiter" 	source="OUTPUT" 	targetmodule="ManPosPop" target="INPUT" />
+    
+    <_connection sourcemodule="ZERO" 	source="OUTPUT" 	targetmodule="ManPosPop" target="INPUT" />
+    <_connection sourcemodule="ZERO" 	source="OUTPUT" 	targetmodule="ManPosPop" target="INPUT" />
+    <_connection sourcemodule="GoalAngle" 	source="OUTPUT" 	targetmodule="ManPosPop" target="INPUT" />
+    <_connection sourcemodule="ZERO" 	source="OUTPUT" 	targetmodule="ManPosPop" target="INPUT" />
+    
     <connection sourcemodule="B_POS" 	source="OUTPUT" 	targetmodule="ManPosPop" target="INPUT" />
 
 
@@ -469,12 +497,12 @@
 	<connection sourcemodule = "B_TORQUE_LIMIT"   source = "OUTPUT"  targetmodule = "Servos"  target = "BODY_TORQUE_LIMIT" />
 	<connection sourcemodule = "H_TORQUE_LIMIT"   source = "OUTPUT"  targetmodule = "Servos"  target = "HEAD_TORQUE_LIMIT" />
 	<connection sourcemodule = "LA_TORQUE_LIMIT"  source = "OUTPUT"  targetmodule = "Servos"  target = "LEFT_ARM_TORQUE_LIMIT" />
-	<connection sourcemodule = "RA_TORQUE_LIMIT"  source = "OUTPUT"  targetmodule = "Servos"  target = "RIGHT_ARM_TORQUE_LIMIT" />
+	<connection sourcemodule = "RightArmTorqueArbiter"  source = "OUTPUT"  targetmodule = "Servos"  target = "RIGHT_ARM_TORQUE_LIMIT" />
 	
 	<connection sourcemodule = "B_TORQUE_ENABLE"   source = "OUTPUT"  targetmodule = "Servos"  target = "BODY_TORQUE_ENABLE" />
 	<connection sourcemodule = "H_TORQUE_ENABLE"   source = "OUTPUT"  targetmodule = "Servos"  target = "HEAD_TORQUE_ENABLE" />
 	<connection sourcemodule = "LA_TORQUE_ENABLE"  source = "OUTPUT"  targetmodule = "Servos"  target = "LEFT_ARM_TORQUE_ENABLE" />
-	<connection sourcemodule = "RA_TORQUE_ENABLE"  source = "OUTPUT"  targetmodule = "Servos"  target = "RIGHT_ARM_TORQUE_ENABLE" />
+	<connection sourcemodule = "RightArmTorqueEnableArbiter"  source = "OUTPUT"  targetmodule = "Servos"  target = "RIGHT_ARM_TORQUE_ENABLE" />
 		
 <module class = "EpiGreenForwardModel" 	name = "ForwardModel" 	/>
 	<connection sourcemodule = "Servos"   	source = "BODY_FEEDBACK_POSITION"       targetmodule = "ForwardModel"  target = "BODY_FEEDBACK_POSITION" />

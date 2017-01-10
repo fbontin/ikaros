@@ -17,25 +17,26 @@ SpeedRegulator::Init()
     
     goal_position       = GetInputArray("GOAL_POSITION");
     feedback_position   = GetInputArray("FEEDBACK_POSITION");
-    state               = GetInputArray("STATE");
-    trigger             = GetInputArray("TRIGGER");
+    throw_trigger       = GetInputArray("THROW_TRIGGER");
+    grab_trigger        = GetInputArray("GRAB_TRIGGER");
+    grab_done           = GetInputArray("GRAB_DONE");
     
     output_speed        = GetOutputArray("OUTPUT_SPEED");
     is_throwing         = GetOutputArray("IS_THROWING");
+    state               = GetOutputArray("STATE");
+    
     
     throwing_sequence = false;
+    internal_state = 0.0f;
     
 }
-
-
-
-
 
 
 // NÅN JÄTTESTOR KOMMENTAR TYP-----------------------------
 
 // TODO - Klickar man på tillbakavägen kastar Epi igen, hetsigt. får ej ske.
 
+// TODO - Grab sequence does not finish. fix.
 
 
 
@@ -45,14 +46,37 @@ SpeedRegulator::Init()
 void
 SpeedRegulator::Tick()
 {
-
+    
     float speed[6];
     bool internal_is_throwing = false;
     
-    if (trigger[0]) {
+    // start throwing sequence
+    if(internal_state == 1.0f && throw_trigger[0]) {
         throwing_sequence = true;
+        internal_state = 2.0f;
         goal_position[0] = 42.0f; //random high value, first tick
     }
+    
+    // start grab sequence
+    if(internal_state == 0.0f && grab_trigger[0]) {
+        for (int i = 0; i < 6; i++) {
+            speed[i] = 0.2f;
+        }
+        internal_state = 3.0f;
+    }
+    
+    // stop grab sequence
+    if(internal_state == 3.0f && grab_done[0]) {
+        internal_state = 1.0f;
+    }
+    
+    //stop throwing seqeunce
+    
+    
+    
+    
+    
+    
     
     if (throwing_sequence){
         
@@ -60,8 +84,10 @@ SpeedRegulator::Tick()
             internal_is_throwing = true;
         }
         
+        //stop throwing seqeunce
         if (goal_position[0] < -105.0f && feedback_position[0] < -105.0f) {
             throwing_sequence = false;
+            internal_state = 0.0f;
         }
         
         if (state[0] == 1.0f){
@@ -116,11 +142,14 @@ SpeedRegulator::Tick()
         copy_array(output_speed, speed, 6);
         
         if (internal_is_throwing) {
-            * is_throwing = 1.0f;
+            * is_throwing = 2.75f;
         } else {
-            * is_throwing = 0.0f;
+            * is_throwing = 2.25f;
         }
+    
     }
+    * state = internal_state;
+    
 }
 
 static InitClass init("SpeedRegulator", &SpeedRegulator::Create, "Source/UserModules/2016/MAMN15/Group 16/SpeedRegulator/");

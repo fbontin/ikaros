@@ -15,12 +15,20 @@ name="SpeedRegulator"
 
 <input name="GOAL_POSITION" description="Goal position of the servos, in degrees." size="6"/>
 <input name="FEEDBACK_POSITION" description="Feedback position of the servos, in degrees." size="6"/>
-<input name="STATE" description="The state of Epi, 0: Do nothing, 1: Make a throw, 2: Pick up an object." size="1"/>
-<input name="TRIGGER" description="1 triggers a throw sequence." size="1"/>
+
+<input name="THROW_TRIGGER" description="1 triggers a throw sequence." size="1"/>
+<input name="GRAB_TRIGGER" description="1 triggers a grab sequence." size="1"/>
+<input name="GRAB_DONE" description="1 means a grab sequence is over." size="1"/>
+
 
 <output name="OUTPUT_SPEED" description="The output speed." size="6" />
 <output name="IS_THROWING" description="1 if throwing, 0 if going back." size="1" />
-
+<output name="STATE" description="The state of Epi:
+0: Do nothing, ball not in hand,
+1: Do nothing, ball in hand,
+2: Make a throw,
+3: Pick up an object."
+size="1"/>
 <module class="SpeedRegulator" />
 
 <view title="SpeedRegulator">
