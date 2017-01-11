@@ -88,11 +88,9 @@
 <module class = "Constant" name = "RA_POS_BEFORE" data = "-110 -88 0 0 89 -1" />
 
 
-  <!-- Create values which decide which constants will be used--> 
-  <module class = "Constant" name = "V_BEFORE" outputsize = "1" data = "2.5" />
-
   <!-- Connect with arbiter-->
 	<connection sourcemodule = "RA_POS_BEFORE" source = "OUTPUT" targetmodule = "RightArmPosArbiter" target = "INPUT_1" delay="0" />
+	<connection sourcemodule = "TwoPointFive" source = "OUTPUT" targetmodule = "RightArmPosArbiter" target = "VALUE_1" delay="0" />
 	
 	<connection sourcemodule = "RA_AFTER_6" source = "OUTPUT" targetmodule = "RightArmPosArbiter" target = "INPUT_2" delay="1" />
 	<connection sourcemodule = "RA_AFTER_5" source = "OUTPUT" targetmodule = "RightArmPosArbiter" target = "INPUT_2" delay="1" />
@@ -101,8 +99,6 @@
 	<connection sourcemodule = "Servo2Spline" source = "OUTPUT" targetmodule = "RightArmPosArbiter" target = "INPUT_2" delay="1" />
 	<connection sourcemodule = "Servo1Spline" source = "OUTPUT" targetmodule = "RightArmPosArbiter" target = "INPUT_2" delay="1" />
 	
-
-	<connection sourcemodule = "V_BEFORE" source = "OUTPUT" targetmodule = "RightArmPosArbiter" target = "VALUE_1" delay="0" />
 	<connection sourcemodule = "SpeedRegulator" source = "IS_THROWING" targetmodule = "RightArmPosArbiter" target = "VALUE_2" delay="0" />
 
   <module
@@ -110,12 +106,6 @@
     name = "RightArmPosArbiter"
     no_of_inputs = "3"
   />
-  
-  <module
-    class = "SpeedRegulator"
-    name = "SpeedRegulator"
-  />
-  
   
   
 	<connection sourcemodule = "Servos" source = "RIGHT_ARM_FEEDBACK_POSITION" targetmodule = "SpeedRegulator" target = "FEEDBACK_POSITION" delay="0" />
@@ -128,6 +118,14 @@
     <module class = "Constant" name = "grab_trigger" data = "0" />
     <connection sourcemodule="grab_trigger" source="OUTPUT" targetmodule="SpeedRegulator" target="GRAB_TRIGGER" delay="1"/>
     
+    <module
+    	class = "SpeedRegulator"
+    	name = "SpeedRegulator"
+  	/>
+    
+    <connection sourcemodule="grab_trigger" source="OUTPUT" targetmodule="MotionRecorder" target="TRIG" delay="1"/>
+        
+
     <_module class = "Constant" name = "grab_done" data = "0" />
     <_connection sourcemodule="grab_done" source="OUTPUT" targetmodule="SpeedRegulator" target="GRAB_DONE" delay="1"/>
     
@@ -150,17 +148,30 @@
     <connection sourcemodule = "Modes" source = "OUTPUT" targetmodule = "ModeSelector" target = "INPUT" />
     <connection sourcemodule = "ModeSelector" source = "OUTPUT" targetmodule = "MotionRecorder" target = "MODE" />
     
+    
+
+
+    
+	
+    
+    <connection sourcemodule = "Servos" source = "RIGHT_ARM_FEEDBACK_POSITION" targetmodule = "MotionRecorder" target = "INPUT" />
+    <connection sourcemodule = "Servos" source = "LEFT_ARM_FEEDBACK_POSITION" targetmodule = "MotionRecorder" target = "INPUT" />
+	<connection sourcemodule = "Servos" source = "HEAD_FEEDBACK_POSITION" targetmodule = "MotionRecorder" target = "INPUT" />
+
     <module
         class = "MotionRecorder"
         name = "MotionRecorder"
         mask = "1 1 1 1 1 1   1 1 1 1 1 1   1 1 1 1 "
         torque = "0.5 0.5 0.5 0.5 0.5 0.5  0.5 0.5 0.5 0.5 0.5 0.5   0.5 0.5 0.5 0.5"
+         _torque = "0   0   0   0   0   0    0   0   0   0   0   0     0   0   0   0  "
         filename = "motion.%d.mot"
+        smoothing_time = "2"
     />
     
     <connection sourcemodule = "MotionRecorder" source = "COMPLETED" targetmodule = "SpeedRegulator" target = "GRAB_DONE" delay="1"/>
     
     
+
  	<connection sourcemodule = "MotionRecorder" source = "OUTPUT" targetmodule = "Split1_O" target = "INPUT" />
     <connection sourcemodule = "MotionRecorder" source = "OUTPUT" targetmodule = "Split2_O" target = "INPUT" />
     <connection sourcemodule = "MotionRecorder" source = "OUTPUT" targetmodule = "Split3_O" target = "INPUT" />
@@ -195,26 +206,23 @@
 	<connection sourcemodule = "Split3_O" source = "OUTPUT" targetmodule = "RightArmPosArbiter" target = "INPUT_3" />
 	<connection sourcemodule = "SpeedRegulator" source = "STATE" targetmodule = "RightArmPosArbiter" target = "VALUE_3" /> 
 
+
+	<!-- HEAD -->
 	<module class = "Arbiter" name = "HeadPosArbiter"/>
-  	
-  	<connection sourcemodule = "SpeedRegulator" source = "STATE" targetmodule = "HeadPosArbiter" target = "VALUE_1" /> 
-  	
+  	<connection sourcemodule = "TwoPointFive" source = "OUTPUT" targetmodule = "HeadPosArbiter" target = "VALUE_1" /> 
     <connection sourcemodule="ZERO" 	source="OUTPUT" 	targetmodule="HeadPosArbiter" target="INPUT_1" />
     <connection sourcemodule="ZERO" 	source="OUTPUT" 	targetmodule="HeadPosArbiter" target="INPUT_1" />
     <connection sourcemodule="GoalAngle" 	source="OUTPUT" 	targetmodule="HeadPosArbiter" target="INPUT_1" />
     <connection sourcemodule="ZERO" 	source="OUTPUT" 	targetmodule="HeadPosArbiter" target="INPUT_1" />
-
-  	
-
-  	<connection sourcemodule = "TwoPointFive" source = "OUTPUT" targetmodule = "HeadPosArbiter" target = "VALUE_2" /> 
+    
+  	<connection sourcemodule = "SpeedRegulator" source = "STATE" targetmodule = "HeadPosArbiter" target = "VALUE_2" /> 
   	<connection sourcemodule = "Split1_O" source = "OUTPUT" targetmodule = "HeadPosArbiter" target = "INPUT_2" />
+    
+    
     
   	<module class = "Constant" name = "TwoPointFive" data = "2.5" />
   	
-  	
-	<connection sourcemodule = "Servos" source = "RIGHT_ARM_FEEDBACK_POSITION" targetmodule = "MotionRecorder" target = "INPUT" />
-	<connection sourcemodule = "Servos" source = "LEFT_ARM_FEEDBACK_POSITION" targetmodule = "MotionRecorder" target = "INPUT" />
-	<connection sourcemodule = "Servos" source = "HEAD_FEEDBACK_POSITION" targetmodule = "MotionRecorder" target = "INPUT" />
+
 	
   
 	<view name = "Throw left arm" object_size = "50" >
@@ -291,7 +299,26 @@
             font_size = "15"
             select="0, 3 ,5"
             color = "red, green, blue"
-        />       
+        /> 
+
+        <object
+            class="Table"
+            title="RA Pos Arbiter Output"
+            module = "RightArmPosArbiter"
+            source = "OUTPUT"
+            x="0" y="9"
+            w="16" h="1"
+            font_size = "10"
+        /> 
+     <object
+            class="Table"
+            title="MR Output"
+            module = "MotionRecorder"
+            source = "OUTPUT"
+            x="0" y="10"
+            w="16" h="1"
+            font_size = "10"
+        /> 
         
         <object
           class="Slider"
@@ -328,19 +355,14 @@
         />        
         
         <object
-          class="Slider"
-          title="Goal Angle Throw"
-          module="GoalAngle"
-          parameter="data"
-          select="0"
-          x="8"
-          y="0"
-          w="2"
-          h="8"
-          min = "-38"
-          max = "38"
-        />
+    		class="Text"
+    		name = "States lol"
+    		text="0: Do nothing, ball not in hand, 1: Do nothing, ball in hand, 2: Make a throw, 3: Pick up an object."
+    		x="10" y="1"
+    		w="8" h="1"
+  		/>
         
+                
         <object
             class="Table"
             title="Goal angle"
@@ -350,6 +372,72 @@
             w="2" h="2"
             font_size = "15"
         />
+        
+        <object
+          class="Slider"
+          title="Goal Angle Throw"
+          module="GoalAngle"
+          parameter="data"
+          select="0"
+          x="8"
+          y="0"
+          w="1"
+          h="8"
+          min = "-38"
+          max = "38"
+        />
+        
+        
+		<object
+            class="Plot"
+            title="throw_trigger"
+            module = "throw_trigger"
+            source = "data"
+            x="10" y="4"
+            w="2" h="2"
+            font_size = "15"
+        />  
+        <object
+            class="Plot"
+            title="grab_trigger"
+            module = "grab_trigger"
+            source = "data"
+            x="12" y="4"
+            w="2" h="2"
+            font_size = "15"
+        /> 	
+        <object
+            class="Plot"
+            title="Playing"
+            module = "MotionRecorder"
+            source = "PLAYING"
+            _select = "0"
+            x="10" y="6"
+            w="2" h="2"
+            font_size = "15"
+        />
+        <object
+            class="Table"
+            title="Time"
+            module = "MotionRecorder"
+            source = "TIME"
+            _select = "0"
+            x="12" y="6"
+            w="2" h="2"
+            font_size = "15"
+        />
+        <object
+            class="Table"
+            title="grab_done"
+            module = "MotionRecorder"
+            source = "COMPLETED"
+            _select = "0"
+            x="10" y="8"
+            w="8" h="1"
+            font_size = "10"
+        />   
+
+        
 		
 	</view>
 
@@ -503,6 +591,7 @@
 	<connection sourcemodule = "H_TORQUE_ENABLE"   source = "OUTPUT"  targetmodule = "Servos"  target = "HEAD_TORQUE_ENABLE" />
 	<connection sourcemodule = "LA_TORQUE_ENABLE"  source = "OUTPUT"  targetmodule = "Servos"  target = "LEFT_ARM_TORQUE_ENABLE" />
 	<connection sourcemodule = "RightArmTorqueEnableArbiter"  source = "OUTPUT"  targetmodule = "Servos"  target = "RIGHT_ARM_TORQUE_ENABLE" />
+	
 		
 <module class = "EpiGreenForwardModel" 	name = "ForwardModel" 	/>
 	<connection sourcemodule = "Servos"   	source = "BODY_FEEDBACK_POSITION"       targetmodule = "ForwardModel"  target = "BODY_FEEDBACK_POSITION" />

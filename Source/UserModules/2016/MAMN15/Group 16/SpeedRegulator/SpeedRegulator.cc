@@ -37,6 +37,7 @@ SpeedRegulator::Init()
 // TODO - Klickar man på tillbakavägen kastar Epi igen, hetsigt. får ej ske.
 
 // TODO - Grab sequence does not finish. fix.
+// När den är i grab sequence går det att röra huet, men inte handen.
 
 
 
@@ -47,7 +48,6 @@ void
 SpeedRegulator::Tick()
 {
     
-    float speed[6];
     bool internal_is_throwing = false;
     
     // start throwing sequence
@@ -60,7 +60,7 @@ SpeedRegulator::Tick()
     // start grab sequence
     if(internal_state == 0.0f && grab_trigger[0]) {
         for (int i = 0; i < 6; i++) {
-            speed[i] = 0.2f;
+            output_speed[i] = 0.2f;
         }
         internal_state = 3.0f;
     }
@@ -95,51 +95,50 @@ SpeedRegulator::Tick()
             if (internal_is_throwing){
                 
                 // 0. Shoulder forward/backward
-                speed[0] = 1 - std::pow(0.005f * error, 1.8f);
+                output_speed[0] = 1 - std::pow(0.005f * error, 1.8f);
                 
                 // 1. Shoulder outwards
-                speed[1] = 0.1f;
+                output_speed[1] = 0.1f;
                 
                 // 2. Over arm spin
-                speed[2] = 0.1f;
+                output_speed[2] = 0.1f;
                 
                 // 3. Elbow
-                speed[3] = speed[0];
+                output_speed[3] = output_speed[0];
                 
                 // 4. Under arm spin
-                speed[4] = 0.1f;
+                output_speed[4] = 0.1f;
                 
                 // 5. Hand
                 if (feedback_position[0] >= -45) {
-                    speed[5] = 0.9f;
+                    output_speed[5] = 0.9f;
                 } else {
-                    speed[5] = 0.1f;
+                    output_speed[5] = 0.1f;
                 }
                 
             } else {
                 
                 if (error > 60.0f) {
-                    speed[0] = 0.7f - error * 0.007f;
+                    output_speed[0] = 0.7f - error * 0.007f;
                 } else if (error > 30.0f) {
-                    speed[0] = 0.3f;
+                    output_speed[0] = 0.3f;
                 } else {
-                    speed[0] = 0.1f + error * 0.007f;
+                    output_speed[0] = 0.1f + error * 0.007f;
                 }
                 for (int i = 1; i < 6; i++) {
-                    speed[i] = speed[0];
+                    output_speed[i] = output_speed[0];
                 }
             }
             
             //All servos limits
             for (int i = 0; i < 6; i++) {
-                if (speed[i] < 0.1f) {
-                    speed[i] = 0.1f;
-                } else if (speed[i] > 1.0f) {
-                    speed[i] = 1.0f;
+                if (output_speed[i] < 0.1f) {
+                    output_speed[i] = 0.1f;
+                } else if (output_speed[i] > 1.0f) {
+                    output_speed[i] = 1.0f;
                 }
             }
         }
-        copy_array(output_speed, speed, 6);
         
         if (internal_is_throwing) {
             * is_throwing = 2.75f;
