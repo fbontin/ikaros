@@ -53,8 +53,8 @@ SpeedRegulator::Tick()
     // start throwing sequence
     if(internal_state == 1.0f && throw_trigger[0]) {
         throwing_sequence = true;
-        internal_state = 2.0f;
         goal_position[0] = 42.0f; //random high value, first tick
+        internal_state = 2.0f;
     }
     
     // start grab sequence
@@ -67,15 +67,16 @@ SpeedRegulator::Tick()
     
     // stop grab sequence
     if(internal_state == 3.0f && grab_done[0]) {
+        for (int i = 0; i < 6; i++) {
+            output_speed[i] = 0.1f;
+        }
         internal_state = 1.0f;
+        
     }
     
     //stop throwing seqeunce
     
-    
-    
-    
-    
+
     
     
     if (throwing_sequence){
@@ -90,7 +91,7 @@ SpeedRegulator::Tick()
             internal_state = 0.0f;
         }
         
-        if (state[0] == 1.0f){
+        if (state[0] == 1.0f || state[0] == 2.0f){
             float error = std::abs(goal_position[0] - feedback_position[0]);
             if (internal_is_throwing){
                 
@@ -110,8 +111,8 @@ SpeedRegulator::Tick()
                 output_speed[4] = 0.1f;
                 
                 // 5. Hand
-                if (feedback_position[0] >= -45) {
-                    output_speed[5] = 0.9f;
+                if (feedback_position[0] > -35) {
+                    output_speed[5] = 1.0f;
                 } else {
                     output_speed[5] = 0.1f;
                 }

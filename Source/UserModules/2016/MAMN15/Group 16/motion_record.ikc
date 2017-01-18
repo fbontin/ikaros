@@ -75,10 +75,6 @@
 		strict_servo_id = "yes"
     />
 
-    <_connection sourcemodule = "MotionRecorder" source = "OUTPUT" targetmodule = "Joints" target = "INPUT" />
-    <_connection sourcemodule = "MotionRecorder" source = "TORQUE" targetmodule = "Joints" target = "INPUT" />
-    <_connection sourcemodule = "MotionRecorder" source = "ENABLE" targetmodule = "Joints" target = "INPUT" />
-
     <connection sourcemodule = "MotionRecorder" source = "OUTPUT" targetmodule = "Split1_O" target = "INPUT" />
     <connection sourcemodule = "MotionRecorder" source = "TORQUE" targetmodule = "Split1_T" target = "INPUT" />
     <connection sourcemodule = "MotionRecorder" source = "ENABLE" targetmodule = "Split1_E" target = "INPUT" />
@@ -114,16 +110,7 @@
     <connection sourcemodule = "Split3_O" source = "OUTPUT" targetmodule = "RightArm" target = "GOAL_POSITION" />
     <connection sourcemodule = "Split3_T" source = "OUTPUT" targetmodule = "RightArm" target = "TORQUE_LIMIT" />
     <connection sourcemodule = "Split3_E" source = "OUTPUT" targetmodule = "RightArm" target = "TORQUE_ENABLE" />
-    
-    <_module class = "Constant" name = "TorqueLimit5" outputsize = "5" data = "0 0 0 0 0" />
-    <_module class = "Constant" name = "TorqueLimit4" outputsize = "4" data = "0 0 0 0" />
-    <_connection sourcemodule = "TorqueLimit5"  source = "OUTPUT" targetmodule = "Joints1"  target = "TORQUE_LIMIT" />
-    <_connection sourcemodule = "TorqueLimit4"  source = "OUTPUT" targetmodule = "Joints2"  target = "TORQUE_LIMIT" />
-    <_connection sourcemodule = "TorqueLimit5"  source = "OUTPUT" targetmodule = "Joints3"  target = "TORQUE_LIMIT" />
 
-
-    
-    <_connection sourcemodule = "Joints" source = "FEEDBACK_PRESENT_POSITION" targetmodule = "MotionRecorder" target = "INPUT" />
 
     <connection sourcemodule = "RightArm" source = "FEEDBACK_PRESENT_POSITION" targetmodule = "MotionRecorder" target = "INPUT" />
     <connection sourcemodule = "LeftArm" source = "FEEDBACK_PRESENT_POSITION" targetmodule = "MotionRecorder" target = "INPUT" />
@@ -132,16 +119,12 @@
 
 
     <view name="View" object_size="50">
-        <_object class="Plot" module="Joints" source="FEEDBACK_PRESENT_POSITION" select="0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13" x="0" y="0" w="8" h="4" />
+
         <object class="Plot" module="MotionRecorder" source="OUTPUT" color="red" select="0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13" x="0" y="0" w="8" h="4" />
 
         <object class ="DropDownMenu" title="record mode" list="all/left/right/head" module="ModeSelector" parameter="row" x="0" y="4" w="1" h="2" />
-        <_object class="Slider" module="ModeSelector" parameter="row" min="0" max="3" x="0" y="4" w="1" h="2" />
         <object class="Table" module="ModeSelector" source="row" min="0" max="3" x="1" y="4" w="2" h="2" />
 
-        <_object class="BarGraph" title="s0T" module="MotionRecorder" source="s0T" x="0" y="0" w="8" h="2" max="1" />
-        <_object class="BarGraph" title="s0E" module="MotionRecorder" source="s0E" x="0" y="2" w="8" h="2" min="-0.25" max="0.25" />
-        <_object class="BarGraph" title="s0dEdT" module="MotionRecorder" source="s0dEdT" x="0" y="4" w="8" h="2" min="-0.1" max="0.1" />
 
         <object class="BarGraph" title="record" module="MotionRecorder" source="STATE" x="8" y="0" w="2" h="2" max="2" />
         <object class="Table" title="time" module="MotionRecorder" source="TIME" decimals="0" x="8" y="2" w="2" h="2" />
@@ -154,9 +137,6 @@
         <object class="Button" title = "Save" module="MotionRecorder" parameter="save" x="10" y="5" h="1" w="2" />
         <object class="Button" title = "Load" module="MotionRecorder" parameter="load" x="10" y="6" h="1" w="2" />
         <object class="Button" title = "SQ Play" module="MotionRecorder" parameter="sqplay" x="10" y="7" h="1" w="2" />
-
-        <_object class="Plot" module="MotionRecorder" source="OUTPUT" select="0" min="0" nax="1" x="0" y="8" w="8" h="4" />
-        <_object class="Plot" module="Joints" source="FEEDBACK_PRESENT_POSITION" color="blue" select="0" min="0" nax="1" x="0" y="8" w="8" h="4" />
 
 <!--
         <object class="Plot" module="MotionRecorder" source="ERROR" select="1" min="-1" nax="1" x="0" y="5" w="8" h="4" />
